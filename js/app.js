@@ -129,6 +129,76 @@ async function initApp() {
       });
       console.log(`Total: ${boundaryLayers.length} boundary/admin layers`);
     };
+    
+    // 檢查邊界圖層狀態（調試函數）
+    window.checkBoundaryLayers = function(stage = 'country') {
+      if (!map || !boundaryManager) {
+        console.log('Map or BoundaryManager not available');
+        return;
+      }
+      
+      const fillLayerId = `boundary-fill-${stage}`;
+      const lineLayerId = `boundary-line-${stage}`;
+      const sourceId = `boundary-source-${stage}`;
+      
+      console.log('=== Boundary Layer Status ===');
+      console.log(`Stage: ${stage}`);
+      
+      // 檢查源
+      const source = map.getSource(sourceId);
+      if (source) {
+        let data = null;
+        try {
+          data = source.getData ? source.getData() : source._data;
+        } catch (e) {
+          data = source._data;
+        }
+        console.log(`Source: ${sourceId}`);
+        console.log(`  Type: ${source.type}`);
+        console.log(`  Data type: ${data?.type}`);
+        console.log(`  Features count: ${data?.features?.length || 0}`);
+        if (data?.features?.length > 0) {
+          console.log(`  First feature:`, data.features[0]);
+          console.log(`  First feature properties:`, data.features[0].properties);
+        }
+      } else {
+        console.log(`Source ${sourceId}: NOT FOUND`);
+      }
+      
+      // 檢查填充圖層
+      const fillLayer = map.getLayer(fillLayerId);
+      if (fillLayer) {
+        const visibility = map.getLayoutProperty(fillLayerId, 'visibility');
+        const fillColor = map.getPaintProperty(fillLayerId, 'fill-color');
+        const fillOpacity = map.getPaintProperty(fillLayerId, 'fill-opacity');
+        console.log(`Fill Layer: ${fillLayerId}`);
+        console.log(`  Visibility: ${visibility}`);
+        console.log(`  Fill color:`, fillColor);
+        console.log(`  Fill opacity:`, fillOpacity);
+      } else {
+        console.log(`Fill Layer ${fillLayerId}: NOT FOUND`);
+      }
+      
+      // 檢查線條圖層
+      const lineLayer = map.getLayer(lineLayerId);
+      if (lineLayer) {
+        const visibility = map.getLayoutProperty(lineLayerId, 'visibility');
+        const lineColor = map.getPaintProperty(lineLayerId, 'line-color');
+        const lineOpacity = map.getPaintProperty(lineLayerId, 'line-opacity');
+        console.log(`Line Layer: ${lineLayerId}`);
+        console.log(`  Visibility: ${visibility}`);
+        console.log(`  Line color:`, lineColor);
+        console.log(`  Line opacity:`, lineOpacity);
+      } else {
+        console.log(`Line Layer ${lineLayerId}: NOT FOUND`);
+      }
+      
+      // 檢查 hasAreas
+      if (boundaryManager.hasAreas) {
+        const hasAreas = boundaryManager.hasAreas(stage);
+        console.log(`Has Areas: ${hasAreas}`);
+      }
+    };
   }
 }
 
@@ -201,6 +271,36 @@ async function initMap() {
       hideMapboxLabels();
       hideMapboxAdministrativeBoundaries();
     }, 500);
+  });
+
+  // 防抖函數（用於頻繁觸發的事件）
+  let hideBoundariesTimeout = null;
+  function debouncedHideMapboxBoundaries() {
+    if (hideBoundariesTimeout) {
+      clearTimeout(hideBoundariesTimeout);
+    }
+    hideBoundariesTimeout = setTimeout(() => {
+      hideMapboxAdministrativeBoundaries();
+    }, 150); // 150ms 防抖，減少頻繁調用
+  }
+
+  // 在縮放過程中（使用防抖，避免性能問題）
+  map.on('zoom', () => {
+    debouncedHideMapboxBoundaries();
+  });
+
+  // 在縮放結束時（確保最終狀態正確）
+  map.on('zoomend', () => {
+    setTimeout(() => {
+      hideMapboxAdministrativeBoundaries();
+    }, 300);
+  });
+
+  // 在移動結束時
+  map.on('moveend', () => {
+    setTimeout(() => {
+      hideMapboxAdministrativeBoundaries();
+    }, 300);
   });
 
   map.on('error', (e) => {
@@ -328,34 +428,71 @@ function hideMapboxAdministrativeBoundaries() {
     const layers = map.getStyle().layers;
     const hiddenLayers = [];
     
-    // 定義需要隱藏的圖層模式
-    const boundaryPatterns = [
-      /^admin-/,                    // admin- 開頭的所有圖層
-      /^boundary-admin/,            // boundary-admin- 開頭
-      /-admin-boundary/,            // 包含 -admin-boundary
-      /^admin-boundary/,            // admin-boundary 開頭
-      /^place-boundary/,            // place-boundary 開頭（某些樣式）
-      /^boundary-/,                 // boundary- 開頭（通用邊界）
+    // 動態獲取我們自己的圖層前綴（從 BoundaryManager）
+    const ourLayerPrefixes = [];
+    if (typeof window !== 'undefined' && window.boundaryManager) {
+      // 從 BoundaryManager 獲取實際的前綴
+      const stages = ['country', 'administration'];
+      stages.forEach(stage => {
+        const fillId = boundaryManager.getFillLayerId(stage);
+        const lineId = boundaryManager.getLineLayerId(stage);
+        if (fillId) ourLayerPrefixes.push(fillId);
+        if (lineId) ourLayerPrefixes.push(lineId);
+      });
+    } else {
+      // 如果 BoundaryManager 不可用，使用靜態列表作為後備
+      ourLayerPrefixes.push(
+        'boundary-fill-country',
+        'boundary-line-country',
+        'boundary-fill-administration',
+        'boundary-line-administration'
+      );
+    }
+    
+    // Mapbox 默認圖層匹配模式（僅匹配 Mapbox 圖層）
+    const mapboxBoundaryPatterns = [
+      /^admin-\d/,                   // admin-0, admin-1 等（Mapbox 默認格式）
+      /^admin-/,                     // admin- 開頭的所有圖層
+      /^boundary-admin/,             // boundary-admin- 開頭
+      /-admin-boundary/,             // 包含 -admin-boundary
+      /^admin-boundary/,             // admin-boundary 開頭
+      /^place-boundary/,             // place-boundary 開頭（某些樣式）
+      /^country-boundary/,           // country-boundary 開頭（某些樣式）
+      /^state-boundary/,             // state-boundary 開頭（某些樣式）
     ];
     
     layers.forEach(layer => {
-      // 檢查圖層 ID 是否匹配任何模式
-      const shouldHide = boundaryPatterns.some(pattern => pattern.test(layer.id));
+      const layerId = layer.id.toLowerCase();
       
-      // 額外檢查：如果是 line 或 fill 類型，且包含 boundary 或 admin 關鍵字
-      const isBoundaryLayer = (layer.type === 'line' || layer.type === 'fill') && 
-                              (layer.id.toLowerCase().includes('boundary') || 
-                               layer.id.toLowerCase().includes('admin'));
+      // 排除我們自己的圖層（動態檢查）
+      const isOurLayer = ourLayerPrefixes.some(prefix => 
+        layerId.startsWith(prefix.toLowerCase())
+      );
       
-      if (shouldHide || isBoundaryLayer) {
+      if (isOurLayer) {
+        // 跳過我們自己的圖層
+        return;
+      }
+      
+      // 檢查是否匹配 Mapbox 模式
+      const matchesMapboxPattern = mapboxBoundaryPatterns.some(pattern => 
+        pattern.test(layer.id)
+      );
+      
+      // 額外檢查：包含 admin 關鍵字的 Mapbox 圖層
+      // 但要排除我們的圖層（已經在上面排除了）
+      const isMapboxAdminLayer = (layer.type === 'line' || layer.type === 'fill') && 
+                                  (layerId.includes('admin')) &&
+                                  !layerId.startsWith('boundary-fill-') &&  // 確保排除我們的
+                                  !layerId.startsWith('boundary-line-');    // 確保排除我們的
+      
+      if (matchesMapboxPattern || isMapboxAdminLayer) {
         try {
-          // 嘗試設置 visibility
           if (map.getLayer(layer.id)) {
             map.setLayoutProperty(layer.id, 'visibility', 'none');
             hiddenLayers.push(layer.id);
           }
         } catch (error) {
-          // 如果 layout property 不可用，嘗試使用 paint property
           try {
             if (layer.type === 'line') {
               map.setPaintProperty(layer.id, 'line-opacity', 0);
@@ -364,7 +501,6 @@ function hideMapboxAdministrativeBoundaries() {
             }
             hiddenLayers.push(layer.id + ' (via opacity)');
           } catch (e) {
-            // 忽略無法設置的圖層
             logger.debug(`Cannot hide administrative boundary layer: ${layer.id}`, error);
           }
         }
@@ -372,7 +508,10 @@ function hideMapboxAdministrativeBoundaries() {
     });
     
     if (hiddenLayers.length > 0) {
-      logger.info(`Mapbox administrative boundaries hidden: ${hiddenLayers.join(', ')}`);
+      logger.info(`Mapbox administrative boundaries hidden: ${hiddenLayers.length} layers`);
+      if (logger.isDebug && logger.isDebug()) {
+        logger.debug(`Hidden layers: ${hiddenLayers.join(', ')}`);
+      }
     } else {
       logger.debug('No Mapbox administrative boundary layers found to hide');
     }

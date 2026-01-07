@@ -8,6 +8,10 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node server-combined.js",
+    "server": "node server-combined.js",
+    "serve": "npx http-server -p 8001 -c-1",
+    "dev": "npx live-server --port=8001 --open=/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +19,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@turf/turf": "^7.3.1",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "stream-json": "^1.9.1"
   },
   "devDependencies": {
     "eslint": "^9.39.2",

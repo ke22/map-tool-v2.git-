@@ -17,6 +17,7 @@ const path = require('path');
 const { chain } = require('stream-chain');
 const Pick = require('stream-json/filters/Pick');
 const StreamArray = require('stream-json/streamers/StreamArray');
+const turf = require('@turf/turf');
 
 const DATA_DIR = path.join(__dirname, '..', 'data', 'gadm');
 const OUTPUT_DIR = path.join(__dirname, '..', 'data', 'gadm', 'optimized', 'by_country');
@@ -100,9 +101,32 @@ pipeline.on('end', () => {
     
     for (const [countryCode, features] of countryFeatures) {
         const outputFile = path.join(OUTPUT_DIR, `${countryCode}.geojson`);
+
+        let outputFeatures = features;
+
+        // 只有 level 0 需要合併：每國輸出 1 個 feature（外框）
+        if (level === 0 && features.length > 1) {
+            console.log(`   ${countryCode}: merging ${features.length} features into one (level 0)`);
+            let merged = features[0];
+            for (let i = 1; i < features.length; i++) {
+                try {
+                    merged = turf.union(merged, features[i]);
+                } catch (e) {
+                    console.warn(`     ⚠️ union failed at feature ${i}, skipping this piece: ${e.message}`);
+                }
+            }
+
+            if (merged && merged.type === 'Feature') {
+                outputFeatures = [merged];
+            } else {
+                console.warn(`     ⚠️ merged result invalid, fallback to original ${features.length} features`);
+                outputFeatures = features;
+            }
+        }
+
         const geojson = {
             type: 'FeatureCollection',
-            features: features
+            features: outputFeatures
         };
         
         const jsonString = JSON.stringify(geojson);
@@ -113,7 +137,7 @@ pipeline.on('end', () => {
         successCount++;
         
         if (successCount <= 10 || successCount % 20 === 0) {
-            console.log(`   ${countryCode}: ${features.length} feature(s), ${(fileSize / 1024).toFixed(2)} KB`);
+            console.log(`   ${countryCode}: ${outputFeatures.length} feature(s), ${(fileSize / 1024).toFixed(2)} KB`);
         }
     }
     
