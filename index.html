@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工作流地圖工具 v2</title>
+  
+  <!-- Mapbox GL CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Configuration -->
+  <script src="config.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="container">
+        <h1 class="app-title">工作流地圖工具 v2</h1>
+        <div class="app-actions">
+          <!-- 底圖切換 -->
+          <div class="basemap-switcher" style="display: inline-flex; gap: 4px; margin-right: 8px;">
+            <button id="basemap-mono-btn" class="btn btn-sm btn-secondary basemap-btn active" data-style="mono" title="單色底圖">單色</button>
+            <button id="basemap-light-btn" class="btn btn-sm btn-secondary basemap-btn" data-style="light" title="淺色底圖">淺色</button>
+            <button id="basemap-satellite-btn" class="btn btn-sm btn-secondary basemap-btn" data-style="satellite" title="衛星底圖">衛星</button>
+          </div>
+          <button id="undo-btn" class="btn btn-icon" title="復原 (Ctrl+Z)">
+            <span>↶</span>
+          </button>
+          <button id="redo-btn" class="btn btn-icon" title="重做 (Ctrl+Y)">
+            <span>↷</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Sidebar -->
+      <aside class="app-sidebar">
+        <!-- Workflow Indicator -->
+        <div class="workflow-indicator">
+          <h2 class="workflow-title">工作流</h2>
+          <div class="workflow-stages">
+            <div class="workflow-stage" data-stage="country">
+              <div class="stage-indicator">
+                <span class="stage-number">1</span>
+                <span class="stage-label">國家區域</span>
+                <div class="stage-actions" id="country-stage-actions" style="display: none;">
+                  <button id="country-next-btn" class="btn btn-sm btn-primary">下一步</button>
+                  <button id="country-skip-btn" class="btn btn-sm btn-secondary">跳過</button>
+                </div>
+              </div>
+              <div class="stage-progress"></div>
+            </div>
+            <div class="workflow-stage" data-stage="administration">
+              <div class="stage-indicator">
+                <span class="stage-number">2</span>
+                <span class="stage-label">行政區</span>
+                <div class="stage-actions" id="administration-stage-actions" style="display: none;">
+                  <button id="administration-next-btn" class="btn btn-sm btn-primary">下一步</button>
+                  <button id="administration-skip-btn" class="btn btn-sm btn-secondary">跳過</button>
+                </div>
+              </div>
+              <div class="stage-progress"></div>
+            </div>
+            <div class="workflow-stage" data-stage="export">
+              <div class="stage-indicator">
+                <span class="stage-number">3</span>
+                <span class="stage-label">匯出</span>
+              </div>
+              <div class="stage-progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage Controls -->
+        <div class="stage-controls" id="stage-controls">
+          <div class="stage-panel" id="country-panel" data-stage="country">
+            <h3 class="stage-panel-title">國家區域階段</h3>
+            <div class="control-group">
+              <label class="control-label">搜尋</label>
+              <div class="search-box">
+                <input type="text" id="country-search" class="search-input" placeholder="輸入國家名稱或座標">
+                <button id="country-search-btn" class="btn btn-sm btn-primary">搜尋</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">AI 分析</label>
+              <div class="ai-analysis-box">
+                <textarea id="country-ai-text" class="ai-textarea" placeholder="貼上文字內容，AI 將自動提取地理位置"></textarea>
+                <div class="button-group">
+                  <button id="country-ai-btn" class="btn btn-sm btn-primary">AI 分析</button>
+                  <button id="country-ai-test-btn" class="btn btn-sm btn-secondary" title="使用測試文字">測試</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 區域樣式工具面板（點選區域時顯示） -->
+          <div class="area-style-panel" id="area-style-panel" style="display: none;">
+            <h3 id="area-style-title">區域樣式</h3>
+            <div class="control-group">
+              <label>顏色</label>
+              <input type="color" id="area-style-color" class="color-input" value="#6CA7A1">
+              <div class="color-presets">
+                <button class="color-preset" data-color="#6CA7A1" style="background-color: #6CA7A1;" title="#6CA7A1"></button>
+                <button class="color-preset" data-color="#496F96" style="background-color: #496F96;" title="#496F96"></button>
+                <button class="color-preset" data-color="#E05C5A" style="background-color: #E05C5A;" title="#E05C5A"></button>
+                <button class="color-preset" data-color="#EDBD76" style="background-color: #EDBD76;" title="#EDBD76"></button>
+                <button class="color-preset" data-color="#E8DFCF" style="background-color: #E8DFCF;" title="#E8DFCF"></button>
+                <button class="color-preset" data-color="#B5CBCD" style="background-color: #B5CBCD;" title="#B5CBCD"></button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label>模式</label>
+              <div class="button-group style-mode-group">
+                <button class="btn-toggle active" id="area-style-fill" data-mode="fill">填充</button>
+                <button class="btn-toggle" id="area-style-outline" data-mode="outline">輪廓</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <button id="area-style-close" class="btn btn-secondary btn-sm">關閉</button>
+            </div>
+          </div>
+
+          <!-- 標記樣式工具面板（點選標記時顯示） -->
+          <div class="area-style-panel" id="marker-style-panel" style="display: none;">
+            <h3 id="marker-style-title">標記樣式</h3>
+            <div class="control-group">
+              <label>顏色</label>
+              <input type="color" id="marker-style-color" class="color-input" value="#ff0000">
+            </div>
+            <div class="control-group">
+              <label>類型</label>
+              <select id="marker-style-type">
+                <option value="point">點</option>
+                <option value="circle">圓圈</option>
+                <option value="pin">圖釘</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label>大小 <span id="marker-style-size-display">12px</span></label>
+              <input type="range" id="marker-style-size" min="8" max="32" value="12">
+            </div>
+            <div class="control-group">
+              <button id="marker-style-close" class="btn btn-secondary btn-sm">關閉</button>
+            </div>
+          </div>
+
+          <!-- 文字標籤樣式工具面板（點選文字標籤時顯示） -->
+          <div class="area-style-panel" id="label-style-panel" style="display: none;">
+            <h3 id="label-style-title">文字樣式</h3>
+            <div class="control-group">
+              <label>文字內容</label>
+              <input type="text" id="label-style-text" class="text-input" placeholder="輸入文字內容">
+            </div>
+            <div class="control-group">
+              <label>文字顏色</label>
+              <input type="color" id="label-style-color" class="color-input" value="#333333">
+            </div>
+            <div class="control-group">
+              <label>背景顏色</label>
+              <input type="color" id="label-style-bg-color" class="color-input" value="#ffffff">
+            </div>
+            <div class="control-group">
+              <label>字體大小 <span id="label-style-size-display">14px</span></label>
+              <input type="range" id="label-style-size" min="10" max="24" value="14">
+            </div>
+            <div class="control-group">
+              <button id="label-style-close" class="btn btn-secondary btn-sm">關閉</button>
+            </div>
+          </div>
+
+          <div class="stage-panel" id="administration-panel" data-stage="administration" style="display: none;">
+            <h3 class="stage-panel-title">行政區階段</h3>
+            <div class="control-group">
+              <label class="control-label">搜尋</label>
+              <div class="search-box">
+                <input type="text" id="administration-search" class="search-input" placeholder="輸入行政區名稱或座標">
+                <button id="administration-search-btn" class="btn btn-sm btn-primary">搜尋</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">AI 分析</label>
+              <div class="ai-analysis-box">
+                <textarea id="administration-ai-text" class="ai-textarea" placeholder="貼上文字內容，AI 將自動提取地理位置"></textarea>
+                <div class="button-group">
+                  <button id="administration-ai-btn" class="btn btn-sm btn-primary">AI 分析</button>
+                  <button id="administration-ai-test-btn" class="btn btn-sm btn-secondary" title="使用測試文字">測試</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel" id="export-panel" data-stage="export" style="display: none;">
+            <h3>匯出階段</h3>
+            <div class="control-group">
+              <label>匯出格式</label>
+              <select id="export-format">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label>DPI</label>
+              <select id="export-dpi">
+                <option value="150">150 DPI (快速)</option>
+                <option value="300" selected>300 DPI (標準)</option>
+                <option value="600">600 DPI (高品質)</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <button id="export-btn" class="btn btn-primary">匯出地圖</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annotations Panel（保留一個全局標註工具） -->
+        <div class="annotations-panel">
+          <h3>標註工具</h3>
+          <div class="control-group">
+            <div class="button-group">
+              <button id="add-marker-btn" class="btn btn-sm btn-primary">➕ 添加標記</button>
+              <button id="add-label-btn" class="btn btn-sm btn-primary">📝 添加文字</button>
+            </div>
+            <div id="annotation-mode-indicator" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #e3f2fd; border-radius: 4px; font-size: 0.875rem; color: #1976d2;">
+              <span id="annotation-mode-text"></span>
+              <button id="cancel-annotation-mode-btn" class="btn btn-sm btn-secondary" style="margin-left: 0.5rem;">取消</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 我的地圖內容面板 -->
+        <div class="content-list-panel">
+          <h3>我的地圖內容</h3>
+          <div class="content-list-stats">
+            <div class="stat-item">
+              <span class="stat-label">區域:</span>
+              <span class="stat-value" id="areas-count">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">標記:</span>
+              <span class="stat-value" id="markers-count">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">文字:</span>
+              <span class="stat-value" id="labels-count">0</span>
+            </div>
+          </div>
+          <div class="content-list-container">
+            <div id="content-list" class="content-list">
+              <!-- 內容將由 ContentListManager 動態生成 -->
+            </div>
+          </div>
+          <!-- 邊界控制（最底部） -->
+          <div class="content-list-boundary-control">
+            <label class="boundary-checkbox-label">
+              <input type="checkbox" id="content-list-administration-boundary-visible" class="boundary-checkbox" checked>
+              <span class="checkbox-text">顯示行政區邊界</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 標記添加彈出框 -->
+        <div class="annotation-popup" id="marker-add-popup" style="display: none;">
+          <div class="popup-content">
+            <h3>添加標記</h3>
+            <div class="control-group">
+              <label>名稱</label>
+              <input type="text" id="marker-name-input" placeholder="輸入標記名稱" value="">
+            </div>
+            <div class="control-group">
+              <label>顏色</label>
+              <input type="color" id="marker-color-input" value="#ff0000">
+            </div>
+            <div class="control-group">
+              <label>類型</label>
+              <select id="marker-type-input">
+                <option value="point">點</option>
+                <option value="circle">圓圈</option>
+                <option value="pin">圖釘</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label>大小</label>
+              <input type="range" id="marker-size-input" min="8" max="32" value="12">
+              <span id="marker-size-display">12px</span>
+            </div>
+            <div class="popup-actions">
+              <button id="confirm-marker-btn" class="btn btn-primary btn-sm">確認</button>
+              <button id="cancel-marker-btn" class="btn btn-secondary btn-sm">取消</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 文字添加彈出框 -->
+        <div class="annotation-popup" id="label-add-popup" style="display: none;">
+          <div class="popup-content">
+            <h3>添加文字</h3>
+            <div class="control-group">
+              <label>文字內容</label>
+              <input type="text" id="label-text-input" placeholder="輸入文字內容" value="">
+            </div>
+            <div class="control-group">
+              <label>字體大小</label>
+              <input type="range" id="label-size-input" min="10" max="24" value="14">
+              <span id="label-size-display">14px</span>
+            </div>
+            <div class="control-group">
+              <label>文字顏色</label>
+              <input type="color" id="label-color-input" value="#333333">
+            </div>
+            <div class="control-group">
+              <label>背景顏色</label>
+              <input type="color" id="label-bg-color-input" value="#ffffff">
+            </div>
+            <div class="popup-actions">
+              <button id="confirm-label-btn" class="btn btn-primary btn-sm">確認</button>
+              <button id="cancel-label-btn" class="btn btn-secondary btn-sm">取消</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Map Container -->
+      <div class="app-content">
+        <div id="map" class="map-container"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Export Dialog -->
+  <div class="export-dialog-overlay" id="export-dialog-overlay" style="display: none;">
+    <div class="export-dialog">
+      <div class="export-dialog-header">
+        <h3>匯出地圖</h3>
+        <button class="icon-btn close-btn" id="export-dialog-close" title="關閉">×</button>
+      </div>
+      <div class="export-dialog-content">
+        <!-- Paper Size -->
+        <div class="control-group">
+          <label>紙張尺寸</label>
+          <select id="export-paper-size">
+            <option value="custom">自定義（當前視圖）</option>
+            <option value="a4">A4 (210 × 297 mm)</option>
+            <option value="a3">A3 (297 × 420 mm)</option>
+            <option value="a2">A2 (420 × 594 mm)</option>
+            <option value="letter">Letter (8.5" × 11")</option>
+            <option value="legal">Legal (8.5" × 14")</option>
+            <option value="tabloid">Tabloid (11" × 17")</option>
+          </select>
+        </div>
+
+        <!-- Orientation -->
+        <div class="control-group">
+          <label>方向</label>
+          <div class="button-group">
+            <label class="radio-label">
+              <input type="radio" name="export-orientation" value="portrait" checked>
+              <span>縱向</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="export-orientation" value="landscape">
+              <span>橫向</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- DPI -->
+        <div class="control-group">
+          <label>分辨率 (DPI)</label>
+          <select id="export-dpi">
+            <option value="72">72 DPI (網頁用)</option>
+            <option value="150">150 DPI (草稿)</option>
+            <option value="300" selected>300 DPI (高質量)</option>
+            <option value="600">600 DPI (專業打印)</option>
+          </select>
+        </div>
+
+        <!-- Format -->
+        <div class="control-group">
+          <label>格式</label>
+          <div class="button-group">
+            <label class="radio-label">
+              <input type="radio" name="export-format" value="png" checked>
+              <span>PNG</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="export-format" value="jpeg">
+              <span>JPEG</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quality (only for JPEG) -->
+        <div class="control-group" id="export-quality-group" style="display: none;">
+          <label>質量 <span id="export-quality-value">90</span>%</label>
+          <input type="range" id="export-quality" min="50" max="100" value="90">
+        </div>
+
+        <!-- Dimensions Preview -->
+        <div class="control-group">
+          <div id="export-dimensions-preview" class="export-dimensions-preview"></div>
+        </div>
+
+        <!-- Preview -->
+        <div class="control-group">
+          <label>預覽</label>
+          <div id="export-preview" class="export-preview"></div>
+        </div>
+      </div>
+      <div class="export-dialog-actions">
+        <button class="btn btn-secondary" id="export-dialog-cancel">取消</button>
+        <button class="btn btn-primary" id="export-dialog-export">匯出地圖</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="js/core/EventBus.js"></script>
+  <script src="js/core/Logger.js"></script>
+  <script src="js/core/StateManager.js"></script>
+  
+  <!-- Utility Scripts -->
+  <script src="js/utils/Debounce.js"></script>
+  <script src="js/utils/DOMCache.js"></script>
+  <script src="js/utils/LocationResolver.js"></script>
+  <script src="js/utils/CountryCodes.js"></script>
+  
+  <!-- Service Scripts -->
+  <script src="js/services/GeminiService.js"></script>
+  
+  <!-- Workflow Scripts -->
+  <script src="js/workflow/WorkflowState.js"></script>
+  <script src="js/workflow/StageManager.js"></script>
+  <script src="js/workflow/StageController.js"></script>
+  
+  <!-- Module Scripts -->
+  <script src="js/modules/data/GeometryStore.js"></script>
+  <script src="js/modules/data/GADMLoader.js"></script>
+  <script src="js/modules/data/PlaceNameTranslator.js"></script>
+  <script src="js/modules/boundary/BoundaryManager.js"></script>
+  <script src="js/modules/markers/MarkerManager.js"></script>
+  <script src="js/modules/labels/LabelManager.js"></script>
+  <script src="js/modules/labels/ChineseLabelManager.js"></script>
+  <script src="js/modules/map/BasemapSwitcher.js"></script>
+  <script src="js/modules/export/ExportManager.js"></script>
+  
+  <!-- UI Scripts -->
+  <script src="js/ui/ContentListManager.js"></script>
+  
+  <!-- Main Application Script -->
+  <script src="js/app.js"></script>
+  
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js" 
+          onerror="handleMapboxLoadError('mapbox-gl.js')"></script>
+  
+  <!-- Mapbox Language Plugin -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.0/mapbox-gl-language.js"
+          onerror="handleMapboxLoadError('mapbox-gl-language.js')"></script>
+  
+  <!-- 錯誤處理 -->
+  <script>
+    function handleMapboxLoadError(scriptName) {
+      console.error(`Failed to load ${scriptName} from CDN`);
+      const errorMsg = document.createElement('div');
+      errorMsg.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ff4444;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        z-index: 10000;
+        font-family: sans-serif;
+      `;
+      errorMsg.innerHTML = `
+        <strong>網路連線錯誤</strong><br>
+        無法載入 Mapbox GL JS 庫。請檢查網路連線或使用本地備份。<br>
+        缺少的檔案: ${scriptName}
+      `;
+      document.body.appendChild(errorMsg);
+    }
+    
+    // 檢查 Mapbox GL JS 是否載入成功
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (typeof mapboxgl === 'undefined') {
+          handleMapboxLoadError('mapbox-gl.js (未定義)');
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+
