@@ -912,6 +912,10 @@ ${text}
             logger.info('Extracted countries:', countries);
             
             if (countries.length > 0) {
+              // 記錄 AI 分析前的國家數量
+              const stateBefore = stateManager.getState();
+              const countBefore = (stateBefore.countryStage?.areas || []).length;
+              
               // 預先檢查數據可用性
               const countriesWithData = [];
               const countriesWithoutData = [];
@@ -946,8 +950,8 @@ ${text}
                     // Mapbox 提供全球國家邊界數據，無需本地文件
                     countriesWithData.push(trimmedName);
                   } else {
-                    // 如果找不到國家代碼，嘗試添加但不保證成功
-                    countriesWithData.push(trimmedName);
+                    // 如果找不到國家代碼，記錄為無數據
+                    countriesWithoutData.push(trimmedName);
                   }
                 } catch (error) {
                   logger.warn(`Failed to check data for country: ${countryName}`, error);
@@ -955,12 +959,10 @@ ${text}
                 }
               }
               
-              // 只處理有數據的國家
-              let processedCount = 0;
+              // 處理有數據的國家
               for (const countryName of countriesWithData) {
                 try {
                   await handleSearch(countryName, 'country');
-                  processedCount++;
                   // 添加延遲避免請求過快
                   await new Promise(resolve => setTimeout(resolve, 500));
                 } catch (error) {
@@ -968,23 +970,28 @@ ${text}
                 }
               }
               
+              // 統計實際添加到 state 的數量
+              const stateAfter = stateManager.getState();
+              const countAfter = (stateAfter.countryStage?.areas || []).length;
+              const newlyAddedCount = countAfter - countBefore;
+              
               // 構建結果消息
               let message = '';
-              if (processedCount > 0) {
-                message = `成功添加 ${processedCount} 個國家/地區`;
+              if (newlyAddedCount > 0) {
+                message = `成功添加 ${newlyAddedCount} 個國家/地區`;
                 if (countriesWithoutData.length > 0) {
-                  message += `\n\n以下 ${countriesWithoutData.length} 個國家/地區沒有數據文件，已跳過：\n${countriesWithoutData.slice(0, 5).join('、')}${countriesWithoutData.length > 5 ? '...' : ''}`;
+                  message += `\n\n以下 ${countriesWithoutData.length} 個國家/地區無法識別或沒有數據，已跳過：\n${countriesWithoutData.slice(0, 5).join('、')}${countriesWithoutData.length > 5 ? '...' : ''}`;
                 }
               } else {
                 if (countriesWithoutData.length > 0) {
-                  message = `未能找到有效的國家/地區數據\n\n以下國家/地區沒有數據文件：\n${countriesWithoutData.slice(0, 5).join('、')}${countriesWithoutData.length > 5 ? '...' : ''}`;
+                  message = `未能添加任何國家/地區\n\n以下國家/地區無法識別或沒有數據：\n${countriesWithoutData.slice(0, 5).join('、')}${countriesWithoutData.length > 5 ? '...' : ''}`;
                 } else {
-                  message = '未能找到有效的國家/地區';
+                  message = '未能添加任何國家/地區（可能都已存在）';
                 }
               }
               
               alert(message);
-              if (processedCount > 0 && textarea) textarea.value = '';
+              if (newlyAddedCount > 0 && textarea) textarea.value = '';
             } else {
               alert('未能從文字中提取到國家/地區名稱');
             }

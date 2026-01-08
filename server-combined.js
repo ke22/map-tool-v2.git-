@@ -254,8 +254,9 @@ function handleGADMRequest(req, res, parsedUrl) {
         let isOptimized = false;
         let useSplitFile = false;
         
-        // 優先使用分割後的國家文件（適用於 level 0 和 level 1）
-        if (level === 0 || level === 1) {
+        // 優先使用分割後的國家文件（只適用於 level 0，因為 by_country 文件只包含 level 0 數據）
+        // 注意：level 1 請求應該使用 gadm_level1_optimized.geojson 或流式處理大文件
+        if (level === 0) {
             try {
                 const stats = fs.statSync(splitCountryPath);
                 filePath = splitCountryPath;
@@ -267,33 +268,8 @@ function handleGADMRequest(req, res, parsedUrl) {
                 const fileContent = fs.readFileSync(splitCountryPath, 'utf8');
                 const geojson = JSON.parse(fileContent);
                 
-                // 對於 level 1，如果請求的是特定行政區（例如 TWN.1），需要過濾
+                // Level 0 文件每個國家只有 1 個 feature（已合併），直接返回
                 let result = geojson;
-                if (level === 1 && parts.length > 1) {
-                    // 請求特定行政區（例如 TWN.1）
-                    const upperGadmId = gadmId.toUpperCase();
-                    const filteredFeatures = geojson.features.filter(feature => {
-                        const gid = feature.properties.GID_1 || feature.properties.gid_1 || '';
-                        const gidStr = String(gid).toUpperCase();
-                        // GADM Level 1 的 GID 格式可能是 TWN.2_1 或 TWN.2
-                        // 匹配邏輯：
-                        // 1. 完全匹配（例如 TWN.2 === TWN.2_1 的前綴部分）
-                        // 2. 以請求的 GID 開頭（例如 TWN.2 匹配 TWN.2_1）
-                        // 3. 請求的 GID 以 GID 開頭（例如 TWN.2.1 匹配 TWN.2_1）
-                        const gidPrefix = gidStr.split('_')[0]; // 移除 _1 後綴
-                        return gidStr === upperGadmId || 
-                               gidStr.startsWith(upperGadmId + '.') ||
-                               gidPrefix === upperGadmId ||
-                               upperGadmId.startsWith(gidPrefix + '.');
-                    });
-                    
-                    result = {
-                        type: 'FeatureCollection',
-                        features: filteredFeatures
-                    };
-                    
-                    console.log(`   🔍 Filtered ${filteredFeatures.length} feature(s) from ${geojson.features.length} total for ${gadmId}`);
-                }
                 
                 // 緩存結果
                 gadmCache.set(cacheKey, {
