@@ -2656,10 +2656,9 @@ async function handleCountrySearch(query, locationResolver) {
             }
           }
         }
+      } else {
+        logger.warn('CountryCodes not available');
       }
-    }
-    } else {
-      logger.warn('CountryCodes not available');
     }
 
     // 如果找不到國家代碼，使用 Mapbox Geocoding API
