@@ -318,6 +318,167 @@ class CountryCodes {
   static has(code) {
     return code.toUpperCase() in COUNTRY_CODES;
   }
+
+  /**
+   * 根據中文名稱模糊查找 ISO 代碼（支持部分匹配）
+   * @param {string} query - 查詢字符串（支持部分匹配）
+   * @returns {Array<{code: string, name: string, nameEn: string, match: string, score: number}>} 匹配結果數組
+   */
+  static searchByChineseName(query) {
+    if (!query || query.trim() === '') return [];
+    
+    const queryLower = query.trim().toLowerCase();
+    const results = [];
+    
+    for (const [code, info] of Object.entries(COUNTRY_CODES)) {
+      const name = info.name;
+      const nameLower = name.toLowerCase();
+      
+      // 完全匹配
+      if (name === query.trim()) {
+        results.unshift({ code, name, nameEn: info.nameEn, match: 'exact', score: 100 });
+      }
+      // 開頭匹配
+      else if (nameLower.startsWith(queryLower)) {
+        results.push({ code, name, nameEn: info.nameEn, match: 'prefix', score: 80 });
+      }
+      // 包含匹配
+      else if (nameLower.includes(queryLower)) {
+        results.push({ code, name, nameEn: info.nameEn, match: 'contains', score: 60 });
+      }
+    }
+    
+    // 按分數排序（完全匹配 > 開頭匹配 > 包含匹配）
+    results.sort((a, b) => b.score - a.score);
+    return results;
+  }
+
+  /**
+   * 根據英文名稱模糊查找 ISO 代碼（支持部分匹配）
+   * @param {string} query - 查詢字符串（支持部分匹配）
+   * @returns {Array<{code: string, name: string, nameEn: string, match: string, score: number}>} 匹配結果數組
+   */
+  static searchByEnglishName(query) {
+    if (!query || query.trim() === '') return [];
+    
+    const queryLower = query.trim().toLowerCase();
+    const results = [];
+    const seenCodes = new Set();
+    
+    for (const [code, info] of Object.entries(COUNTRY_CODES)) {
+      if (seenCodes.has(code)) continue;
+      
+      const nameEn = info.nameEn;
+      const nameEnLower = nameEn.toLowerCase();
+      
+      // 完全匹配（不區分大小寫）
+      if (nameEnLower === queryLower) {
+        results.unshift({ code, name: info.name, nameEn, match: 'exact', score: 100 });
+        seenCodes.add(code);
+        continue;
+      }
+      
+      // 開頭匹配
+      if (nameEnLower.startsWith(queryLower)) {
+        results.push({ code, name: info.name, nameEn, match: 'prefix', score: 80 });
+        seenCodes.add(code);
+        continue;
+      }
+      
+      // 包含匹配
+      if (nameEnLower.includes(queryLower)) {
+        results.push({ code, name: info.name, nameEn, match: 'contains', score: 60 });
+        seenCodes.add(code);
+        continue;
+      }
+      
+      // 單詞開頭匹配（例如 "United" 匹配 "United States of America"）
+      const words = nameEnLower.split(/\s+/);
+      for (const word of words) {
+        if (word.startsWith(queryLower)) {
+          results.push({ code, name: info.name, nameEn, match: 'word-prefix', score: 70 });
+          seenCodes.add(code);
+          break;
+        }
+      }
+    }
+    
+    // 按分數排序
+    results.sort((a, b) => b.score - a.score);
+    return results;
+  }
+
+  /**
+   * 統一搜尋（自動識別中英文並搜尋）
+   * @param {string} query - 查詢字符串
+   * @returns {Array<{code: string, name: string, nameEn: string, match: string, score: number, source: 'chinese'|'english'|'both'}>} 匹配結果數組
+   */
+  static search(query) {
+    if (!query || query.trim() === '') return [];
+    
+    const trimmedQuery = query.trim();
+    const results = [];
+    const seenCodes = new Set();
+    
+    // 檢測是否包含中文字符
+    const hasChinese = /[\u4e00-\u9fa5]/.test(trimmedQuery);
+    
+    // 如果包含中文，優先搜索中文
+    if (hasChinese) {
+      const cnResults = this.searchByChineseName(trimmedQuery);
+      cnResults.forEach(r => {
+        if (!seenCodes.has(r.code)) {
+          seenCodes.add(r.code);
+          results.push({ ...r, source: 'chinese' });
+        }
+      });
+    }
+    
+    // 同時搜索英文（可能用戶輸入的是英文，或中文搜索無結果）
+    const enResults = this.searchByEnglishName(trimmedQuery);
+    enResults.forEach(r => {
+      if (!seenCodes.has(r.code)) {
+        seenCodes.add(r.code);
+        const source = seenCodes.size === results.length + 1 ? 'english' : 'both';
+        results.push({ ...r, source });
+      } else {
+        // 如果已經存在（從中文搜索得到），更新 source 為 'both'
+        const existingIndex = results.findIndex(item => item.code === r.code);
+        if (existingIndex !== -1 && results[existingIndex].source === 'chinese') {
+          results[existingIndex].source = 'both';
+          // 如果英文匹配分數更高，更新分數
+          if (r.score > results[existingIndex].score) {
+            results[existingIndex].score = r.score;
+            results[existingIndex].match = r.match;
+          }
+        }
+      }
+    });
+    
+    // 按分數排序
+    results.sort((a, b) => b.score - a.score);
+    return results;
+  }
+
+  /**
+   * 根據中文或英文名稱查找 ISO 代碼（優先完全匹配，fallback 到模糊搜索）
+   * @param {string} name - 國家名稱（中文或英文）
+   * @returns {string|null} ISO 代碼
+   */
+  static findByName(name) {
+    if (!name) return null;
+    
+    // 先嘗試精確匹配
+    let code = this.findByChineseName(name);
+    if (code) return code;
+    
+    code = this.findByEnglishName(name);
+    if (code) return code;
+    
+    // 如果精確匹配失敗，使用模糊搜索
+    const results = this.search(name);
+    return results.length > 0 ? results[0].code : null;
+  }
 }
 
 // 導出到全局
@@ -330,6 +491,7 @@ if (typeof window !== 'undefined') {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { COUNTRY_CODES, CountryCodes };
 }
+
 
 
 

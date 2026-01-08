@@ -925,11 +925,20 @@ ${text}
                   const trimmedName = countryName.trim();
                   if (!trimmedName) continue;
                   
-                  // 獲取國家代碼
+                  // 獲取國家代碼（優先使用模糊搜索，提高匹配率）
                   let countryCode = null;
                   if (CountryCodes) {
-                    countryCode = CountryCodes.findByChineseName(trimmedName) || 
-                                  CountryCodes.findByEnglishName(trimmedName);
+                    // 優先使用增強的搜索功能（支持模糊匹配）
+                    if (typeof CountryCodes.search === 'function') {
+                      const results = CountryCodes.search(trimmedName);
+                      countryCode = results.length > 0 ? results[0].code : null;
+                    }
+                    
+                    // Fallback: 使用精確匹配
+                    if (!countryCode) {
+                      countryCode = CountryCodes.findByChineseName(trimmedName) || 
+                                    CountryCodes.findByEnglishName(trimmedName);
+                    }
                   }
                   
                   if (countryCode) {
@@ -1251,11 +1260,92 @@ ${text}
 
   // 訂閱階段切換事件
   if (eventBus) {
-    eventBus.on('stage:switch', (data) => {
+    eventBus.on('stage:switch', async (data) => {
       logger.info('Stage switched:', data);
       // 階段切換時更新內容列表（確保跨階段可見）
       if (contentListManager) {
         contentListManager.updateContentList();
+      }
+      
+      // 當切換到 administration 階段時，自動載入並顯示行政區邊界
+      if (data.to === 'administration') {
+        const state = stateManager.getState();
+        const countryAreas = state.countryStage?.areas || [];
+        const boundaryVisible = state.administrationStage?.boundaryVisible !== false;
+        
+        logger.info(`[Stage Switch] Entering administration stage. Countries: ${countryAreas.length}, boundaryVisible: ${boundaryVisible}`);
+        
+        if (countryAreas.length > 0 && boundaryVisible && boundaryManager && map) {
+          // 確保 administration source 已創建
+          const adminSourceId = 'boundary-source-administration';
+          if (!map.getSource(adminSourceId)) {
+            boundaryManager.createSource('administration');
+          }
+          
+          // 為每個選中的國家載入行政區邊界（預覽模式，只顯示邊界線）
+          for (const country of countryAreas) {
+            const countryCode = country.gadmId || country.id;
+            try {
+              logger.info(`[Stage Switch] Loading administrative boundaries for country: ${countryCode}`);
+              
+              // 獲取該國家的所有行政區
+              const response = await fetch(`/api/gadm?gadmId=${encodeURIComponent(countryCode)}&level=1`);
+              if (response.ok) {
+                const geojson = await response.json();
+                if (geojson && geojson.features && geojson.features.length > 0) {
+                  // 添加到 administration stage 的 source，使用 preview- 前綴
+                  const adminSource = map.getSource(adminSourceId);
+                  if (adminSource && adminSource.type === 'geojson') {
+                    const currentData = adminSource._data || { type: 'FeatureCollection', features: [] };
+                    const existingFeatureIds = new Set((currentData.features || []).map(f => f.id));
+                    
+                    // 只添加不存在的 features（避免重複）
+                    const newFeatures = geojson.features
+                      .filter(f => {
+                        const gid = f.properties?.GID_1 || f.id;
+                        const previewId = `preview-${countryCode}-${gid}`;
+                        return !existingFeatureIds.has(previewId) && !existingFeatureIds.has(gid);
+                      })
+                      .map((f, index) => {
+                        const gid = f.properties?.GID_1 || f.id || `admin-${index}`;
+                        return {
+                          ...f,
+                          id: `preview-${countryCode}-${gid}`, // 使用 preview- 前綴區分
+                          properties: {
+                            ...f.properties,
+                            _preview: true, // 標記為預覽邊界
+                            _countryCode: countryCode
+                          }
+                        };
+                      });
+                    
+                    if (newFeatures.length > 0) {
+                      const updatedFeatures = [...(currentData.features || []), ...newFeatures];
+                      adminSource.setData({
+                        type: 'FeatureCollection',
+                        features: updatedFeatures
+                      });
+                      
+                      logger.info(`[Stage Switch] Added ${newFeatures.length} preview administrative boundaries for ${countryCode}`);
+                    }
+                  }
+                }
+              }
+            } catch (error) {
+              logger.error(`[Stage Switch] Failed to load administrative boundaries for ${countryCode}:`, error);
+            }
+          }
+          
+          // 顯示邊界線（使用 outline 模式，只顯示邊框）
+          if (boundaryManager) {
+            // 使用 requestAnimationFrame 確保數據已同步
+            requestAnimationFrame(() => {
+              boundaryManager.setVisibility('administration', true);
+              boundaryManager.setMode('administration', 'outline'); // 只顯示邊界線，不填充
+              logger.info(`[Stage Switch] Administrative boundaries set to visible (outline mode)`);
+            });
+          }
+        }
       }
     });
   }
@@ -2077,24 +2167,146 @@ async function handleAdministrationSearch(query, locationResolver) {
     }
 
     // 嘗試通過服務器端 API 搜索行政區
-    // 先獲取國家代碼（從當前國家階段或通過查詢推斷）
+    // 先獲取國家代碼（從當前國家階段、座標反推或查詢推斷）
     const state = stateManager.getState();
     const countryAreas = state.countryStage?.areas || [];
     logger.info(`[handleAdministrationSearch] Country areas found: ${countryAreas.length}`);
     
-    // 如果沒有選中的國家，嘗試從查詢中推斷（例如 "台北市" -> TWN）
     let countryCode = null;
-    if (countryAreas.length > 0) {
-      // 使用第一個選中的國家
+    
+    // 方法1: 優先使用 Mapbox Geocoding API 反向地理編碼（根據座標推斷國家）
+    if (coordinates && coordinates.length === 2 && countryAreas.length > 0) {
+      try {
+        const CONFIG = typeof window !== 'undefined' ? window.CONFIG : {};
+        const token = CONFIG.MAPBOX?.TOKEN;
+        
+        if (token) {
+          const [lng, lat] = coordinates;
+          const reverseGeocodeUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${token}&types=country&limit=1`;
+          
+          logger.info(`[handleAdministrationSearch] Attempting reverse geocoding for [${lng}, ${lat}]`);
+          const reverseResponse = await fetch(reverseGeocodeUrl);
+          
+          if (reverseResponse.ok) {
+            const reverseData = await reverseResponse.json();
+            if (reverseData.features && reverseData.features.length > 0) {
+              // Mapbox 返回的國家代碼可能是 ISO 3166-1 alpha-2 (例如 "RU" for Russia)
+              const countryCodeFromMapbox = reverseData.features[0].properties?.short_code?.toUpperCase();
+              
+              if (countryCodeFromMapbox) {
+                logger.info(`[handleAdministrationSearch] Mapbox returned country code: ${countryCodeFromMapbox}`);
+                
+                // 檢查是否在選中的國家列表中（需要將 ISO 代碼轉換為 GADM 代碼）
+                // 對於大多數國家，ISO 代碼和 GADM 代碼相同，但有些例外（例如 UK vs GBR）
+                const countryMapping = {
+                  'RU': 'RUS',
+                  'TW': 'TWN',
+                  'CN': 'CHN',
+                  'US': 'USA',
+                  'GB': 'GBR',
+                  'KR': 'KOR',
+                  'KP': 'PRK'
+                };
+                
+                const gadmCode = countryMapping[countryCodeFromMapbox] || countryCodeFromMapbox;
+                const matchedCountry = countryAreas.find(a => {
+                  const code = (a.gadmId || a.id).toUpperCase();
+                  return code === gadmCode || code.startsWith(gadmCode);
+                });
+                
+                if (matchedCountry) {
+                  countryCode = matchedCountry.gadmId || matchedCountry.id;
+                  logger.info(`[handleAdministrationSearch] Matched country from reverse geocoding: ${countryCode}`);
+                }
+              }
+            }
+          }
+        }
+      } catch (error) {
+        logger.warn(`[handleAdministrationSearch] Reverse geocoding failed:`, error);
+      }
+    }
+    
+    // 方法2: 根據查詢內容推斷（城市名稱映射）
+    if (!countryCode) {
+      const queryClean = query.replace(/[市縣省州]/g, '').trim();
+      
+      // 城市到國家代碼的映射（可擴展）
+      const cityToCountryMap = {
+        '莫斯科': 'RUS',
+        '聖彼得堡': 'RUS',
+        '台北': 'TWN',
+        '新北': 'TWN',
+        '桃園': 'TWN',
+        '台中': 'TWN',
+        '台南': 'TWN',
+        '高雄': 'TWN',
+        '北京': 'CHN',
+        '上海': 'CHN',
+        '紐約': 'USA',
+        '洛杉磯': 'USA',
+        '芝加哥': 'USA'
+      };
+      
+      for (const [city, code] of Object.entries(cityToCountryMap)) {
+        if (queryClean.includes(city)) {
+          // 檢查該國家是否在選中的國家列表中
+          const matchedCountry = countryAreas.find(a => {
+            const areaCode = (a.gadmId || a.id).toUpperCase();
+            return areaCode === code.toUpperCase();
+          });
+          
+          if (matchedCountry) {
+            countryCode = matchedCountry.gadmId || matchedCountry.id;
+            logger.info(`[handleAdministrationSearch] Inferred country from city name "${city}": ${countryCode}`);
+            break;
+          }
+        }
+      }
+    }
+    
+    // 方法3: 根據座標範圍粗略判斷（fallback）
+    if (!countryCode && coordinates && coordinates.length === 2 && countryAreas.length > 0) {
+      const [lng, lat] = coordinates;
+      
+      // 俄羅斯範圍（粗略）
+      if (lng >= 19 && lng <= 180 && lat >= 41 && lat <= 82) {
+        const rusArea = countryAreas.find(a => {
+          const code = (a.gadmId || a.id).toUpperCase();
+          return code === 'RUS';
+        });
+        if (rusArea) {
+          countryCode = rusArea.gadmId || rusArea.id;
+          logger.info(`[handleAdministrationSearch] Inferred country from coordinates (RUS range): ${countryCode}`);
+        }
+      }
+      
+      // 台灣範圍（粗略）
+      if (!countryCode && lng >= 119 && lng <= 122 && lat >= 21 && lat <= 26) {
+        const twnArea = countryAreas.find(a => {
+          const code = (a.gadmId || a.id).toUpperCase();
+          return code === 'TWN';
+        });
+        if (twnArea) {
+          countryCode = twnArea.gadmId || twnArea.id;
+          logger.info(`[handleAdministrationSearch] Inferred country from coordinates (TWN range): ${countryCode}`);
+        }
+      }
+    }
+    
+    // 方法4: 如果還是沒有，使用第一個選中的國家（最終 fallback）
+    if (!countryCode && countryAreas.length > 0) {
       countryCode = countryAreas[0].gadmId || countryAreas[0].id;
-      logger.info(`[handleAdministrationSearch] Using country from stage: ${countryCode}`);
-    } else {
-      // 嘗試從查詢推斷（簡化版本，主要處理台灣）
+      logger.info(`[handleAdministrationSearch] Using first country from stage (fallback): ${countryCode}`);
+    }
+    
+    // 方法5: 嘗試從查詢推斷（台灣特例）
+    if (!countryCode) {
       if (query.includes('台北') || query.includes('新北') || query.includes('桃園') || 
           query.includes('台中') || query.includes('台南') || query.includes('高雄') ||
           query.includes('台灣') || query.includes('臺灣')) {
         countryCode = 'TWN';
-        logger.info(`[handleAdministrationSearch] Inferred country code from query: ${countryCode}`);
+        logger.info(`[handleAdministrationSearch] Inferred country code from query (TWN): ${countryCode}`);
       }
     }
 
@@ -2200,6 +2412,31 @@ async function handleAdministrationSearch(query, locationResolver) {
           }
           
           try {
+            // 在添加填充的行政區之前，先移除對應的預覽邊界（如果存在）
+            const adminSourceId = 'boundary-source-administration';
+            const adminSource = map.getSource(adminSourceId);
+            if (adminSource && adminSource.type === 'geojson') {
+              const currentData = adminSource._data || { type: 'FeatureCollection', features: [] };
+              const previewFeatureIds = [
+                `preview-${countryCode}-${gid1}`,
+                `preview-${countryCode}-${gadmId}`
+              ];
+              
+              // 移除預覽邊界
+              const filteredFeatures = (currentData.features || []).filter(f => {
+                const fid = f.id || '';
+                return !previewFeatureIds.includes(fid) && !fid.startsWith(`preview-${countryCode}-${gid1}`) && !fid.startsWith(`preview-${countryCode}-${gadmId}`);
+              });
+              
+              if (filteredFeatures.length < currentData.features.length) {
+                adminSource.setData({
+                  type: 'FeatureCollection',
+                  features: filteredFeatures
+                });
+                logger.info(`[handleAdministrationSearch] Removed ${currentData.features.length - filteredFeatures.length} preview boundary(ies) before adding filled area`);
+              }
+            }
+            
             await boundaryManager.addArea('administration', area);
             logger.info(`Added administrative area: ${adminName} (${gadmId}) with color ${color}`);
             
@@ -2291,19 +2528,42 @@ async function handleCountrySearch(query, locationResolver) {
     let countryName = query;
 
     if (CountryCodes) {
-      // 嘗試通過中文名稱查找
-      countryCode = CountryCodes.findByChineseName(query.trim());
-      if (countryCode) {
-        countryName = CountryCodes.get(countryCode)?.name || query;
-        logger.info(`Found country code via Chinese name: ${countryCode} (${countryName})`);
-      } else {
-        // 嘗試通過英文名稱查找
-        countryCode = CountryCodes.findByEnglishName(query.trim());
+      // 優先使用增強的搜尋功能（支持模糊匹配）
+      if (typeof CountryCodes.search === 'function') {
+        const results = CountryCodes.search(query.trim());
+        
+        if (results.length > 0) {
+          // 使用最匹配的結果
+          const bestMatch = results[0];
+          countryCode = bestMatch.code;
+          countryName = bestMatch.name; // 使用中文名稱作為顯示名稱
+          
+          logger.info(`Found country via enhanced search: ${countryCode} (${countryName}, ${bestMatch.nameEn})`);
+          logger.info(`Match type: ${bestMatch.match}, Score: ${bestMatch.score}, Source: ${bestMatch.source}`);
+          
+          // 如果有多個結果且分數相近，記錄日志以便調試
+          if (results.length > 1 && results[1].score >= bestMatch.score - 10) {
+            logger.info(`Multiple matches found: ${results.slice(0, 3).map(r => `${r.name}(${r.code})`).join(', ')}`);
+          }
+        }
+      }
+      
+      // Fallback: 使用舊的精確匹配方法（如果新方法不可用或無結果）
+      if (!countryCode) {
+        // 嘗試通過中文名稱查找
+        countryCode = CountryCodes.findByChineseName(query.trim());
         if (countryCode) {
           countryName = CountryCodes.get(countryCode)?.name || query;
-          logger.info(`Found country code via English name: ${countryCode} (${countryName})`);
+          logger.info(`Found country code via Chinese name (exact): ${countryCode} (${countryName})`);
         } else {
-          logger.warn(`Country code not found for: ${query}`);
+          // 嘗試通過英文名稱查找
+          countryCode = CountryCodes.findByEnglishName(query.trim());
+          if (countryCode) {
+            countryName = CountryCodes.get(countryCode)?.name || query;
+            logger.info(`Found country code via English name (exact): ${countryCode} (${countryName})`);
+          } else {
+            logger.warn(`Country code not found for: ${query}`);
+          }
         }
       }
     } else {
@@ -2481,7 +2741,8 @@ async function handleCountrySearch(query, locationResolver) {
         });
         logger.info(`Zoomed to location: [${coordinates[0]}, ${coordinates[1]}]`);
       } else {
-        alert('無法找到該國家，請檢查輸入的國家名稱是否正確。');
+        logger.warn(`Unable to find country for query: ${query}`);
+        alert(`無法找到該國家：${query}\n請嘗試使用完整的中文或英文名稱，例如："台灣"、"Taiwan"、"United States" 等`);
       }
     }
   } catch (error) {
