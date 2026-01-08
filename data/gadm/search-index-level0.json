@@ -9,14 +9,16 @@
       "variants": [],
       "aliases": [
         "ARUBA",
-        "ABW",
-        "阿魯巴"
+        "ABW"
+      ],
+      "searchKeys": [
+        "ARUBA",
+        "ABW"
       ]
     },
     "searchKeys": [
       "ARUBA",
-      "ABW",
-      "阿魯巴"
+      "ABW"
     ],
     "_properties": {
       "GID_0": "ABW",
@@ -33,15 +35,16 @@
       "variants": [],
       "aliases": [
         "AFGHANISTAN",
-        "AFG",
-        "阿富汗",
-        "AFGHANISTAN"
+        "AFG"
+      ],
+      "searchKeys": [
+        "AFGHANISTAN",
+        "AFG"
       ]
     },
     "searchKeys": [
       "AFGHANISTAN",
-      "AFG",
-      "阿富汗"
+      "AFG"
     ],
     "_properties": {
       "GID_0": "AFG",
@@ -58,15 +61,16 @@
       "variants": [],
       "aliases": [
         "ANGOLA",
-        "AGO",
-        "安哥拉",
-        "ANGOLA"
+        "AGO"
+      ],
+      "searchKeys": [
+        "ANGOLA",
+        "AGO"
       ]
     },
     "searchKeys": [
       "ANGOLA",
-      "AGO",
-      "安哥拉"
+      "AGO"
     ],
     "_properties": {
       "GID_0": "AGO",
@@ -83,15 +87,16 @@
       "variants": [],
       "aliases": [
         "ANGUILLA",
-        "AIA",
-        "安吉拉",
-        "ANGUILLA"
+        "AIA"
+      ],
+      "searchKeys": [
+        "ANGUILLA",
+        "AIA"
       ]
     },
     "searchKeys": [
       "ANGUILLA",
-      "AIA",
-      "安吉拉"
+      "AIA"
     ],
     "_properties": {
       "GID_0": "AIA",
@@ -108,16 +113,16 @@
       "variants": [],
       "aliases": [
         "ÅLAND",
-        "ALA",
-        "亞蘭群島",
-        "ALAND ISLANDS"
+        "ALA"
+      ],
+      "searchKeys": [
+        "ÅLAND",
+        "ALA"
       ]
     },
     "searchKeys": [
       "ÅLAND",
-      "ALA",
-      "亞蘭群島",
-      "ALAND ISLANDS"
+      "ALA"
     ],
     "_properties": {
       "GID_0": "ALA",
@@ -134,15 +139,16 @@
       "variants": [],
       "aliases": [
         "ALBANIA",
-        "ALB",
-        "阿爾巴尼亞",
-        "ALBANIA"
+        "ALB"
+      ],
+      "searchKeys": [
+        "ALBANIA",
+        "ALB"
       ]
     },
     "searchKeys": [
       "ALBANIA",
-      "ALB",
-      "阿爾巴尼亞"
+      "ALB"
     ],
     "_properties": {
       "GID_0": "ALB",
@@ -159,15 +165,16 @@
       "variants": [],
       "aliases": [
         "ANDORRA",
-        "AND",
-        "安道爾",
-        "ANDORRA"
+        "AND"
+      ],
+      "searchKeys": [
+        "ANDORRA",
+        "AND"
       ]
     },
     "searchKeys": [
       "ANDORRA",
-      "AND",
-      "安道爾"
+      "AND"
     ],
     "_properties": {
       "GID_0": "AND",
@@ -184,15 +191,16 @@
       "variants": [],
       "aliases": [
         "UNITED ARAB EMIRATES",
-        "ARE",
-        "阿拉伯聯合大公國",
-        "UNITED ARAB EMIRATES"
+        "ARE"
+      ],
+      "searchKeys": [
+        "UNITED ARAB EMIRATES",
+        "ARE"
       ]
     },
     "searchKeys": [
       "UNITED ARAB EMIRATES",
-      "ARE",
-      "阿拉伯聯合大公國"
+      "ARE"
     ],
     "_properties": {
       "GID_0": "ARE",
@@ -209,15 +217,16 @@
       "variants": [],
       "aliases": [
         "ARGENTINA",
-        "ARG",
-        "阿根廷",
-        "ARGENTINA"
+        "ARG"
+      ],
+      "searchKeys": [
+        "ARGENTINA",
+        "ARG"
       ]
     },
     "searchKeys": [
       "ARGENTINA",
-      "ARG",
-      "阿根廷"
+      "ARG"
     ],
     "_properties": {
       "GID_0": "ARG",
@@ -234,15 +243,16 @@
       "variants": [],
       "aliases": [
         "ARMENIA",
-        "ARM",
-        "亞美尼亞",
-        "ARMENIA"
+        "ARM"
+      ],
+      "searchKeys": [
+        "ARMENIA",
+        "ARM"
       ]
     },
     "searchKeys": [
       "ARMENIA",
-      "ARM",
-      "亞美尼亞"
+      "ARM"
     ],
     "_properties": {
       "GID_0": "ARM",
@@ -259,15 +269,16 @@
       "variants": [],
       "aliases": [
         "AMERICAN SAMOA",
-        "ASM",
-        "薩摩亞",
-        "AMERICAN SAMOA"
+        "ASM"
+      ],
+      "searchKeys": [
+        "AMERICAN SAMOA",
+        "ASM"
       ]
     },
     "searchKeys": [
       "AMERICAN SAMOA",
-      "ASM",
-      "薩摩亞"
+      "ASM"
     ],
     "_properties": {
       "GID_0": "ASM",
@@ -284,15 +295,16 @@
       "variants": [],
       "aliases": [
         "ANTARCTICA",
-        "ATA",
-        "南極洲",
-        "ANTARCTICA"
+        "ATA"
+      ],
+      "searchKeys": [
+        "ANTARCTICA",
+        "ATA"
       ]
     },
     "searchKeys": [
       "ANTARCTICA",
-      "ATA",
-      "南極洲"
+      "ATA"
     ],
     "_properties": {
       "GID_0": "ATA",
@@ -309,15 +321,16 @@
       "variants": [],
       "aliases": [
         "FRENCH SOUTHERN TERRITORIES",
-        "ATF",
-        "法屬南部領地",
-        "FRENCH SOUTHERN TERRITORIES"
+        "ATF"
+      ],
+      "searchKeys": [
+        "FRENCH SOUTHERN TERRITORIES",
+        "ATF"
       ]
     },
     "searchKeys": [
       "FRENCH SOUTHERN TERRITORIES",
-      "ATF",
-      "法屬南部領地"
+      "ATF"
     ],
     "_properties": {
       "GID_0": "ATF",
@@ -334,15 +347,16 @@
       "variants": [],
       "aliases": [
         "ANTIGUA AND BARBUDA",
-        "ATG",
-        "安地卡及巴布達",
-        "ANTIGUA AND BARBUDA"
+        "ATG"
+      ],
+      "searchKeys": [
+        "ANTIGUA AND BARBUDA",
+        "ATG"
       ]
     },
     "searchKeys": [
       "ANTIGUA AND BARBUDA",
-      "ATG",
-      "安地卡及巴布達"
+      "ATG"
     ],
     "_properties": {
       "GID_0": "ATG",
@@ -359,15 +373,16 @@
       "variants": [],
       "aliases": [
         "AUSTRALIA",
-        "AUS",
-        "澳洲",
-        "AUSTRALIA"
+        "AUS"
+      ],
+      "searchKeys": [
+        "AUSTRALIA",
+        "AUS"
       ]
     },
     "searchKeys": [
       "AUSTRALIA",
-      "AUS",
-      "澳洲"
+      "AUS"
     ],
     "_properties": {
       "GID_0": "AUS",
@@ -384,15 +399,16 @@
       "variants": [],
       "aliases": [
         "AUSTRIA",
-        "AUT",
-        "奧地利",
-        "AUSTRIA"
+        "AUT"
+      ],
+      "searchKeys": [
+        "AUSTRIA",
+        "AUT"
       ]
     },
     "searchKeys": [
       "AUSTRIA",
-      "AUT",
-      "奧地利"
+      "AUT"
     ],
     "_properties": {
       "GID_0": "AUT",
@@ -409,15 +425,16 @@
       "variants": [],
       "aliases": [
         "AZERBAIJAN",
-        "AZE",
-        "亞塞拜然",
-        "AZERBAIJAN"
+        "AZE"
+      ],
+      "searchKeys": [
+        "AZERBAIJAN",
+        "AZE"
       ]
     },
     "searchKeys": [
       "AZERBAIJAN",
-      "AZE",
-      "亞塞拜然"
+      "AZE"
     ],
     "_properties": {
       "GID_0": "AZE",
@@ -434,15 +451,16 @@
       "variants": [],
       "aliases": [
         "BURUNDI",
-        "BDI",
-        "蒲隆地",
-        "BURUNDI"
+        "BDI"
+      ],
+      "searchKeys": [
+        "BURUNDI",
+        "BDI"
       ]
     },
     "searchKeys": [
       "BURUNDI",
-      "BDI",
-      "蒲隆地"
+      "BDI"
     ],
     "_properties": {
       "GID_0": "BDI",
@@ -459,15 +477,16 @@
       "variants": [],
       "aliases": [
         "BELGIUM",
-        "BEL",
-        "比利時",
-        "BELGIUM"
+        "BEL"
+      ],
+      "searchKeys": [
+        "BELGIUM",
+        "BEL"
       ]
     },
     "searchKeys": [
       "BELGIUM",
-      "BEL",
-      "比利時"
+      "BEL"
     ],
     "_properties": {
       "GID_0": "BEL",
@@ -484,15 +503,16 @@
       "variants": [],
       "aliases": [
         "BENIN",
-        "BEN",
-        "貝南",
-        "BENIN"
+        "BEN"
+      ],
+      "searchKeys": [
+        "BENIN",
+        "BEN"
       ]
     },
     "searchKeys": [
       "BENIN",
-      "BEN",
-      "貝南"
+      "BEN"
     ],
     "_properties": {
       "GID_0": "BEN",
@@ -509,15 +529,16 @@
       "variants": [],
       "aliases": [
         "BONAIRE, SINT EUSTATIUS AND SABA",
-        "BES",
-        "波奈、聖佑達修斯與沙巴",
-        "BONAIRE, SINT EUSTATIUS AND SABA"
+        "BES"
+      ],
+      "searchKeys": [
+        "BONAIRE, SINT EUSTATIUS AND SABA",
+        "BES"
       ]
     },
     "searchKeys": [
       "BONAIRE, SINT EUSTATIUS AND SABA",
-      "BES",
-      "波奈、聖佑達修斯與沙巴"
+      "BES"
     ],
     "_properties": {
       "GID_0": "BES",
@@ -534,15 +555,16 @@
       "variants": [],
       "aliases": [
         "BURKINA FASO",
-        "BFA",
-        "布吉納法索",
-        "BURKINA FASO"
+        "BFA"
+      ],
+      "searchKeys": [
+        "BURKINA FASO",
+        "BFA"
       ]
     },
     "searchKeys": [
       "BURKINA FASO",
-      "BFA",
-      "布吉納法索"
+      "BFA"
     ],
     "_properties": {
       "GID_0": "BFA",
@@ -559,15 +581,16 @@
       "variants": [],
       "aliases": [
         "BANGLADESH",
-        "BGD",
-        "孟加拉",
-        "BANGLADESH"
+        "BGD"
+      ],
+      "searchKeys": [
+        "BANGLADESH",
+        "BGD"
       ]
     },
     "searchKeys": [
       "BANGLADESH",
-      "BGD",
-      "孟加拉"
+      "BGD"
     ],
     "_properties": {
       "GID_0": "BGD",
@@ -584,15 +607,16 @@
       "variants": [],
       "aliases": [
         "BULGARIA",
-        "BGR",
-        "保加利亞",
-        "BULGARIA"
+        "BGR"
+      ],
+      "searchKeys": [
+        "BULGARIA",
+        "BGR"
       ]
     },
     "searchKeys": [
       "BULGARIA",
-      "BGR",
-      "保加利亞"
+      "BGR"
     ],
     "_properties": {
       "GID_0": "BGR",
@@ -609,15 +633,16 @@
       "variants": [],
       "aliases": [
         "BAHRAIN",
-        "BHR",
-        "巴林",
-        "BAHRAIN"
+        "BHR"
+      ],
+      "searchKeys": [
+        "BAHRAIN",
+        "BHR"
       ]
     },
     "searchKeys": [
       "BAHRAIN",
-      "BHR",
-      "巴林"
+      "BHR"
     ],
     "_properties": {
       "GID_0": "BHR",
@@ -634,15 +659,16 @@
       "variants": [],
       "aliases": [
         "BAHAMAS",
-        "BHS",
-        "巴哈馬",
-        "BAHAMAS"
+        "BHS"
+      ],
+      "searchKeys": [
+        "BAHAMAS",
+        "BHS"
       ]
     },
     "searchKeys": [
       "BAHAMAS",
-      "BHS",
-      "巴哈馬"
+      "BHS"
     ],
     "_properties": {
       "GID_0": "BHS",
@@ -659,15 +685,16 @@
       "variants": [],
       "aliases": [
         "BOSNIA AND HERZEGOVINA",
-        "BIH",
-        "波士尼亞與赫塞哥維納",
-        "BOSNIA AND HERZEGOVINA"
+        "BIH"
+      ],
+      "searchKeys": [
+        "BOSNIA AND HERZEGOVINA",
+        "BIH"
       ]
     },
     "searchKeys": [
       "BOSNIA AND HERZEGOVINA",
-      "BIH",
-      "波士尼亞與赫塞哥維納"
+      "BIH"
     ],
     "_properties": {
       "GID_0": "BIH",
@@ -684,16 +711,16 @@
       "variants": [],
       "aliases": [
         "SAINT-BARTHÉLEMY",
-        "BLM",
-        "聖巴瑟米",
-        "SAINT BARTHÉLEMY"
+        "BLM"
+      ],
+      "searchKeys": [
+        "SAINT-BARTHÉLEMY",
+        "BLM"
       ]
     },
     "searchKeys": [
       "SAINT-BARTHÉLEMY",
-      "BLM",
-      "聖巴瑟米",
-      "SAINT BARTHÉLEMY"
+      "BLM"
     ],
     "_properties": {
       "GID_0": "BLM",
@@ -710,15 +737,16 @@
       "variants": [],
       "aliases": [
         "BELARUS",
-        "BLR",
-        "白俄羅斯",
-        "BELARUS"
+        "BLR"
+      ],
+      "searchKeys": [
+        "BELARUS",
+        "BLR"
       ]
     },
     "searchKeys": [
       "BELARUS",
-      "BLR",
-      "白俄羅斯"
+      "BLR"
     ],
     "_properties": {
       "GID_0": "BLR",
@@ -735,15 +763,16 @@
       "variants": [],
       "aliases": [
         "BELIZE",
-        "BLZ",
-        "貝里斯",
-        "BELIZE"
+        "BLZ"
+      ],
+      "searchKeys": [
+        "BELIZE",
+        "BLZ"
       ]
     },
     "searchKeys": [
       "BELIZE",
-      "BLZ",
-      "貝里斯"
+      "BLZ"
     ],
     "_properties": {
       "GID_0": "BLZ",
@@ -760,15 +789,16 @@
       "variants": [],
       "aliases": [
         "BERMUDA",
-        "BMU",
-        "百慕達",
-        "BERMUDA"
+        "BMU"
+      ],
+      "searchKeys": [
+        "BERMUDA",
+        "BMU"
       ]
     },
     "searchKeys": [
       "BERMUDA",
-      "BMU",
-      "百慕達"
+      "BMU"
     ],
     "_properties": {
       "GID_0": "BMU",
@@ -785,15 +815,16 @@
       "variants": [],
       "aliases": [
         "BOLIVIA",
-        "BOL",
-        "玻利維亞",
-        "BOLIVIA"
+        "BOL"
+      ],
+      "searchKeys": [
+        "BOLIVIA",
+        "BOL"
       ]
     },
     "searchKeys": [
       "BOLIVIA",
-      "BOL",
-      "玻利維亞"
+      "BOL"
     ],
     "_properties": {
       "GID_0": "BOL",
@@ -810,15 +841,16 @@
       "variants": [],
       "aliases": [
         "BRAZIL",
-        "BRA",
-        "巴西",
-        "BRAZIL"
+        "BRA"
+      ],
+      "searchKeys": [
+        "BRAZIL",
+        "BRA"
       ]
     },
     "searchKeys": [
       "BRAZIL",
-      "BRA",
-      "巴西"
+      "BRA"
     ],
     "_properties": {
       "GID_0": "BRA",
@@ -835,15 +867,16 @@
       "variants": [],
       "aliases": [
         "BARBADOS",
-        "BRB",
-        "巴貝多",
-        "BARBADOS"
+        "BRB"
+      ],
+      "searchKeys": [
+        "BARBADOS",
+        "BRB"
       ]
     },
     "searchKeys": [
       "BARBADOS",
-      "BRB",
-      "巴貝多"
+      "BRB"
     ],
     "_properties": {
       "GID_0": "BRB",
@@ -860,16 +893,16 @@
       "variants": [],
       "aliases": [
         "BRUNEI",
-        "BRN",
-        "汶萊",
-        "BRUNEI DARUSSALAM"
+        "BRN"
+      ],
+      "searchKeys": [
+        "BRUNEI",
+        "BRN"
       ]
     },
     "searchKeys": [
       "BRUNEI",
-      "BRN",
-      "汶萊",
-      "BRUNEI DARUSSALAM"
+      "BRN"
     ],
     "_properties": {
       "GID_0": "BRN",
@@ -886,15 +919,16 @@
       "variants": [],
       "aliases": [
         "BHUTAN",
-        "BTN",
-        "不丹",
-        "BHUTAN"
+        "BTN"
+      ],
+      "searchKeys": [
+        "BHUTAN",
+        "BTN"
       ]
     },
     "searchKeys": [
       "BHUTAN",
-      "BTN",
-      "不丹"
+      "BTN"
     ],
     "_properties": {
       "GID_0": "BTN",
@@ -911,15 +945,16 @@
       "variants": [],
       "aliases": [
         "BOUVET ISLAND",
-        "BVT",
-        "布威島",
-        "BOUVET ISLAND"
+        "BVT"
+      ],
+      "searchKeys": [
+        "BOUVET ISLAND",
+        "BVT"
       ]
     },
     "searchKeys": [
       "BOUVET ISLAND",
-      "BVT",
-      "布威島"
+      "BVT"
     ],
     "_properties": {
       "GID_0": "BVT",
@@ -936,15 +971,16 @@
       "variants": [],
       "aliases": [
         "BOTSWANA",
-        "BWA",
-        "波札那",
-        "BOTSWANA"
+        "BWA"
+      ],
+      "searchKeys": [
+        "BOTSWANA",
+        "BWA"
       ]
     },
     "searchKeys": [
       "BOTSWANA",
-      "BWA",
-      "波札那"
+      "BWA"
     ],
     "_properties": {
       "GID_0": "BWA",
@@ -961,15 +997,16 @@
       "variants": [],
       "aliases": [
         "CENTRAL AFRICAN REPUBLIC",
-        "CAF",
-        "中非",
-        "CENTRAL AFRICAN REPUBLIC"
+        "CAF"
+      ],
+      "searchKeys": [
+        "CENTRAL AFRICAN REPUBLIC",
+        "CAF"
       ]
     },
     "searchKeys": [
       "CENTRAL AFRICAN REPUBLIC",
-      "CAF",
-      "中非"
+      "CAF"
     ],
     "_properties": {
       "GID_0": "CAF",
@@ -986,15 +1023,16 @@
       "variants": [],
       "aliases": [
         "CANADA",
-        "CAN",
-        "加拿大",
-        "CANADA"
+        "CAN"
+      ],
+      "searchKeys": [
+        "CANADA",
+        "CAN"
       ]
     },
     "searchKeys": [
       "CANADA",
-      "CAN",
-      "加拿大"
+      "CAN"
     ],
     "_properties": {
       "GID_0": "CAN",
@@ -1011,16 +1049,16 @@
       "variants": [],
       "aliases": [
         "COCOS ISLANDS",
-        "CCK",
-        "科克斯（基靈）群島",
-        "COCOS (KEELING) ISLANDS"
+        "CCK"
+      ],
+      "searchKeys": [
+        "COCOS ISLANDS",
+        "CCK"
       ]
     },
     "searchKeys": [
       "COCOS ISLANDS",
-      "CCK",
-      "科克斯（基靈）群島",
-      "COCOS (KEELING) ISLANDS"
+      "CCK"
     ],
     "_properties": {
       "GID_0": "CCK",
@@ -1037,15 +1075,16 @@
       "variants": [],
       "aliases": [
         "SWITZERLAND",
-        "CHE",
-        "瑞士",
-        "SWITZERLAND"
+        "CHE"
+      ],
+      "searchKeys": [
+        "SWITZERLAND",
+        "CHE"
       ]
     },
     "searchKeys": [
       "SWITZERLAND",
-      "CHE",
-      "瑞士"
+      "CHE"
     ],
     "_properties": {
       "GID_0": "CHE",
@@ -1062,15 +1101,16 @@
       "variants": [],
       "aliases": [
         "CHILE",
-        "CHL",
-        "智利",
-        "CHILE"
+        "CHL"
+      ],
+      "searchKeys": [
+        "CHILE",
+        "CHL"
       ]
     },
     "searchKeys": [
       "CHILE",
-      "CHL",
-      "智利"
+      "CHL"
     ],
     "_properties": {
       "GID_0": "CHL",
@@ -1087,15 +1127,16 @@
       "variants": [],
       "aliases": [
         "CHINA",
-        "CHN",
-        "中國",
-        "CHINA"
+        "CHN"
+      ],
+      "searchKeys": [
+        "CHINA",
+        "CHN"
       ]
     },
     "searchKeys": [
       "CHINA",
-      "CHN",
-      "中國"
+      "CHN"
     ],
     "_properties": {
       "GID_0": "CHN",
@@ -1111,6 +1152,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "CHINA",
+        "Z02"
+      ],
+      "searchKeys": [
         "CHINA",
         "Z02"
       ]
@@ -1135,6 +1180,10 @@
       "aliases": [
         "CHINA",
         "Z03"
+      ],
+      "searchKeys": [
+        "CHINA",
+        "Z03"
       ]
     },
     "searchKeys": [
@@ -1155,6 +1204,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "CHINA",
+        "Z08"
+      ],
+      "searchKeys": [
         "CHINA",
         "Z08"
       ]
@@ -1178,15 +1231,16 @@
       "variants": [],
       "aliases": [
         "CÔTE D'IVOIRE",
-        "CIV",
-        "象牙海岸",
-        "CÔTE D'IVOIRE"
+        "CIV"
+      ],
+      "searchKeys": [
+        "CÔTE D'IVOIRE",
+        "CIV"
       ]
     },
     "searchKeys": [
       "CÔTE D'IVOIRE",
-      "CIV",
-      "象牙海岸"
+      "CIV"
     ],
     "_properties": {
       "GID_0": "CIV",
@@ -1203,15 +1257,16 @@
       "variants": [],
       "aliases": [
         "CAMEROON",
-        "CMR",
-        "喀麥隆",
-        "CAMEROON"
+        "CMR"
+      ],
+      "searchKeys": [
+        "CAMEROON",
+        "CMR"
       ]
     },
     "searchKeys": [
       "CAMEROON",
-      "CMR",
-      "喀麥隆"
+      "CMR"
     ],
     "_properties": {
       "GID_0": "CMR",
@@ -1228,16 +1283,16 @@
       "variants": [],
       "aliases": [
         "DEMOCRATIC REPUBLIC OF THE CONGO",
-        "COD",
-        "剛果民主共和國",
-        "CONGO (DEMOCRATIC REPUBLIC OF THE)"
+        "COD"
+      ],
+      "searchKeys": [
+        "DEMOCRATIC REPUBLIC OF THE CONGO",
+        "COD"
       ]
     },
     "searchKeys": [
       "DEMOCRATIC REPUBLIC OF THE CONGO",
-      "COD",
-      "剛果民主共和國",
-      "CONGO (DEMOCRATIC REPUBLIC OF THE)"
+      "COD"
     ],
     "_properties": {
       "GID_0": "COD",
@@ -1254,16 +1309,16 @@
       "variants": [],
       "aliases": [
         "REPUBLIC OF THE CONGO",
-        "COG",
-        "剛果共和國",
-        "CONGO"
+        "COG"
+      ],
+      "searchKeys": [
+        "REPUBLIC OF THE CONGO",
+        "COG"
       ]
     },
     "searchKeys": [
       "REPUBLIC OF THE CONGO",
-      "COG",
-      "剛果共和國",
-      "CONGO"
+      "COG"
     ],
     "_properties": {
       "GID_0": "COG",
@@ -1280,15 +1335,16 @@
       "variants": [],
       "aliases": [
         "COOK ISLANDS",
-        "COK",
-        "庫克群島",
-        "COOK ISLANDS"
+        "COK"
+      ],
+      "searchKeys": [
+        "COOK ISLANDS",
+        "COK"
       ]
     },
     "searchKeys": [
       "COOK ISLANDS",
-      "COK",
-      "庫克群島"
+      "COK"
     ],
     "_properties": {
       "GID_0": "COK",
@@ -1305,15 +1361,16 @@
       "variants": [],
       "aliases": [
         "COLOMBIA",
-        "COL",
-        "哥倫比亞",
-        "COLOMBIA"
+        "COL"
+      ],
+      "searchKeys": [
+        "COLOMBIA",
+        "COL"
       ]
     },
     "searchKeys": [
       "COLOMBIA",
-      "COL",
-      "哥倫比亞"
+      "COL"
     ],
     "_properties": {
       "GID_0": "COL",
@@ -1330,15 +1387,16 @@
       "variants": [],
       "aliases": [
         "COMOROS",
-        "COM",
-        "葛摩",
-        "COMOROS"
+        "COM"
+      ],
+      "searchKeys": [
+        "COMOROS",
+        "COM"
       ]
     },
     "searchKeys": [
       "COMOROS",
-      "COM",
-      "葛摩"
+      "COM"
     ],
     "_properties": {
       "GID_0": "COM",
@@ -1355,15 +1413,16 @@
       "variants": [],
       "aliases": [
         "CABO VERDE",
-        "CPV",
-        "維德角",
-        "CABO VERDE"
+        "CPV"
+      ],
+      "searchKeys": [
+        "CABO VERDE",
+        "CPV"
       ]
     },
     "searchKeys": [
       "CABO VERDE",
-      "CPV",
-      "維德角"
+      "CPV"
     ],
     "_properties": {
       "GID_0": "CPV",
@@ -1380,15 +1439,16 @@
       "variants": [],
       "aliases": [
         "COSTA RICA",
-        "CRI",
-        "哥斯大黎加",
-        "COSTA RICA"
+        "CRI"
+      ],
+      "searchKeys": [
+        "COSTA RICA",
+        "CRI"
       ]
     },
     "searchKeys": [
       "COSTA RICA",
-      "CRI",
-      "哥斯大黎加"
+      "CRI"
     ],
     "_properties": {
       "GID_0": "CRI",
@@ -1405,15 +1465,16 @@
       "variants": [],
       "aliases": [
         "CUBA",
-        "CUB",
-        "古巴",
-        "CUBA"
+        "CUB"
+      ],
+      "searchKeys": [
+        "CUBA",
+        "CUB"
       ]
     },
     "searchKeys": [
       "CUBA",
-      "CUB",
-      "古巴"
+      "CUB"
     ],
     "_properties": {
       "GID_0": "CUB",
@@ -1430,15 +1491,16 @@
       "variants": [],
       "aliases": [
         "CURAÇAO",
-        "CUW",
-        "古拉索",
-        "CURAÇAO"
+        "CUW"
+      ],
+      "searchKeys": [
+        "CURAÇAO",
+        "CUW"
       ]
     },
     "searchKeys": [
       "CURAÇAO",
-      "CUW",
-      "古拉索"
+      "CUW"
     ],
     "_properties": {
       "GID_0": "CUW",
@@ -1455,15 +1517,16 @@
       "variants": [],
       "aliases": [
         "CHRISTMAS ISLAND",
-        "CXR",
-        "聖誕島",
-        "CHRISTMAS ISLAND"
+        "CXR"
+      ],
+      "searchKeys": [
+        "CHRISTMAS ISLAND",
+        "CXR"
       ]
     },
     "searchKeys": [
       "CHRISTMAS ISLAND",
-      "CXR",
-      "聖誕島"
+      "CXR"
     ],
     "_properties": {
       "GID_0": "CXR",
@@ -1480,15 +1543,16 @@
       "variants": [],
       "aliases": [
         "CAYMAN ISLANDS",
-        "CYM",
-        "開曼群島",
-        "CAYMAN ISLANDS"
+        "CYM"
+      ],
+      "searchKeys": [
+        "CAYMAN ISLANDS",
+        "CYM"
       ]
     },
     "searchKeys": [
       "CAYMAN ISLANDS",
-      "CYM",
-      "開曼群島"
+      "CYM"
     ],
     "_properties": {
       "GID_0": "CYM",
@@ -1505,15 +1569,16 @@
       "variants": [],
       "aliases": [
         "CYPRUS",
-        "CYP",
-        "賽普勒斯",
-        "CYPRUS"
+        "CYP"
+      ],
+      "searchKeys": [
+        "CYPRUS",
+        "CYP"
       ]
     },
     "searchKeys": [
       "CYPRUS",
-      "CYP",
-      "賽普勒斯"
+      "CYP"
     ],
     "_properties": {
       "GID_0": "CYP",
@@ -1530,15 +1595,16 @@
       "variants": [],
       "aliases": [
         "CZECHIA",
-        "CZE",
-        "捷克",
-        "CZECHIA"
+        "CZE"
+      ],
+      "searchKeys": [
+        "CZECHIA",
+        "CZE"
       ]
     },
     "searchKeys": [
       "CZECHIA",
-      "CZE",
-      "捷克"
+      "CZE"
     ],
     "_properties": {
       "GID_0": "CZE",
@@ -1555,15 +1621,16 @@
       "variants": [],
       "aliases": [
         "GERMANY",
-        "DEU",
-        "德國",
-        "GERMANY"
+        "DEU"
+      ],
+      "searchKeys": [
+        "GERMANY",
+        "DEU"
       ]
     },
     "searchKeys": [
       "GERMANY",
-      "DEU",
-      "德國"
+      "DEU"
     ],
     "_properties": {
       "GID_0": "DEU",
@@ -1580,15 +1647,16 @@
       "variants": [],
       "aliases": [
         "DJIBOUTI",
-        "DJI",
-        "吉布地",
-        "DJIBOUTI"
+        "DJI"
+      ],
+      "searchKeys": [
+        "DJIBOUTI",
+        "DJI"
       ]
     },
     "searchKeys": [
       "DJIBOUTI",
-      "DJI",
-      "吉布地"
+      "DJI"
     ],
     "_properties": {
       "GID_0": "DJI",
@@ -1605,15 +1673,16 @@
       "variants": [],
       "aliases": [
         "DOMINICA",
-        "DMA",
-        "多米尼克",
-        "DOMINICA"
+        "DMA"
+      ],
+      "searchKeys": [
+        "DOMINICA",
+        "DMA"
       ]
     },
     "searchKeys": [
       "DOMINICA",
-      "DMA",
-      "多米尼克"
+      "DMA"
     ],
     "_properties": {
       "GID_0": "DMA",
@@ -1630,15 +1699,16 @@
       "variants": [],
       "aliases": [
         "DENMARK",
-        "DNK",
-        "丹麥",
-        "DENMARK"
+        "DNK"
+      ],
+      "searchKeys": [
+        "DENMARK",
+        "DNK"
       ]
     },
     "searchKeys": [
       "DENMARK",
-      "DNK",
-      "丹麥"
+      "DNK"
     ],
     "_properties": {
       "GID_0": "DNK",
@@ -1655,15 +1725,16 @@
       "variants": [],
       "aliases": [
         "DOMINICAN REPUBLIC",
-        "DOM",
-        "多明尼加",
-        "DOMINICAN REPUBLIC"
+        "DOM"
+      ],
+      "searchKeys": [
+        "DOMINICAN REPUBLIC",
+        "DOM"
       ]
     },
     "searchKeys": [
       "DOMINICAN REPUBLIC",
-      "DOM",
-      "多明尼加"
+      "DOM"
     ],
     "_properties": {
       "GID_0": "DOM",
@@ -1680,15 +1751,16 @@
       "variants": [],
       "aliases": [
         "ALGERIA",
-        "DZA",
-        "阿爾及利亞",
-        "ALGERIA"
+        "DZA"
+      ],
+      "searchKeys": [
+        "ALGERIA",
+        "DZA"
       ]
     },
     "searchKeys": [
       "ALGERIA",
-      "DZA",
-      "阿爾及利亞"
+      "DZA"
     ],
     "_properties": {
       "GID_0": "DZA",
@@ -1705,15 +1777,16 @@
       "variants": [],
       "aliases": [
         "ECUADOR",
-        "ECU",
-        "厄瓜多",
-        "ECUADOR"
+        "ECU"
+      ],
+      "searchKeys": [
+        "ECUADOR",
+        "ECU"
       ]
     },
     "searchKeys": [
       "ECUADOR",
-      "ECU",
-      "厄瓜多"
+      "ECU"
     ],
     "_properties": {
       "GID_0": "ECU",
@@ -1730,15 +1803,16 @@
       "variants": [],
       "aliases": [
         "EGYPT",
-        "EGY",
-        "埃及",
-        "EGYPT"
+        "EGY"
+      ],
+      "searchKeys": [
+        "EGYPT",
+        "EGY"
       ]
     },
     "searchKeys": [
       "EGYPT",
-      "EGY",
-      "埃及"
+      "EGY"
     ],
     "_properties": {
       "GID_0": "EGY",
@@ -1755,15 +1829,16 @@
       "variants": [],
       "aliases": [
         "ERITREA",
-        "ERI",
-        "厄利垂亞",
-        "ERITREA"
+        "ERI"
+      ],
+      "searchKeys": [
+        "ERITREA",
+        "ERI"
       ]
     },
     "searchKeys": [
       "ERITREA",
-      "ERI",
-      "厄利垂亞"
+      "ERI"
     ],
     "_properties": {
       "GID_0": "ERI",
@@ -1780,15 +1855,16 @@
       "variants": [],
       "aliases": [
         "WESTERN SAHARA",
-        "ESH",
-        "西撒哈拉",
-        "WESTERN SAHARA"
+        "ESH"
+      ],
+      "searchKeys": [
+        "WESTERN SAHARA",
+        "ESH"
       ]
     },
     "searchKeys": [
       "WESTERN SAHARA",
-      "ESH",
-      "西撒哈拉"
+      "ESH"
     ],
     "_properties": {
       "GID_0": "ESH",
@@ -1805,15 +1881,16 @@
       "variants": [],
       "aliases": [
         "SPAIN",
-        "ESP",
-        "西班牙",
-        "SPAIN"
+        "ESP"
+      ],
+      "searchKeys": [
+        "SPAIN",
+        "ESP"
       ]
     },
     "searchKeys": [
       "SPAIN",
-      "ESP",
-      "西班牙"
+      "ESP"
     ],
     "_properties": {
       "GID_0": "ESP",
@@ -1830,15 +1907,16 @@
       "variants": [],
       "aliases": [
         "ESTONIA",
-        "EST",
-        "愛沙尼亞",
-        "ESTONIA"
+        "EST"
+      ],
+      "searchKeys": [
+        "ESTONIA",
+        "EST"
       ]
     },
     "searchKeys": [
       "ESTONIA",
-      "EST",
-      "愛沙尼亞"
+      "EST"
     ],
     "_properties": {
       "GID_0": "EST",
@@ -1855,15 +1933,16 @@
       "variants": [],
       "aliases": [
         "ETHIOPIA",
-        "ETH",
-        "衣索比亞",
-        "ETHIOPIA"
+        "ETH"
+      ],
+      "searchKeys": [
+        "ETHIOPIA",
+        "ETH"
       ]
     },
     "searchKeys": [
       "ETHIOPIA",
-      "ETH",
-      "衣索比亞"
+      "ETH"
     ],
     "_properties": {
       "GID_0": "ETH",
@@ -1880,15 +1959,16 @@
       "variants": [],
       "aliases": [
         "FINLAND",
-        "FIN",
-        "芬蘭",
-        "FINLAND"
+        "FIN"
+      ],
+      "searchKeys": [
+        "FINLAND",
+        "FIN"
       ]
     },
     "searchKeys": [
       "FINLAND",
-      "FIN",
-      "芬蘭"
+      "FIN"
     ],
     "_properties": {
       "GID_0": "FIN",
@@ -1905,15 +1985,16 @@
       "variants": [],
       "aliases": [
         "FIJI",
-        "FJI",
-        "斐濟",
-        "FIJI"
+        "FJI"
+      ],
+      "searchKeys": [
+        "FIJI",
+        "FJI"
       ]
     },
     "searchKeys": [
       "FIJI",
-      "FJI",
-      "斐濟"
+      "FJI"
     ],
     "_properties": {
       "GID_0": "FJI",
@@ -1930,15 +2011,16 @@
       "variants": [],
       "aliases": [
         "FALKLAND ISLANDS",
-        "FLK",
-        "福克蘭群島",
-        "FALKLAND ISLANDS"
+        "FLK"
+      ],
+      "searchKeys": [
+        "FALKLAND ISLANDS",
+        "FLK"
       ]
     },
     "searchKeys": [
       "FALKLAND ISLANDS",
-      "FLK",
-      "福克蘭群島"
+      "FLK"
     ],
     "_properties": {
       "GID_0": "FLK",
@@ -1955,15 +2037,16 @@
       "variants": [],
       "aliases": [
         "FRANCE",
-        "FRA",
-        "法國",
-        "FRANCE"
+        "FRA"
+      ],
+      "searchKeys": [
+        "FRANCE",
+        "FRA"
       ]
     },
     "searchKeys": [
       "FRANCE",
-      "FRA",
-      "法國"
+      "FRA"
     ],
     "_properties": {
       "GID_0": "FRA",
@@ -1980,15 +2063,16 @@
       "variants": [],
       "aliases": [
         "FAROE ISLANDS",
-        "FRO",
-        "法羅群島",
-        "FAROE ISLANDS"
+        "FRO"
+      ],
+      "searchKeys": [
+        "FAROE ISLANDS",
+        "FRO"
       ]
     },
     "searchKeys": [
       "FAROE ISLANDS",
-      "FRO",
-      "法羅群島"
+      "FRO"
     ],
     "_properties": {
       "GID_0": "FRO",
@@ -2005,15 +2089,16 @@
       "variants": [],
       "aliases": [
         "MICRONESIA",
-        "FSM",
-        "密克羅尼西亞",
-        "MICRONESIA"
+        "FSM"
+      ],
+      "searchKeys": [
+        "MICRONESIA",
+        "FSM"
       ]
     },
     "searchKeys": [
       "MICRONESIA",
-      "FSM",
-      "密克羅尼西亞"
+      "FSM"
     ],
     "_properties": {
       "GID_0": "FSM",
@@ -2030,15 +2115,16 @@
       "variants": [],
       "aliases": [
         "GABON",
-        "GAB",
-        "加彭",
-        "GABON"
+        "GAB"
+      ],
+      "searchKeys": [
+        "GABON",
+        "GAB"
       ]
     },
     "searchKeys": [
       "GABON",
-      "GAB",
-      "加彭"
+      "GAB"
     ],
     "_properties": {
       "GID_0": "GAB",
@@ -2055,15 +2141,16 @@
       "variants": [],
       "aliases": [
         "UNITED KINGDOM",
-        "GBR",
-        "英國",
-        "UNITED KINGDOM"
+        "GBR"
+      ],
+      "searchKeys": [
+        "UNITED KINGDOM",
+        "GBR"
       ]
     },
     "searchKeys": [
       "UNITED KINGDOM",
-      "GBR",
-      "英國"
+      "GBR"
     ],
     "_properties": {
       "GID_0": "GBR",
@@ -2080,15 +2167,16 @@
       "variants": [],
       "aliases": [
         "GEORGIA",
-        "GEO",
-        "喬治亞",
-        "GEORGIA"
+        "GEO"
+      ],
+      "searchKeys": [
+        "GEORGIA",
+        "GEO"
       ]
     },
     "searchKeys": [
       "GEORGIA",
-      "GEO",
-      "喬治亞"
+      "GEO"
     ],
     "_properties": {
       "GID_0": "GEO",
@@ -2105,15 +2193,16 @@
       "variants": [],
       "aliases": [
         "GUERNSEY",
-        "GGY",
-        "根西",
-        "GUERNSEY"
+        "GGY"
+      ],
+      "searchKeys": [
+        "GUERNSEY",
+        "GGY"
       ]
     },
     "searchKeys": [
       "GUERNSEY",
-      "GGY",
-      "根西"
+      "GGY"
     ],
     "_properties": {
       "GID_0": "GGY",
@@ -2130,15 +2219,16 @@
       "variants": [],
       "aliases": [
         "GHANA",
-        "GHA",
-        "迦納",
-        "GHANA"
+        "GHA"
+      ],
+      "searchKeys": [
+        "GHANA",
+        "GHA"
       ]
     },
     "searchKeys": [
       "GHANA",
-      "GHA",
-      "迦納"
+      "GHA"
     ],
     "_properties": {
       "GID_0": "GHA",
@@ -2155,15 +2245,16 @@
       "variants": [],
       "aliases": [
         "GIBRALTAR",
-        "GIB",
-        "直布羅陀",
-        "GIBRALTAR"
+        "GIB"
+      ],
+      "searchKeys": [
+        "GIBRALTAR",
+        "GIB"
       ]
     },
     "searchKeys": [
       "GIBRALTAR",
-      "GIB",
-      "直布羅陀"
+      "GIB"
     ],
     "_properties": {
       "GID_0": "GIB",
@@ -2180,15 +2271,16 @@
       "variants": [],
       "aliases": [
         "GUINEA",
-        "GIN",
-        "幾內亞",
-        "GUINEA"
+        "GIN"
+      ],
+      "searchKeys": [
+        "GUINEA",
+        "GIN"
       ]
     },
     "searchKeys": [
       "GUINEA",
-      "GIN",
-      "幾內亞"
+      "GIN"
     ],
     "_properties": {
       "GID_0": "GIN",
@@ -2205,15 +2297,16 @@
       "variants": [],
       "aliases": [
         "GUADELOUPE",
-        "GLP",
-        "瓜地洛普",
-        "GUADELOUPE"
+        "GLP"
+      ],
+      "searchKeys": [
+        "GUADELOUPE",
+        "GLP"
       ]
     },
     "searchKeys": [
       "GUADELOUPE",
-      "GLP",
-      "瓜地洛普"
+      "GLP"
     ],
     "_properties": {
       "GID_0": "GLP",
@@ -2230,15 +2323,16 @@
       "variants": [],
       "aliases": [
         "GAMBIA",
-        "GMB",
-        "甘比亞",
-        "GAMBIA"
+        "GMB"
+      ],
+      "searchKeys": [
+        "GAMBIA",
+        "GMB"
       ]
     },
     "searchKeys": [
       "GAMBIA",
-      "GMB",
-      "甘比亞"
+      "GMB"
     ],
     "_properties": {
       "GID_0": "GMB",
@@ -2255,15 +2349,16 @@
       "variants": [],
       "aliases": [
         "GUINEA-BISSAU",
-        "GNB",
-        "幾內亞比索",
-        "GUINEA-BISSAU"
+        "GNB"
+      ],
+      "searchKeys": [
+        "GUINEA-BISSAU",
+        "GNB"
       ]
     },
     "searchKeys": [
       "GUINEA-BISSAU",
-      "GNB",
-      "幾內亞比索"
+      "GNB"
     ],
     "_properties": {
       "GID_0": "GNB",
@@ -2280,15 +2375,16 @@
       "variants": [],
       "aliases": [
         "EQUATORIAL GUINEA",
-        "GNQ",
-        "赤道幾內亞",
-        "EQUATORIAL GUINEA"
+        "GNQ"
+      ],
+      "searchKeys": [
+        "EQUATORIAL GUINEA",
+        "GNQ"
       ]
     },
     "searchKeys": [
       "EQUATORIAL GUINEA",
-      "GNQ",
-      "赤道幾內亞"
+      "GNQ"
     ],
     "_properties": {
       "GID_0": "GNQ",
@@ -2305,15 +2401,16 @@
       "variants": [],
       "aliases": [
         "GREECE",
-        "GRC",
-        "希臘",
-        "GREECE"
+        "GRC"
+      ],
+      "searchKeys": [
+        "GREECE",
+        "GRC"
       ]
     },
     "searchKeys": [
       "GREECE",
-      "GRC",
-      "希臘"
+      "GRC"
     ],
     "_properties": {
       "GID_0": "GRC",
@@ -2330,15 +2427,16 @@
       "variants": [],
       "aliases": [
         "GRENADA",
-        "GRD",
-        "格瑞那達",
-        "GRENADA"
+        "GRD"
+      ],
+      "searchKeys": [
+        "GRENADA",
+        "GRD"
       ]
     },
     "searchKeys": [
       "GRENADA",
-      "GRD",
-      "格瑞那達"
+      "GRD"
     ],
     "_properties": {
       "GID_0": "GRD",
@@ -2355,15 +2453,16 @@
       "variants": [],
       "aliases": [
         "GREENLAND",
-        "GRL",
-        "格陵蘭",
-        "GREENLAND"
+        "GRL"
+      ],
+      "searchKeys": [
+        "GREENLAND",
+        "GRL"
       ]
     },
     "searchKeys": [
       "GREENLAND",
-      "GRL",
-      "格陵蘭"
+      "GRL"
     ],
     "_properties": {
       "GID_0": "GRL",
@@ -2380,15 +2479,16 @@
       "variants": [],
       "aliases": [
         "GUATEMALA",
-        "GTM",
-        "瓜地馬拉",
-        "GUATEMALA"
+        "GTM"
+      ],
+      "searchKeys": [
+        "GUATEMALA",
+        "GTM"
       ]
     },
     "searchKeys": [
       "GUATEMALA",
-      "GTM",
-      "瓜地馬拉"
+      "GTM"
     ],
     "_properties": {
       "GID_0": "GTM",
@@ -2405,15 +2505,16 @@
       "variants": [],
       "aliases": [
         "FRENCH GUIANA",
-        "GUF",
-        "法屬圭亞那",
-        "FRENCH GUIANA"
+        "GUF"
+      ],
+      "searchKeys": [
+        "FRENCH GUIANA",
+        "GUF"
       ]
     },
     "searchKeys": [
       "FRENCH GUIANA",
-      "GUF",
-      "法屬圭亞那"
+      "GUF"
     ],
     "_properties": {
       "GID_0": "GUF",
@@ -2430,15 +2531,16 @@
       "variants": [],
       "aliases": [
         "GUAM",
-        "GUM",
-        "關島",
-        "GUAM"
+        "GUM"
+      ],
+      "searchKeys": [
+        "GUAM",
+        "GUM"
       ]
     },
     "searchKeys": [
       "GUAM",
-      "GUM",
-      "關島"
+      "GUM"
     ],
     "_properties": {
       "GID_0": "GUM",
@@ -2455,15 +2557,16 @@
       "variants": [],
       "aliases": [
         "GUYANA",
-        "GUY",
-        "蓋亞那",
-        "GUYANA"
+        "GUY"
+      ],
+      "searchKeys": [
+        "GUYANA",
+        "GUY"
       ]
     },
     "searchKeys": [
       "GUYANA",
-      "GUY",
-      "蓋亞那"
+      "GUY"
     ],
     "_properties": {
       "GID_0": "GUY",
@@ -2480,16 +2583,16 @@
       "variants": [],
       "aliases": [
         "HEARD ISLAND AND MCDONALD ISLAND",
-        "HMD",
-        "赫德島和麥當勞群島",
-        "HEARD ISLAND AND MCDONALD ISLANDS"
+        "HMD"
+      ],
+      "searchKeys": [
+        "HEARD ISLAND AND MCDONALD ISLAND",
+        "HMD"
       ]
     },
     "searchKeys": [
       "HEARD ISLAND AND MCDONALD ISLAND",
-      "HMD",
-      "赫德島和麥當勞群島",
-      "HEARD ISLAND AND MCDONALD ISLANDS"
+      "HMD"
     ],
     "_properties": {
       "GID_0": "HMD",
@@ -2506,15 +2609,16 @@
       "variants": [],
       "aliases": [
         "HONDURAS",
-        "HND",
-        "宏都拉斯",
-        "HONDURAS"
+        "HND"
+      ],
+      "searchKeys": [
+        "HONDURAS",
+        "HND"
       ]
     },
     "searchKeys": [
       "HONDURAS",
-      "HND",
-      "宏都拉斯"
+      "HND"
     ],
     "_properties": {
       "GID_0": "HND",
@@ -2531,15 +2635,16 @@
       "variants": [],
       "aliases": [
         "CROATIA",
-        "HRV",
-        "克羅埃西亞",
-        "CROATIA"
+        "HRV"
+      ],
+      "searchKeys": [
+        "CROATIA",
+        "HRV"
       ]
     },
     "searchKeys": [
       "CROATIA",
-      "HRV",
-      "克羅埃西亞"
+      "HRV"
     ],
     "_properties": {
       "GID_0": "HRV",
@@ -2556,15 +2661,16 @@
       "variants": [],
       "aliases": [
         "HAITI",
-        "HTI",
-        "海地",
-        "HAITI"
+        "HTI"
+      ],
+      "searchKeys": [
+        "HAITI",
+        "HTI"
       ]
     },
     "searchKeys": [
       "HAITI",
-      "HTI",
-      "海地"
+      "HTI"
     ],
     "_properties": {
       "GID_0": "HTI",
@@ -2581,15 +2687,16 @@
       "variants": [],
       "aliases": [
         "HUNGARY",
-        "HUN",
-        "匈牙利",
-        "HUNGARY"
+        "HUN"
+      ],
+      "searchKeys": [
+        "HUNGARY",
+        "HUN"
       ]
     },
     "searchKeys": [
       "HUNGARY",
-      "HUN",
-      "匈牙利"
+      "HUN"
     ],
     "_properties": {
       "GID_0": "HUN",
@@ -2606,15 +2713,16 @@
       "variants": [],
       "aliases": [
         "INDONESIA",
-        "IDN",
-        "印尼",
-        "INDONESIA"
+        "IDN"
+      ],
+      "searchKeys": [
+        "INDONESIA",
+        "IDN"
       ]
     },
     "searchKeys": [
       "INDONESIA",
-      "IDN",
-      "印尼"
+      "IDN"
     ],
     "_properties": {
       "GID_0": "IDN",
@@ -2631,15 +2739,16 @@
       "variants": [],
       "aliases": [
         "ISLE OF MAN",
-        "IMN",
-        "曼島",
-        "ISLE OF MAN"
+        "IMN"
+      ],
+      "searchKeys": [
+        "ISLE OF MAN",
+        "IMN"
       ]
     },
     "searchKeys": [
       "ISLE OF MAN",
-      "IMN",
-      "曼島"
+      "IMN"
     ],
     "_properties": {
       "GID_0": "IMN",
@@ -2656,15 +2765,16 @@
       "variants": [],
       "aliases": [
         "INDIA",
-        "IND",
-        "印度",
-        "INDIA"
+        "IND"
+      ],
+      "searchKeys": [
+        "INDIA",
+        "IND"
       ]
     },
     "searchKeys": [
       "INDIA",
-      "IND",
-      "印度"
+      "IND"
     ],
     "_properties": {
       "GID_0": "IND",
@@ -2680,6 +2790,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "INDIA",
+        "Z01"
+      ],
+      "searchKeys": [
         "INDIA",
         "Z01"
       ]
@@ -2704,6 +2818,10 @@
       "aliases": [
         "INDIA",
         "Z04"
+      ],
+      "searchKeys": [
+        "INDIA",
+        "Z04"
       ]
     },
     "searchKeys": [
@@ -2724,6 +2842,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "INDIA",
+        "Z05"
+      ],
+      "searchKeys": [
         "INDIA",
         "Z05"
       ]
@@ -2748,6 +2870,10 @@
       "aliases": [
         "INDIA",
         "Z07"
+      ],
+      "searchKeys": [
+        "INDIA",
+        "Z07"
       ]
     },
     "searchKeys": [
@@ -2768,6 +2894,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "INDIA",
+        "Z09"
+      ],
+      "searchKeys": [
         "INDIA",
         "Z09"
       ]
@@ -2791,15 +2921,16 @@
       "variants": [],
       "aliases": [
         "BRITISH INDIAN OCEAN TERRITORY",
-        "IOT",
-        "英屬印度洋領地",
-        "BRITISH INDIAN OCEAN TERRITORY"
+        "IOT"
+      ],
+      "searchKeys": [
+        "BRITISH INDIAN OCEAN TERRITORY",
+        "IOT"
       ]
     },
     "searchKeys": [
       "BRITISH INDIAN OCEAN TERRITORY",
-      "IOT",
-      "英屬印度洋領地"
+      "IOT"
     ],
     "_properties": {
       "GID_0": "IOT",
@@ -2816,15 +2947,16 @@
       "variants": [],
       "aliases": [
         "IRELAND",
-        "IRL",
-        "愛爾蘭",
-        "IRELAND"
+        "IRL"
+      ],
+      "searchKeys": [
+        "IRELAND",
+        "IRL"
       ]
     },
     "searchKeys": [
       "IRELAND",
-      "IRL",
-      "愛爾蘭"
+      "IRL"
     ],
     "_properties": {
       "GID_0": "IRL",
@@ -2841,15 +2973,16 @@
       "variants": [],
       "aliases": [
         "IRAN",
-        "IRN",
-        "伊朗",
-        "IRAN"
+        "IRN"
+      ],
+      "searchKeys": [
+        "IRAN",
+        "IRN"
       ]
     },
     "searchKeys": [
       "IRAN",
-      "IRN",
-      "伊朗"
+      "IRN"
     ],
     "_properties": {
       "GID_0": "IRN",
@@ -2866,15 +2999,16 @@
       "variants": [],
       "aliases": [
         "IRAQ",
-        "IRQ",
-        "伊拉克",
-        "IRAQ"
+        "IRQ"
+      ],
+      "searchKeys": [
+        "IRAQ",
+        "IRQ"
       ]
     },
     "searchKeys": [
       "IRAQ",
-      "IRQ",
-      "伊拉克"
+      "IRQ"
     ],
     "_properties": {
       "GID_0": "IRQ",
@@ -2891,15 +3025,16 @@
       "variants": [],
       "aliases": [
         "ICELAND",
-        "ISL",
-        "冰島",
-        "ICELAND"
+        "ISL"
+      ],
+      "searchKeys": [
+        "ICELAND",
+        "ISL"
       ]
     },
     "searchKeys": [
       "ICELAND",
-      "ISL",
-      "冰島"
+      "ISL"
     ],
     "_properties": {
       "GID_0": "ISL",
@@ -2916,15 +3051,16 @@
       "variants": [],
       "aliases": [
         "ISRAEL",
-        "ISR",
-        "以色列",
-        "ISRAEL"
+        "ISR"
+      ],
+      "searchKeys": [
+        "ISRAEL",
+        "ISR"
       ]
     },
     "searchKeys": [
       "ISRAEL",
-      "ISR",
-      "以色列"
+      "ISR"
     ],
     "_properties": {
       "GID_0": "ISR",
@@ -2941,15 +3077,16 @@
       "variants": [],
       "aliases": [
         "ITALY",
-        "ITA",
-        "義大利",
-        "ITALY"
+        "ITA"
+      ],
+      "searchKeys": [
+        "ITALY",
+        "ITA"
       ]
     },
     "searchKeys": [
       "ITALY",
-      "ITA",
-      "義大利"
+      "ITA"
     ],
     "_properties": {
       "GID_0": "ITA",
@@ -2966,15 +3103,16 @@
       "variants": [],
       "aliases": [
         "JAMAICA",
-        "JAM",
-        "牙買加",
-        "JAMAICA"
+        "JAM"
+      ],
+      "searchKeys": [
+        "JAMAICA",
+        "JAM"
       ]
     },
     "searchKeys": [
       "JAMAICA",
-      "JAM",
-      "牙買加"
+      "JAM"
     ],
     "_properties": {
       "GID_0": "JAM",
@@ -2991,15 +3129,16 @@
       "variants": [],
       "aliases": [
         "JERSEY",
-        "JEY",
-        "澤西",
-        "JERSEY"
+        "JEY"
+      ],
+      "searchKeys": [
+        "JERSEY",
+        "JEY"
       ]
     },
     "searchKeys": [
       "JERSEY",
-      "JEY",
-      "澤西"
+      "JEY"
     ],
     "_properties": {
       "GID_0": "JEY",
@@ -3016,15 +3155,16 @@
       "variants": [],
       "aliases": [
         "JORDAN",
-        "JOR",
-        "約旦",
-        "JORDAN"
+        "JOR"
+      ],
+      "searchKeys": [
+        "JORDAN",
+        "JOR"
       ]
     },
     "searchKeys": [
       "JORDAN",
-      "JOR",
-      "約旦"
+      "JOR"
     ],
     "_properties": {
       "GID_0": "JOR",
@@ -3041,15 +3181,16 @@
       "variants": [],
       "aliases": [
         "JAPAN",
-        "JPN",
-        "日本",
-        "JAPAN"
+        "JPN"
+      ],
+      "searchKeys": [
+        "JAPAN",
+        "JPN"
       ]
     },
     "searchKeys": [
       "JAPAN",
-      "JPN",
-      "日本"
+      "JPN"
     ],
     "_properties": {
       "GID_0": "JPN",
@@ -3066,15 +3207,16 @@
       "variants": [],
       "aliases": [
         "KAZAKHSTAN",
-        "KAZ",
-        "哈薩克",
-        "KAZAKHSTAN"
+        "KAZ"
+      ],
+      "searchKeys": [
+        "KAZAKHSTAN",
+        "KAZ"
       ]
     },
     "searchKeys": [
       "KAZAKHSTAN",
-      "KAZ",
-      "哈薩克"
+      "KAZ"
     ],
     "_properties": {
       "GID_0": "KAZ",
@@ -3091,15 +3233,16 @@
       "variants": [],
       "aliases": [
         "KENYA",
-        "KEN",
-        "肯亞",
-        "KENYA"
+        "KEN"
+      ],
+      "searchKeys": [
+        "KENYA",
+        "KEN"
       ]
     },
     "searchKeys": [
       "KENYA",
-      "KEN",
-      "肯亞"
+      "KEN"
     ],
     "_properties": {
       "GID_0": "KEN",
@@ -3116,15 +3259,16 @@
       "variants": [],
       "aliases": [
         "KYRGYZSTAN",
-        "KGZ",
-        "吉爾吉斯",
-        "KYRGYZSTAN"
+        "KGZ"
+      ],
+      "searchKeys": [
+        "KYRGYZSTAN",
+        "KGZ"
       ]
     },
     "searchKeys": [
       "KYRGYZSTAN",
-      "KGZ",
-      "吉爾吉斯"
+      "KGZ"
     ],
     "_properties": {
       "GID_0": "KGZ",
@@ -3141,15 +3285,16 @@
       "variants": [],
       "aliases": [
         "CAMBODIA",
-        "KHM",
-        "柬埔寨",
-        "CAMBODIA"
+        "KHM"
+      ],
+      "searchKeys": [
+        "CAMBODIA",
+        "KHM"
       ]
     },
     "searchKeys": [
       "CAMBODIA",
-      "KHM",
-      "柬埔寨"
+      "KHM"
     ],
     "_properties": {
       "GID_0": "KHM",
@@ -3166,15 +3311,16 @@
       "variants": [],
       "aliases": [
         "KIRIBATI",
-        "KIR",
-        "吉里巴斯",
-        "KIRIBATI"
+        "KIR"
+      ],
+      "searchKeys": [
+        "KIRIBATI",
+        "KIR"
       ]
     },
     "searchKeys": [
       "KIRIBATI",
-      "KIR",
-      "吉里巴斯"
+      "KIR"
     ],
     "_properties": {
       "GID_0": "KIR",
@@ -3191,15 +3337,16 @@
       "variants": [],
       "aliases": [
         "SAINT KITTS AND NEVIS",
-        "KNA",
-        "聖克里斯多福及尼維斯",
-        "SAINT KITTS AND NEVIS"
+        "KNA"
+      ],
+      "searchKeys": [
+        "SAINT KITTS AND NEVIS",
+        "KNA"
       ]
     },
     "searchKeys": [
       "SAINT KITTS AND NEVIS",
-      "KNA",
-      "聖克里斯多福及尼維斯"
+      "KNA"
     ],
     "_properties": {
       "GID_0": "KNA",
@@ -3216,16 +3363,16 @@
       "variants": [],
       "aliases": [
         "SOUTH KOREA",
-        "KOR",
-        "南韓",
-        "KOREA (REPUBLIC OF)"
+        "KOR"
+      ],
+      "searchKeys": [
+        "SOUTH KOREA",
+        "KOR"
       ]
     },
     "searchKeys": [
       "SOUTH KOREA",
-      "KOR",
-      "南韓",
-      "KOREA (REPUBLIC OF)"
+      "KOR"
     ],
     "_properties": {
       "GID_0": "KOR",
@@ -3242,15 +3389,16 @@
       "variants": [],
       "aliases": [
         "KUWAIT",
-        "KWT",
-        "科威特",
-        "KUWAIT"
+        "KWT"
+      ],
+      "searchKeys": [
+        "KUWAIT",
+        "KWT"
       ]
     },
     "searchKeys": [
       "KUWAIT",
-      "KWT",
-      "科威特"
+      "KWT"
     ],
     "_properties": {
       "GID_0": "KWT",
@@ -3267,16 +3415,16 @@
       "variants": [],
       "aliases": [
         "LAOS",
-        "LAO",
-        "寮國",
-        "LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+        "LAO"
+      ],
+      "searchKeys": [
+        "LAOS",
+        "LAO"
       ]
     },
     "searchKeys": [
       "LAOS",
-      "LAO",
-      "寮國",
-      "LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+      "LAO"
     ],
     "_properties": {
       "GID_0": "LAO",
@@ -3293,15 +3441,16 @@
       "variants": [],
       "aliases": [
         "LEBANON",
-        "LBN",
-        "黎巴嫩",
-        "LEBANON"
+        "LBN"
+      ],
+      "searchKeys": [
+        "LEBANON",
+        "LBN"
       ]
     },
     "searchKeys": [
       "LEBANON",
-      "LBN",
-      "黎巴嫩"
+      "LBN"
     ],
     "_properties": {
       "GID_0": "LBN",
@@ -3318,15 +3467,16 @@
       "variants": [],
       "aliases": [
         "LIBERIA",
-        "LBR",
-        "賴比瑞亞",
-        "LIBERIA"
+        "LBR"
+      ],
+      "searchKeys": [
+        "LIBERIA",
+        "LBR"
       ]
     },
     "searchKeys": [
       "LIBERIA",
-      "LBR",
-      "賴比瑞亞"
+      "LBR"
     ],
     "_properties": {
       "GID_0": "LBR",
@@ -3343,15 +3493,16 @@
       "variants": [],
       "aliases": [
         "LIBYA",
-        "LBY",
-        "利比亞",
-        "LIBYA"
+        "LBY"
+      ],
+      "searchKeys": [
+        "LIBYA",
+        "LBY"
       ]
     },
     "searchKeys": [
       "LIBYA",
-      "LBY",
-      "利比亞"
+      "LBY"
     ],
     "_properties": {
       "GID_0": "LBY",
@@ -3368,15 +3519,16 @@
       "variants": [],
       "aliases": [
         "SAINT LUCIA",
-        "LCA",
-        "聖露西亞",
-        "SAINT LUCIA"
+        "LCA"
+      ],
+      "searchKeys": [
+        "SAINT LUCIA",
+        "LCA"
       ]
     },
     "searchKeys": [
       "SAINT LUCIA",
-      "LCA",
-      "聖露西亞"
+      "LCA"
     ],
     "_properties": {
       "GID_0": "LCA",
@@ -3393,15 +3545,16 @@
       "variants": [],
       "aliases": [
         "LIECHTENSTEIN",
-        "LIE",
-        "列支敦斯登",
-        "LIECHTENSTEIN"
+        "LIE"
+      ],
+      "searchKeys": [
+        "LIECHTENSTEIN",
+        "LIE"
       ]
     },
     "searchKeys": [
       "LIECHTENSTEIN",
-      "LIE",
-      "列支敦斯登"
+      "LIE"
     ],
     "_properties": {
       "GID_0": "LIE",
@@ -3418,15 +3571,16 @@
       "variants": [],
       "aliases": [
         "SRI LANKA",
-        "LKA",
-        "斯里蘭卡",
-        "SRI LANKA"
+        "LKA"
+      ],
+      "searchKeys": [
+        "SRI LANKA",
+        "LKA"
       ]
     },
     "searchKeys": [
       "SRI LANKA",
-      "LKA",
-      "斯里蘭卡"
+      "LKA"
     ],
     "_properties": {
       "GID_0": "LKA",
@@ -3443,15 +3597,16 @@
       "variants": [],
       "aliases": [
         "LESOTHO",
-        "LSO",
-        "賴索托",
-        "LESOTHO"
+        "LSO"
+      ],
+      "searchKeys": [
+        "LESOTHO",
+        "LSO"
       ]
     },
     "searchKeys": [
       "LESOTHO",
-      "LSO",
-      "賴索托"
+      "LSO"
     ],
     "_properties": {
       "GID_0": "LSO",
@@ -3468,15 +3623,16 @@
       "variants": [],
       "aliases": [
         "LITHUANIA",
-        "LTU",
-        "立陶宛",
-        "LITHUANIA"
+        "LTU"
+      ],
+      "searchKeys": [
+        "LITHUANIA",
+        "LTU"
       ]
     },
     "searchKeys": [
       "LITHUANIA",
-      "LTU",
-      "立陶宛"
+      "LTU"
     ],
     "_properties": {
       "GID_0": "LTU",
@@ -3493,15 +3649,16 @@
       "variants": [],
       "aliases": [
         "LUXEMBOURG",
-        "LUX",
-        "盧森堡",
-        "LUXEMBOURG"
+        "LUX"
+      ],
+      "searchKeys": [
+        "LUXEMBOURG",
+        "LUX"
       ]
     },
     "searchKeys": [
       "LUXEMBOURG",
-      "LUX",
-      "盧森堡"
+      "LUX"
     ],
     "_properties": {
       "GID_0": "LUX",
@@ -3518,15 +3675,16 @@
       "variants": [],
       "aliases": [
         "LATVIA",
-        "LVA",
-        "拉脫維亞",
-        "LATVIA"
+        "LVA"
+      ],
+      "searchKeys": [
+        "LATVIA",
+        "LVA"
       ]
     },
     "searchKeys": [
       "LATVIA",
-      "LVA",
-      "拉脫維亞"
+      "LVA"
     ],
     "_properties": {
       "GID_0": "LVA",
@@ -3543,16 +3701,16 @@
       "variants": [],
       "aliases": [
         "SAINT-MARTIN",
-        "MAF",
-        "法屬聖馬丁",
-        "SAINT MARTIN (FRENCH PART)"
+        "MAF"
+      ],
+      "searchKeys": [
+        "SAINT-MARTIN",
+        "MAF"
       ]
     },
     "searchKeys": [
       "SAINT-MARTIN",
-      "MAF",
-      "法屬聖馬丁",
-      "SAINT MARTIN (FRENCH PART)"
+      "MAF"
     ],
     "_properties": {
       "GID_0": "MAF",
@@ -3569,15 +3727,16 @@
       "variants": [],
       "aliases": [
         "MOROCCO",
-        "MAR",
-        "摩洛哥",
-        "MOROCCO"
+        "MAR"
+      ],
+      "searchKeys": [
+        "MOROCCO",
+        "MAR"
       ]
     },
     "searchKeys": [
       "MOROCCO",
-      "MAR",
-      "摩洛哥"
+      "MAR"
     ],
     "_properties": {
       "GID_0": "MAR",
@@ -3594,15 +3753,16 @@
       "variants": [],
       "aliases": [
         "MONACO",
-        "MCO",
-        "摩納哥",
-        "MONACO"
+        "MCO"
+      ],
+      "searchKeys": [
+        "MONACO",
+        "MCO"
       ]
     },
     "searchKeys": [
       "MONACO",
-      "MCO",
-      "摩納哥"
+      "MCO"
     ],
     "_properties": {
       "GID_0": "MCO",
@@ -3619,15 +3779,16 @@
       "variants": [],
       "aliases": [
         "MOLDOVA",
-        "MDA",
-        "摩爾多瓦",
-        "MOLDOVA"
+        "MDA"
+      ],
+      "searchKeys": [
+        "MOLDOVA",
+        "MDA"
       ]
     },
     "searchKeys": [
       "MOLDOVA",
-      "MDA",
-      "摩爾多瓦"
+      "MDA"
     ],
     "_properties": {
       "GID_0": "MDA",
@@ -3644,15 +3805,16 @@
       "variants": [],
       "aliases": [
         "MADAGASCAR",
-        "MDG",
-        "馬達加斯加",
-        "MADAGASCAR"
+        "MDG"
+      ],
+      "searchKeys": [
+        "MADAGASCAR",
+        "MDG"
       ]
     },
     "searchKeys": [
       "MADAGASCAR",
-      "MDG",
-      "馬達加斯加"
+      "MDG"
     ],
     "_properties": {
       "GID_0": "MDG",
@@ -3669,15 +3831,16 @@
       "variants": [],
       "aliases": [
         "MALDIVES",
-        "MDV",
-        "馬爾地夫",
-        "MALDIVES"
+        "MDV"
+      ],
+      "searchKeys": [
+        "MALDIVES",
+        "MDV"
       ]
     },
     "searchKeys": [
       "MALDIVES",
-      "MDV",
-      "馬爾地夫"
+      "MDV"
     ],
     "_properties": {
       "GID_0": "MDV",
@@ -3694,16 +3857,16 @@
       "variants": [],
       "aliases": [
         "MÉXICO",
-        "MEX",
-        "墨西哥",
-        "MEXICO"
+        "MEX"
+      ],
+      "searchKeys": [
+        "MÉXICO",
+        "MEX"
       ]
     },
     "searchKeys": [
       "MÉXICO",
-      "MEX",
-      "墨西哥",
-      "MEXICO"
+      "MEX"
     ],
     "_properties": {
       "GID_0": "MEX",
@@ -3720,15 +3883,16 @@
       "variants": [],
       "aliases": [
         "MARSHALL ISLANDS",
-        "MHL",
-        "馬紹爾群島",
-        "MARSHALL ISLANDS"
+        "MHL"
+      ],
+      "searchKeys": [
+        "MARSHALL ISLANDS",
+        "MHL"
       ]
     },
     "searchKeys": [
       "MARSHALL ISLANDS",
-      "MHL",
-      "馬紹爾群島"
+      "MHL"
     ],
     "_properties": {
       "GID_0": "MHL",
@@ -3745,15 +3909,16 @@
       "variants": [],
       "aliases": [
         "NORTH MACEDONIA",
-        "MKD",
-        "北馬其頓",
-        "NORTH MACEDONIA"
+        "MKD"
+      ],
+      "searchKeys": [
+        "NORTH MACEDONIA",
+        "MKD"
       ]
     },
     "searchKeys": [
       "NORTH MACEDONIA",
-      "MKD",
-      "北馬其頓"
+      "MKD"
     ],
     "_properties": {
       "GID_0": "MKD",
@@ -3770,15 +3935,16 @@
       "variants": [],
       "aliases": [
         "MALI",
-        "MLI",
-        "馬利",
-        "MALI"
+        "MLI"
+      ],
+      "searchKeys": [
+        "MALI",
+        "MLI"
       ]
     },
     "searchKeys": [
       "MALI",
-      "MLI",
-      "馬利"
+      "MLI"
     ],
     "_properties": {
       "GID_0": "MLI",
@@ -3795,15 +3961,16 @@
       "variants": [],
       "aliases": [
         "MALTA",
-        "MLT",
-        "馬爾他",
-        "MALTA"
+        "MLT"
+      ],
+      "searchKeys": [
+        "MALTA",
+        "MLT"
       ]
     },
     "searchKeys": [
       "MALTA",
-      "MLT",
-      "馬爾他"
+      "MLT"
     ],
     "_properties": {
       "GID_0": "MLT",
@@ -3820,15 +3987,16 @@
       "variants": [],
       "aliases": [
         "MYANMAR",
-        "MMR",
-        "緬甸",
-        "MYANMAR"
+        "MMR"
+      ],
+      "searchKeys": [
+        "MYANMAR",
+        "MMR"
       ]
     },
     "searchKeys": [
       "MYANMAR",
-      "MMR",
-      "緬甸"
+      "MMR"
     ],
     "_properties": {
       "GID_0": "MMR",
@@ -3845,15 +4013,16 @@
       "variants": [],
       "aliases": [
         "MONTENEGRO",
-        "MNE",
-        "蒙特內哥羅",
-        "MONTENEGRO"
+        "MNE"
+      ],
+      "searchKeys": [
+        "MONTENEGRO",
+        "MNE"
       ]
     },
     "searchKeys": [
       "MONTENEGRO",
-      "MNE",
-      "蒙特內哥羅"
+      "MNE"
     ],
     "_properties": {
       "GID_0": "MNE",
@@ -3870,15 +4039,16 @@
       "variants": [],
       "aliases": [
         "MONGOLIA",
-        "MNG",
-        "蒙古",
-        "MONGOLIA"
+        "MNG"
+      ],
+      "searchKeys": [
+        "MONGOLIA",
+        "MNG"
       ]
     },
     "searchKeys": [
       "MONGOLIA",
-      "MNG",
-      "蒙古"
+      "MNG"
     ],
     "_properties": {
       "GID_0": "MNG",
@@ -3895,15 +4065,16 @@
       "variants": [],
       "aliases": [
         "NORTHERN MARIANA ISLANDS",
-        "MNP",
-        "北馬里亞納群島",
-        "NORTHERN MARIANA ISLANDS"
+        "MNP"
+      ],
+      "searchKeys": [
+        "NORTHERN MARIANA ISLANDS",
+        "MNP"
       ]
     },
     "searchKeys": [
       "NORTHERN MARIANA ISLANDS",
-      "MNP",
-      "北馬里亞納群島"
+      "MNP"
     ],
     "_properties": {
       "GID_0": "MNP",
@@ -3920,15 +4091,16 @@
       "variants": [],
       "aliases": [
         "MOZAMBIQUE",
-        "MOZ",
-        "莫三比克",
-        "MOZAMBIQUE"
+        "MOZ"
+      ],
+      "searchKeys": [
+        "MOZAMBIQUE",
+        "MOZ"
       ]
     },
     "searchKeys": [
       "MOZAMBIQUE",
-      "MOZ",
-      "莫三比克"
+      "MOZ"
     ],
     "_properties": {
       "GID_0": "MOZ",
@@ -3945,15 +4117,16 @@
       "variants": [],
       "aliases": [
         "MAURITANIA",
-        "MRT",
-        "茅利塔尼亞",
-        "MAURITANIA"
+        "MRT"
+      ],
+      "searchKeys": [
+        "MAURITANIA",
+        "MRT"
       ]
     },
     "searchKeys": [
       "MAURITANIA",
-      "MRT",
-      "茅利塔尼亞"
+      "MRT"
     ],
     "_properties": {
       "GID_0": "MRT",
@@ -3970,15 +4143,16 @@
       "variants": [],
       "aliases": [
         "MONTSERRAT",
-        "MSR",
-        "蒙哲臘",
-        "MONTSERRAT"
+        "MSR"
+      ],
+      "searchKeys": [
+        "MONTSERRAT",
+        "MSR"
       ]
     },
     "searchKeys": [
       "MONTSERRAT",
-      "MSR",
-      "蒙哲臘"
+      "MSR"
     ],
     "_properties": {
       "GID_0": "MSR",
@@ -3995,15 +4169,16 @@
       "variants": [],
       "aliases": [
         "MARTINIQUE",
-        "MTQ",
-        "馬丁尼克",
-        "MARTINIQUE"
+        "MTQ"
+      ],
+      "searchKeys": [
+        "MARTINIQUE",
+        "MTQ"
       ]
     },
     "searchKeys": [
       "MARTINIQUE",
-      "MTQ",
-      "馬丁尼克"
+      "MTQ"
     ],
     "_properties": {
       "GID_0": "MTQ",
@@ -4020,15 +4195,16 @@
       "variants": [],
       "aliases": [
         "MAURITIUS",
-        "MUS",
-        "模里西斯",
-        "MAURITIUS"
+        "MUS"
+      ],
+      "searchKeys": [
+        "MAURITIUS",
+        "MUS"
       ]
     },
     "searchKeys": [
       "MAURITIUS",
-      "MUS",
-      "模里西斯"
+      "MUS"
     ],
     "_properties": {
       "GID_0": "MUS",
@@ -4045,15 +4221,16 @@
       "variants": [],
       "aliases": [
         "MALAWI",
-        "MWI",
-        "馬拉威",
-        "MALAWI"
+        "MWI"
+      ],
+      "searchKeys": [
+        "MALAWI",
+        "MWI"
       ]
     },
     "searchKeys": [
       "MALAWI",
-      "MWI",
-      "馬拉威"
+      "MWI"
     ],
     "_properties": {
       "GID_0": "MWI",
@@ -4070,15 +4247,16 @@
       "variants": [],
       "aliases": [
         "MALAYSIA",
-        "MYS",
-        "馬來西亞",
-        "MALAYSIA"
+        "MYS"
+      ],
+      "searchKeys": [
+        "MALAYSIA",
+        "MYS"
       ]
     },
     "searchKeys": [
       "MALAYSIA",
-      "MYS",
-      "馬來西亞"
+      "MYS"
     ],
     "_properties": {
       "GID_0": "MYS",
@@ -4095,15 +4273,16 @@
       "variants": [],
       "aliases": [
         "MAYOTTE",
-        "MYT",
-        "馬約特",
-        "MAYOTTE"
+        "MYT"
+      ],
+      "searchKeys": [
+        "MAYOTTE",
+        "MYT"
       ]
     },
     "searchKeys": [
       "MAYOTTE",
-      "MYT",
-      "馬約特"
+      "MYT"
     ],
     "_properties": {
       "GID_0": "MYT",
@@ -4120,15 +4299,16 @@
       "variants": [],
       "aliases": [
         "NAMIBIA",
-        "NAM",
-        "納米比亞",
-        "NAMIBIA"
+        "NAM"
+      ],
+      "searchKeys": [
+        "NAMIBIA",
+        "NAM"
       ]
     },
     "searchKeys": [
       "NAMIBIA",
-      "NAM",
-      "納米比亞"
+      "NAM"
     ],
     "_properties": {
       "GID_0": "NAM",
@@ -4145,15 +4325,16 @@
       "variants": [],
       "aliases": [
         "NEW CALEDONIA",
-        "NCL",
-        "新喀里多尼亞",
-        "NEW CALEDONIA"
+        "NCL"
+      ],
+      "searchKeys": [
+        "NEW CALEDONIA",
+        "NCL"
       ]
     },
     "searchKeys": [
       "NEW CALEDONIA",
-      "NCL",
-      "新喀里多尼亞"
+      "NCL"
     ],
     "_properties": {
       "GID_0": "NCL",
@@ -4170,15 +4351,16 @@
       "variants": [],
       "aliases": [
         "NIGER",
-        "NER",
-        "尼日",
-        "NIGER"
+        "NER"
+      ],
+      "searchKeys": [
+        "NIGER",
+        "NER"
       ]
     },
     "searchKeys": [
       "NIGER",
-      "NER",
-      "尼日"
+      "NER"
     ],
     "_properties": {
       "GID_0": "NER",
@@ -4195,15 +4377,16 @@
       "variants": [],
       "aliases": [
         "NORFOLK ISLAND",
-        "NFK",
-        "諾福克島",
-        "NORFOLK ISLAND"
+        "NFK"
+      ],
+      "searchKeys": [
+        "NORFOLK ISLAND",
+        "NFK"
       ]
     },
     "searchKeys": [
       "NORFOLK ISLAND",
-      "NFK",
-      "諾福克島"
+      "NFK"
     ],
     "_properties": {
       "GID_0": "NFK",
@@ -4220,15 +4403,16 @@
       "variants": [],
       "aliases": [
         "NIGERIA",
-        "NGA",
-        "奈及利亞",
-        "NIGERIA"
+        "NGA"
+      ],
+      "searchKeys": [
+        "NIGERIA",
+        "NGA"
       ]
     },
     "searchKeys": [
       "NIGERIA",
-      "NGA",
-      "奈及利亞"
+      "NGA"
     ],
     "_properties": {
       "GID_0": "NGA",
@@ -4245,15 +4429,16 @@
       "variants": [],
       "aliases": [
         "NICARAGUA",
-        "NIC",
-        "尼加拉瓜",
-        "NICARAGUA"
+        "NIC"
+      ],
+      "searchKeys": [
+        "NICARAGUA",
+        "NIC"
       ]
     },
     "searchKeys": [
       "NICARAGUA",
-      "NIC",
-      "尼加拉瓜"
+      "NIC"
     ],
     "_properties": {
       "GID_0": "NIC",
@@ -4270,15 +4455,16 @@
       "variants": [],
       "aliases": [
         "NIUE",
-        "NIU",
-        "紐埃",
-        "NIUE"
+        "NIU"
+      ],
+      "searchKeys": [
+        "NIUE",
+        "NIU"
       ]
     },
     "searchKeys": [
       "NIUE",
-      "NIU",
-      "紐埃"
+      "NIU"
     ],
     "_properties": {
       "GID_0": "NIU",
@@ -4295,15 +4481,16 @@
       "variants": [],
       "aliases": [
         "NETHERLANDS",
-        "NLD",
-        "荷蘭",
-        "NETHERLANDS"
+        "NLD"
+      ],
+      "searchKeys": [
+        "NETHERLANDS",
+        "NLD"
       ]
     },
     "searchKeys": [
       "NETHERLANDS",
-      "NLD",
-      "荷蘭"
+      "NLD"
     ],
     "_properties": {
       "GID_0": "NLD",
@@ -4320,15 +4507,16 @@
       "variants": [],
       "aliases": [
         "NORWAY",
-        "NOR",
-        "挪威",
-        "NORWAY"
+        "NOR"
+      ],
+      "searchKeys": [
+        "NORWAY",
+        "NOR"
       ]
     },
     "searchKeys": [
       "NORWAY",
-      "NOR",
-      "挪威"
+      "NOR"
     ],
     "_properties": {
       "GID_0": "NOR",
@@ -4345,15 +4533,16 @@
       "variants": [],
       "aliases": [
         "NEPAL",
-        "NPL",
-        "尼泊爾",
-        "NEPAL"
+        "NPL"
+      ],
+      "searchKeys": [
+        "NEPAL",
+        "NPL"
       ]
     },
     "searchKeys": [
       "NEPAL",
-      "NPL",
-      "尼泊爾"
+      "NPL"
     ],
     "_properties": {
       "GID_0": "NPL",
@@ -4370,15 +4559,16 @@
       "variants": [],
       "aliases": [
         "NAURU",
-        "NRU",
-        "諾魯",
-        "NAURU"
+        "NRU"
+      ],
+      "searchKeys": [
+        "NAURU",
+        "NRU"
       ]
     },
     "searchKeys": [
       "NAURU",
-      "NRU",
-      "諾魯"
+      "NRU"
     ],
     "_properties": {
       "GID_0": "NRU",
@@ -4395,15 +4585,16 @@
       "variants": [],
       "aliases": [
         "NEW ZEALAND",
-        "NZL",
-        "紐西蘭",
-        "NEW ZEALAND"
+        "NZL"
+      ],
+      "searchKeys": [
+        "NEW ZEALAND",
+        "NZL"
       ]
     },
     "searchKeys": [
       "NEW ZEALAND",
-      "NZL",
-      "紐西蘭"
+      "NZL"
     ],
     "_properties": {
       "GID_0": "NZL",
@@ -4420,15 +4611,16 @@
       "variants": [],
       "aliases": [
         "OMAN",
-        "OMN",
-        "阿曼",
-        "OMAN"
+        "OMN"
+      ],
+      "searchKeys": [
+        "OMAN",
+        "OMN"
       ]
     },
     "searchKeys": [
       "OMAN",
-      "OMN",
-      "阿曼"
+      "OMN"
     ],
     "_properties": {
       "GID_0": "OMN",
@@ -4445,15 +4637,16 @@
       "variants": [],
       "aliases": [
         "PAKISTAN",
-        "PAK",
-        "巴基斯坦",
-        "PAKISTAN"
+        "PAK"
+      ],
+      "searchKeys": [
+        "PAKISTAN",
+        "PAK"
       ]
     },
     "searchKeys": [
       "PAKISTAN",
-      "PAK",
-      "巴基斯坦"
+      "PAK"
     ],
     "_properties": {
       "GID_0": "PAK",
@@ -4469,6 +4662,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "PAKISTAN",
+        "Z06"
+      ],
+      "searchKeys": [
         "PAKISTAN",
         "Z06"
       ]
@@ -4492,15 +4689,16 @@
       "variants": [],
       "aliases": [
         "PANAMA",
-        "PAN",
-        "巴拿馬",
-        "PANAMA"
+        "PAN"
+      ],
+      "searchKeys": [
+        "PANAMA",
+        "PAN"
       ]
     },
     "searchKeys": [
       "PANAMA",
-      "PAN",
-      "巴拿馬"
+      "PAN"
     ],
     "_properties": {
       "GID_0": "PAN",
@@ -4517,16 +4715,16 @@
       "variants": [],
       "aliases": [
         "PITCAIRN ISLANDS",
-        "PCN",
-        "皮特肯群島",
-        "PITCAIRN"
+        "PCN"
+      ],
+      "searchKeys": [
+        "PITCAIRN ISLANDS",
+        "PCN"
       ]
     },
     "searchKeys": [
       "PITCAIRN ISLANDS",
-      "PCN",
-      "皮特肯群島",
-      "PITCAIRN"
+      "PCN"
     ],
     "_properties": {
       "GID_0": "PCN",
@@ -4543,15 +4741,16 @@
       "variants": [],
       "aliases": [
         "PERU",
-        "PER",
-        "秘魯",
-        "PERU"
+        "PER"
+      ],
+      "searchKeys": [
+        "PERU",
+        "PER"
       ]
     },
     "searchKeys": [
       "PERU",
-      "PER",
-      "秘魯"
+      "PER"
     ],
     "_properties": {
       "GID_0": "PER",
@@ -4568,15 +4767,16 @@
       "variants": [],
       "aliases": [
         "PHILIPPINES",
-        "PHL",
-        "菲律賓",
-        "PHILIPPINES"
+        "PHL"
+      ],
+      "searchKeys": [
+        "PHILIPPINES",
+        "PHL"
       ]
     },
     "searchKeys": [
       "PHILIPPINES",
-      "PHL",
-      "菲律賓"
+      "PHL"
     ],
     "_properties": {
       "GID_0": "PHL",
@@ -4593,15 +4793,16 @@
       "variants": [],
       "aliases": [
         "PALAU",
-        "PLW",
-        "帛琉",
-        "PALAU"
+        "PLW"
+      ],
+      "searchKeys": [
+        "PALAU",
+        "PLW"
       ]
     },
     "searchKeys": [
       "PALAU",
-      "PLW",
-      "帛琉"
+      "PLW"
     ],
     "_properties": {
       "GID_0": "PLW",
@@ -4618,15 +4819,16 @@
       "variants": [],
       "aliases": [
         "PAPUA NEW GUINEA",
-        "PNG",
-        "巴布亞紐幾內亞",
-        "PAPUA NEW GUINEA"
+        "PNG"
+      ],
+      "searchKeys": [
+        "PAPUA NEW GUINEA",
+        "PNG"
       ]
     },
     "searchKeys": [
       "PAPUA NEW GUINEA",
-      "PNG",
-      "巴布亞紐幾內亞"
+      "PNG"
     ],
     "_properties": {
       "GID_0": "PNG",
@@ -4643,15 +4845,16 @@
       "variants": [],
       "aliases": [
         "POLAND",
-        "POL",
-        "波蘭",
-        "POLAND"
+        "POL"
+      ],
+      "searchKeys": [
+        "POLAND",
+        "POL"
       ]
     },
     "searchKeys": [
       "POLAND",
-      "POL",
-      "波蘭"
+      "POL"
     ],
     "_properties": {
       "GID_0": "POL",
@@ -4668,15 +4871,16 @@
       "variants": [],
       "aliases": [
         "PUERTO RICO",
-        "PRI",
-        "波多黎各",
-        "PUERTO RICO"
+        "PRI"
+      ],
+      "searchKeys": [
+        "PUERTO RICO",
+        "PRI"
       ]
     },
     "searchKeys": [
       "PUERTO RICO",
-      "PRI",
-      "波多黎各"
+      "PRI"
     ],
     "_properties": {
       "GID_0": "PRI",
@@ -4693,16 +4897,16 @@
       "variants": [],
       "aliases": [
         "NORTH KOREA",
-        "PRK",
-        "北韓",
-        "KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+        "PRK"
+      ],
+      "searchKeys": [
+        "NORTH KOREA",
+        "PRK"
       ]
     },
     "searchKeys": [
       "NORTH KOREA",
-      "PRK",
-      "北韓",
-      "KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+      "PRK"
     ],
     "_properties": {
       "GID_0": "PRK",
@@ -4719,15 +4923,16 @@
       "variants": [],
       "aliases": [
         "PORTUGAL",
-        "PRT",
-        "葡萄牙",
-        "PORTUGAL"
+        "PRT"
+      ],
+      "searchKeys": [
+        "PORTUGAL",
+        "PRT"
       ]
     },
     "searchKeys": [
       "PORTUGAL",
-      "PRT",
-      "葡萄牙"
+      "PRT"
     ],
     "_properties": {
       "GID_0": "PRT",
@@ -4744,15 +4949,16 @@
       "variants": [],
       "aliases": [
         "PARAGUAY",
-        "PRY",
-        "巴拉圭",
-        "PARAGUAY"
+        "PRY"
+      ],
+      "searchKeys": [
+        "PARAGUAY",
+        "PRY"
       ]
     },
     "searchKeys": [
       "PARAGUAY",
-      "PRY",
-      "巴拉圭"
+      "PRY"
     ],
     "_properties": {
       "GID_0": "PRY",
@@ -4769,16 +4975,16 @@
       "variants": [],
       "aliases": [
         "PALESTINE",
-        "PSE",
-        "巴勒斯坦",
-        "PALESTINE, STATE OF"
+        "PSE"
+      ],
+      "searchKeys": [
+        "PALESTINE",
+        "PSE"
       ]
     },
     "searchKeys": [
       "PALESTINE",
-      "PSE",
-      "巴勒斯坦",
-      "PALESTINE, STATE OF"
+      "PSE"
     ],
     "_properties": {
       "GID_0": "PSE",
@@ -4795,15 +5001,16 @@
       "variants": [],
       "aliases": [
         "FRENCH POLYNESIA",
-        "PYF",
-        "法屬玻里尼西亞",
-        "FRENCH POLYNESIA"
+        "PYF"
+      ],
+      "searchKeys": [
+        "FRENCH POLYNESIA",
+        "PYF"
       ]
     },
     "searchKeys": [
       "FRENCH POLYNESIA",
-      "PYF",
-      "法屬玻里尼西亞"
+      "PYF"
     ],
     "_properties": {
       "GID_0": "PYF",
@@ -4820,15 +5027,16 @@
       "variants": [],
       "aliases": [
         "QATAR",
-        "QAT",
-        "卡達",
-        "QATAR"
+        "QAT"
+      ],
+      "searchKeys": [
+        "QATAR",
+        "QAT"
       ]
     },
     "searchKeys": [
       "QATAR",
-      "QAT",
-      "卡達"
+      "QAT"
     ],
     "_properties": {
       "GID_0": "QAT",
@@ -4845,15 +5053,16 @@
       "variants": [],
       "aliases": [
         "RÉUNION",
-        "REU",
-        "留尼旺",
-        "RÉUNION"
+        "REU"
+      ],
+      "searchKeys": [
+        "RÉUNION",
+        "REU"
       ]
     },
     "searchKeys": [
       "RÉUNION",
-      "REU",
-      "留尼旺"
+      "REU"
     ],
     "_properties": {
       "GID_0": "REU",
@@ -4870,15 +5079,16 @@
       "variants": [],
       "aliases": [
         "ROMANIA",
-        "ROU",
-        "羅馬尼亞",
-        "ROMANIA"
+        "ROU"
+      ],
+      "searchKeys": [
+        "ROMANIA",
+        "ROU"
       ]
     },
     "searchKeys": [
       "ROMANIA",
-      "ROU",
-      "羅馬尼亞"
+      "ROU"
     ],
     "_properties": {
       "GID_0": "ROU",
@@ -4895,16 +5105,16 @@
       "variants": [],
       "aliases": [
         "RUSSIA",
-        "RUS",
-        "俄羅斯",
-        "RUSSIAN FEDERATION"
+        "RUS"
+      ],
+      "searchKeys": [
+        "RUSSIA",
+        "RUS"
       ]
     },
     "searchKeys": [
       "RUSSIA",
-      "RUS",
-      "俄羅斯",
-      "RUSSIAN FEDERATION"
+      "RUS"
     ],
     "_properties": {
       "GID_0": "RUS",
@@ -4921,15 +5131,16 @@
       "variants": [],
       "aliases": [
         "RWANDA",
-        "RWA",
-        "盧安達",
-        "RWANDA"
+        "RWA"
+      ],
+      "searchKeys": [
+        "RWANDA",
+        "RWA"
       ]
     },
     "searchKeys": [
       "RWANDA",
-      "RWA",
-      "盧安達"
+      "RWA"
     ],
     "_properties": {
       "GID_0": "RWA",
@@ -4946,15 +5157,16 @@
       "variants": [],
       "aliases": [
         "SAUDI ARABIA",
-        "SAU",
-        "沙烏地阿拉伯",
-        "SAUDI ARABIA"
+        "SAU"
+      ],
+      "searchKeys": [
+        "SAUDI ARABIA",
+        "SAU"
       ]
     },
     "searchKeys": [
       "SAUDI ARABIA",
-      "SAU",
-      "沙烏地阿拉伯"
+      "SAU"
     ],
     "_properties": {
       "GID_0": "SAU",
@@ -4971,15 +5183,16 @@
       "variants": [],
       "aliases": [
         "SUDAN",
-        "SDN",
-        "蘇丹",
-        "SUDAN"
+        "SDN"
+      ],
+      "searchKeys": [
+        "SUDAN",
+        "SDN"
       ]
     },
     "searchKeys": [
       "SUDAN",
-      "SDN",
-      "蘇丹"
+      "SDN"
     ],
     "_properties": {
       "GID_0": "SDN",
@@ -4996,15 +5209,16 @@
       "variants": [],
       "aliases": [
         "SENEGAL",
-        "SEN",
-        "塞內加爾",
-        "SENEGAL"
+        "SEN"
+      ],
+      "searchKeys": [
+        "SENEGAL",
+        "SEN"
       ]
     },
     "searchKeys": [
       "SENEGAL",
-      "SEN",
-      "塞內加爾"
+      "SEN"
     ],
     "_properties": {
       "GID_0": "SEN",
@@ -5021,15 +5235,16 @@
       "variants": [],
       "aliases": [
         "SINGAPORE",
-        "SGP",
-        "新加坡",
-        "SINGAPORE"
+        "SGP"
+      ],
+      "searchKeys": [
+        "SINGAPORE",
+        "SGP"
       ]
     },
     "searchKeys": [
       "SINGAPORE",
-      "SGP",
-      "新加坡"
+      "SGP"
     ],
     "_properties": {
       "GID_0": "SGP",
@@ -5046,16 +5261,16 @@
       "variants": [],
       "aliases": [
         "SOUTH GEORGIA AND THE SOUTH SAND",
-        "SGS",
-        "南喬治亞和南桑威奇群島",
-        "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+        "SGS"
+      ],
+      "searchKeys": [
+        "SOUTH GEORGIA AND THE SOUTH SAND",
+        "SGS"
       ]
     },
     "searchKeys": [
       "SOUTH GEORGIA AND THE SOUTH SAND",
-      "SGS",
-      "南喬治亞和南桑威奇群島",
-      "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+      "SGS"
     ],
     "_properties": {
       "GID_0": "SGS",
@@ -5072,16 +5287,16 @@
       "variants": [],
       "aliases": [
         "SAINT HELENA, ASCENSION AND TRIS",
-        "SHN",
-        "聖赫勒拿",
-        "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+        "SHN"
+      ],
+      "searchKeys": [
+        "SAINT HELENA, ASCENSION AND TRIS",
+        "SHN"
       ]
     },
     "searchKeys": [
       "SAINT HELENA, ASCENSION AND TRIS",
-      "SHN",
-      "聖赫勒拿",
-      "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+      "SHN"
     ],
     "_properties": {
       "GID_0": "SHN",
@@ -5098,15 +5313,16 @@
       "variants": [],
       "aliases": [
         "SVALBARD AND JAN MAYEN",
-        "SJM",
-        "斯瓦爾巴和揚馬延",
-        "SVALBARD AND JAN MAYEN"
+        "SJM"
+      ],
+      "searchKeys": [
+        "SVALBARD AND JAN MAYEN",
+        "SJM"
       ]
     },
     "searchKeys": [
       "SVALBARD AND JAN MAYEN",
-      "SJM",
-      "斯瓦爾巴和揚馬延"
+      "SJM"
     ],
     "_properties": {
       "GID_0": "SJM",
@@ -5123,15 +5339,16 @@
       "variants": [],
       "aliases": [
         "SOLOMON ISLANDS",
-        "SLB",
-        "索羅門群島",
-        "SOLOMON ISLANDS"
+        "SLB"
+      ],
+      "searchKeys": [
+        "SOLOMON ISLANDS",
+        "SLB"
       ]
     },
     "searchKeys": [
       "SOLOMON ISLANDS",
-      "SLB",
-      "索羅門群島"
+      "SLB"
     ],
     "_properties": {
       "GID_0": "SLB",
@@ -5148,15 +5365,16 @@
       "variants": [],
       "aliases": [
         "SIERRA LEONE",
-        "SLE",
-        "獅子山",
-        "SIERRA LEONE"
+        "SLE"
+      ],
+      "searchKeys": [
+        "SIERRA LEONE",
+        "SLE"
       ]
     },
     "searchKeys": [
       "SIERRA LEONE",
-      "SLE",
-      "獅子山"
+      "SLE"
     ],
     "_properties": {
       "GID_0": "SLE",
@@ -5173,15 +5391,16 @@
       "variants": [],
       "aliases": [
         "EL SALVADOR",
-        "SLV",
-        "薩爾瓦多",
-        "EL SALVADOR"
+        "SLV"
+      ],
+      "searchKeys": [
+        "EL SALVADOR",
+        "SLV"
       ]
     },
     "searchKeys": [
       "EL SALVADOR",
-      "SLV",
-      "薩爾瓦多"
+      "SLV"
     ],
     "_properties": {
       "GID_0": "SLV",
@@ -5198,15 +5417,16 @@
       "variants": [],
       "aliases": [
         "SAN MARINO",
-        "SMR",
-        "聖馬利諾",
-        "SAN MARINO"
+        "SMR"
+      ],
+      "searchKeys": [
+        "SAN MARINO",
+        "SMR"
       ]
     },
     "searchKeys": [
       "SAN MARINO",
-      "SMR",
-      "聖馬利諾"
+      "SMR"
     ],
     "_properties": {
       "GID_0": "SMR",
@@ -5223,15 +5443,16 @@
       "variants": [],
       "aliases": [
         "SOMALIA",
-        "SOM",
-        "索馬利亞",
-        "SOMALIA"
+        "SOM"
+      ],
+      "searchKeys": [
+        "SOMALIA",
+        "SOM"
       ]
     },
     "searchKeys": [
       "SOMALIA",
-      "SOM",
-      "索馬利亞"
+      "SOM"
     ],
     "_properties": {
       "GID_0": "SOM",
@@ -5248,15 +5469,16 @@
       "variants": [],
       "aliases": [
         "SAINT PIERRE AND MIQUELON",
-        "SPM",
-        "聖皮耶與密克隆",
-        "SAINT PIERRE AND MIQUELON"
+        "SPM"
+      ],
+      "searchKeys": [
+        "SAINT PIERRE AND MIQUELON",
+        "SPM"
       ]
     },
     "searchKeys": [
       "SAINT PIERRE AND MIQUELON",
-      "SPM",
-      "聖皮耶與密克隆"
+      "SPM"
     ],
     "_properties": {
       "GID_0": "SPM",
@@ -5273,15 +5495,16 @@
       "variants": [],
       "aliases": [
         "SERBIA",
-        "SRB",
-        "塞爾維亞",
-        "SERBIA"
+        "SRB"
+      ],
+      "searchKeys": [
+        "SERBIA",
+        "SRB"
       ]
     },
     "searchKeys": [
       "SERBIA",
-      "SRB",
-      "塞爾維亞"
+      "SRB"
     ],
     "_properties": {
       "GID_0": "SRB",
@@ -5298,15 +5521,16 @@
       "variants": [],
       "aliases": [
         "SOUTH SUDAN",
-        "SSD",
-        "南蘇丹",
-        "SOUTH SUDAN"
+        "SSD"
+      ],
+      "searchKeys": [
+        "SOUTH SUDAN",
+        "SSD"
       ]
     },
     "searchKeys": [
       "SOUTH SUDAN",
-      "SSD",
-      "南蘇丹"
+      "SSD"
     ],
     "_properties": {
       "GID_0": "SSD",
@@ -5323,16 +5547,16 @@
       "variants": [],
       "aliases": [
         "SÃO TOMÉ AND PRÍNCIPE",
-        "STP",
-        "聖多美普林西比",
-        "SAO TOME AND PRINCIPE"
+        "STP"
+      ],
+      "searchKeys": [
+        "SÃO TOMÉ AND PRÍNCIPE",
+        "STP"
       ]
     },
     "searchKeys": [
       "SÃO TOMÉ AND PRÍNCIPE",
-      "STP",
-      "聖多美普林西比",
-      "SAO TOME AND PRINCIPE"
+      "STP"
     ],
     "_properties": {
       "GID_0": "STP",
@@ -5349,15 +5573,16 @@
       "variants": [],
       "aliases": [
         "SURINAME",
-        "SUR",
-        "蘇利南",
-        "SURINAME"
+        "SUR"
+      ],
+      "searchKeys": [
+        "SURINAME",
+        "SUR"
       ]
     },
     "searchKeys": [
       "SURINAME",
-      "SUR",
-      "蘇利南"
+      "SUR"
     ],
     "_properties": {
       "GID_0": "SUR",
@@ -5374,15 +5599,16 @@
       "variants": [],
       "aliases": [
         "SLOVAKIA",
-        "SVK",
-        "斯洛伐克",
-        "SLOVAKIA"
+        "SVK"
+      ],
+      "searchKeys": [
+        "SLOVAKIA",
+        "SVK"
       ]
     },
     "searchKeys": [
       "SLOVAKIA",
-      "SVK",
-      "斯洛伐克"
+      "SVK"
     ],
     "_properties": {
       "GID_0": "SVK",
@@ -5399,15 +5625,16 @@
       "variants": [],
       "aliases": [
         "SLOVENIA",
-        "SVN",
-        "斯洛維尼亞",
-        "SLOVENIA"
+        "SVN"
+      ],
+      "searchKeys": [
+        "SLOVENIA",
+        "SVN"
       ]
     },
     "searchKeys": [
       "SLOVENIA",
-      "SVN",
-      "斯洛維尼亞"
+      "SVN"
     ],
     "_properties": {
       "GID_0": "SVN",
@@ -5424,15 +5651,16 @@
       "variants": [],
       "aliases": [
         "SWEDEN",
-        "SWE",
-        "瑞典",
-        "SWEDEN"
+        "SWE"
+      ],
+      "searchKeys": [
+        "SWEDEN",
+        "SWE"
       ]
     },
     "searchKeys": [
       "SWEDEN",
-      "SWE",
-      "瑞典"
+      "SWE"
     ],
     "_properties": {
       "GID_0": "SWE",
@@ -5449,16 +5677,16 @@
       "variants": [],
       "aliases": [
         "SWAZILAND",
-        "SWZ",
-        "史瓦帝尼",
-        "ESWATINI"
+        "SWZ"
+      ],
+      "searchKeys": [
+        "SWAZILAND",
+        "SWZ"
       ]
     },
     "searchKeys": [
       "SWAZILAND",
-      "SWZ",
-      "史瓦帝尼",
-      "ESWATINI"
+      "SWZ"
     ],
     "_properties": {
       "GID_0": "SWZ",
@@ -5475,16 +5703,16 @@
       "variants": [],
       "aliases": [
         "SINT MAARTEN",
-        "SXM",
-        "荷屬聖馬丁",
-        "SINT MAARTEN (DUTCH PART)"
+        "SXM"
+      ],
+      "searchKeys": [
+        "SINT MAARTEN",
+        "SXM"
       ]
     },
     "searchKeys": [
       "SINT MAARTEN",
-      "SXM",
-      "荷屬聖馬丁",
-      "SINT MAARTEN (DUTCH PART)"
+      "SXM"
     ],
     "_properties": {
       "GID_0": "SXM",
@@ -5501,15 +5729,16 @@
       "variants": [],
       "aliases": [
         "SEYCHELLES",
-        "SYC",
-        "塞席爾",
-        "SEYCHELLES"
+        "SYC"
+      ],
+      "searchKeys": [
+        "SEYCHELLES",
+        "SYC"
       ]
     },
     "searchKeys": [
       "SEYCHELLES",
-      "SYC",
-      "塞席爾"
+      "SYC"
     ],
     "_properties": {
       "GID_0": "SYC",
@@ -5526,16 +5755,16 @@
       "variants": [],
       "aliases": [
         "SYRIA",
-        "SYR",
-        "敘利亞",
-        "SYRIAN ARAB REPUBLIC"
+        "SYR"
+      ],
+      "searchKeys": [
+        "SYRIA",
+        "SYR"
       ]
     },
     "searchKeys": [
       "SYRIA",
-      "SYR",
-      "敘利亞",
-      "SYRIAN ARAB REPUBLIC"
+      "SYR"
     ],
     "_properties": {
       "GID_0": "SYR",
@@ -5552,15 +5781,16 @@
       "variants": [],
       "aliases": [
         "TURKS AND CAICOS ISLANDS",
-        "TCA",
-        "特克斯和凱科斯群島",
-        "TURKS AND CAICOS ISLANDS"
+        "TCA"
+      ],
+      "searchKeys": [
+        "TURKS AND CAICOS ISLANDS",
+        "TCA"
       ]
     },
     "searchKeys": [
       "TURKS AND CAICOS ISLANDS",
-      "TCA",
-      "特克斯和凱科斯群島"
+      "TCA"
     ],
     "_properties": {
       "GID_0": "TCA",
@@ -5577,15 +5807,16 @@
       "variants": [],
       "aliases": [
         "CHAD",
-        "TCD",
-        "查德",
-        "CHAD"
+        "TCD"
+      ],
+      "searchKeys": [
+        "CHAD",
+        "TCD"
       ]
     },
     "searchKeys": [
       "CHAD",
-      "TCD",
-      "查德"
+      "TCD"
     ],
     "_properties": {
       "GID_0": "TCD",
@@ -5602,15 +5833,16 @@
       "variants": [],
       "aliases": [
         "TOGO",
-        "TGO",
-        "多哥",
-        "TOGO"
+        "TGO"
+      ],
+      "searchKeys": [
+        "TOGO",
+        "TGO"
       ]
     },
     "searchKeys": [
       "TOGO",
-      "TGO",
-      "多哥"
+      "TGO"
     ],
     "_properties": {
       "GID_0": "TGO",
@@ -5627,15 +5859,16 @@
       "variants": [],
       "aliases": [
         "THAILAND",
-        "THA",
-        "泰國",
-        "THAILAND"
+        "THA"
+      ],
+      "searchKeys": [
+        "THAILAND",
+        "THA"
       ]
     },
     "searchKeys": [
       "THAILAND",
-      "THA",
-      "泰國"
+      "THA"
     ],
     "_properties": {
       "GID_0": "THA",
@@ -5652,15 +5885,16 @@
       "variants": [],
       "aliases": [
         "TAJIKISTAN",
-        "TJK",
-        "塔吉克",
-        "TAJIKISTAN"
+        "TJK"
+      ],
+      "searchKeys": [
+        "TAJIKISTAN",
+        "TJK"
       ]
     },
     "searchKeys": [
       "TAJIKISTAN",
-      "TJK",
-      "塔吉克"
+      "TJK"
     ],
     "_properties": {
       "GID_0": "TJK",
@@ -5677,15 +5911,16 @@
       "variants": [],
       "aliases": [
         "TOKELAU",
-        "TKL",
-        "托克勞",
-        "TOKELAU"
+        "TKL"
+      ],
+      "searchKeys": [
+        "TOKELAU",
+        "TKL"
       ]
     },
     "searchKeys": [
       "TOKELAU",
-      "TKL",
-      "托克勞"
+      "TKL"
     ],
     "_properties": {
       "GID_0": "TKL",
@@ -5702,15 +5937,16 @@
       "variants": [],
       "aliases": [
         "TURKMENISTAN",
-        "TKM",
-        "土庫曼",
-        "TURKMENISTAN"
+        "TKM"
+      ],
+      "searchKeys": [
+        "TURKMENISTAN",
+        "TKM"
       ]
     },
     "searchKeys": [
       "TURKMENISTAN",
-      "TKM",
-      "土庫曼"
+      "TKM"
     ],
     "_properties": {
       "GID_0": "TKM",
@@ -5727,15 +5963,16 @@
       "variants": [],
       "aliases": [
         "TIMOR-LESTE",
-        "TLS",
-        "東帝汶",
-        "TIMOR-LESTE"
+        "TLS"
+      ],
+      "searchKeys": [
+        "TIMOR-LESTE",
+        "TLS"
       ]
     },
     "searchKeys": [
       "TIMOR-LESTE",
-      "TLS",
-      "東帝汶"
+      "TLS"
     ],
     "_properties": {
       "GID_0": "TLS",
@@ -5752,15 +5989,16 @@
       "variants": [],
       "aliases": [
         "TONGA",
-        "TON",
-        "東加",
-        "TONGA"
+        "TON"
+      ],
+      "searchKeys": [
+        "TONGA",
+        "TON"
       ]
     },
     "searchKeys": [
       "TONGA",
-      "TON",
-      "東加"
+      "TON"
     ],
     "_properties": {
       "GID_0": "TON",
@@ -5777,15 +6015,16 @@
       "variants": [],
       "aliases": [
         "TRINIDAD AND TOBAGO",
-        "TTO",
-        "千里達及托巴哥",
-        "TRINIDAD AND TOBAGO"
+        "TTO"
+      ],
+      "searchKeys": [
+        "TRINIDAD AND TOBAGO",
+        "TTO"
       ]
     },
     "searchKeys": [
       "TRINIDAD AND TOBAGO",
-      "TTO",
-      "千里達及托巴哥"
+      "TTO"
     ],
     "_properties": {
       "GID_0": "TTO",
@@ -5802,15 +6041,16 @@
       "variants": [],
       "aliases": [
         "TUNISIA",
-        "TUN",
-        "突尼西亞",
-        "TUNISIA"
+        "TUN"
+      ],
+      "searchKeys": [
+        "TUNISIA",
+        "TUN"
       ]
     },
     "searchKeys": [
       "TUNISIA",
-      "TUN",
-      "突尼西亞"
+      "TUN"
     ],
     "_properties": {
       "GID_0": "TUN",
@@ -5827,15 +6067,16 @@
       "variants": [],
       "aliases": [
         "TURKEY",
-        "TUR",
-        "土耳其",
-        "TURKEY"
+        "TUR"
+      ],
+      "searchKeys": [
+        "TURKEY",
+        "TUR"
       ]
     },
     "searchKeys": [
       "TURKEY",
-      "TUR",
-      "土耳其"
+      "TUR"
     ],
     "_properties": {
       "GID_0": "TUR",
@@ -5852,15 +6093,16 @@
       "variants": [],
       "aliases": [
         "TUVALU",
-        "TUV",
-        "吐瓦魯",
-        "TUVALU"
+        "TUV"
+      ],
+      "searchKeys": [
+        "TUVALU",
+        "TUV"
       ]
     },
     "searchKeys": [
       "TUVALU",
-      "TUV",
-      "吐瓦魯"
+      "TUV"
     ],
     "_properties": {
       "GID_0": "TUV",
@@ -5877,15 +6119,16 @@
       "variants": [],
       "aliases": [
         "TAIWAN",
-        "TWN",
-        "台灣",
-        "TAIWAN"
+        "TWN"
+      ],
+      "searchKeys": [
+        "TAIWAN",
+        "TWN"
       ]
     },
     "searchKeys": [
       "TAIWAN",
-      "TWN",
-      "台灣"
+      "TWN"
     ],
     "_properties": {
       "GID_0": "TWN",
@@ -5902,15 +6145,16 @@
       "variants": [],
       "aliases": [
         "TANZANIA",
-        "TZA",
-        "坦尚尼亞",
-        "TANZANIA"
+        "TZA"
+      ],
+      "searchKeys": [
+        "TANZANIA",
+        "TZA"
       ]
     },
     "searchKeys": [
       "TANZANIA",
-      "TZA",
-      "坦尚尼亞"
+      "TZA"
     ],
     "_properties": {
       "GID_0": "TZA",
@@ -5927,15 +6171,16 @@
       "variants": [],
       "aliases": [
         "UGANDA",
-        "UGA",
-        "烏干達",
-        "UGANDA"
+        "UGA"
+      ],
+      "searchKeys": [
+        "UGANDA",
+        "UGA"
       ]
     },
     "searchKeys": [
       "UGANDA",
-      "UGA",
-      "烏干達"
+      "UGA"
     ],
     "_properties": {
       "GID_0": "UGA",
@@ -5952,15 +6197,16 @@
       "variants": [],
       "aliases": [
         "UKRAINE",
-        "UKR",
-        "烏克蘭",
-        "UKRAINE"
+        "UKR"
+      ],
+      "searchKeys": [
+        "UKRAINE",
+        "UKR"
       ]
     },
     "searchKeys": [
       "UKRAINE",
-      "UKR",
-      "烏克蘭"
+      "UKR"
     ],
     "_properties": {
       "GID_0": "UKR",
@@ -5977,16 +6223,16 @@
       "variants": [],
       "aliases": [
         "UNITED STATES MINOR OUTLYING ISL",
-        "UMI",
-        "美國本土外小島嶼",
-        "UNITED STATES MINOR OUTLYING ISLANDS"
+        "UMI"
+      ],
+      "searchKeys": [
+        "UNITED STATES MINOR OUTLYING ISL",
+        "UMI"
       ]
     },
     "searchKeys": [
       "UNITED STATES MINOR OUTLYING ISL",
-      "UMI",
-      "美國本土外小島嶼",
-      "UNITED STATES MINOR OUTLYING ISLANDS"
+      "UMI"
     ],
     "_properties": {
       "GID_0": "UMI",
@@ -6003,15 +6249,16 @@
       "variants": [],
       "aliases": [
         "URUGUAY",
-        "URY",
-        "烏拉圭",
-        "URUGUAY"
+        "URY"
+      ],
+      "searchKeys": [
+        "URUGUAY",
+        "URY"
       ]
     },
     "searchKeys": [
       "URUGUAY",
-      "URY",
-      "烏拉圭"
+      "URY"
     ],
     "_properties": {
       "GID_0": "URY",
@@ -6028,16 +6275,16 @@
       "variants": [],
       "aliases": [
         "UNITED STATES",
-        "USA",
-        "美國",
-        "UNITED STATES OF AMERICA"
+        "USA"
+      ],
+      "searchKeys": [
+        "UNITED STATES",
+        "USA"
       ]
     },
     "searchKeys": [
       "UNITED STATES",
-      "USA",
-      "美國",
-      "UNITED STATES OF AMERICA"
+      "USA"
     ],
     "_properties": {
       "GID_0": "USA",
@@ -6054,15 +6301,16 @@
       "variants": [],
       "aliases": [
         "UZBEKISTAN",
-        "UZB",
-        "烏茲別克",
-        "UZBEKISTAN"
+        "UZB"
+      ],
+      "searchKeys": [
+        "UZBEKISTAN",
+        "UZB"
       ]
     },
     "searchKeys": [
       "UZBEKISTAN",
-      "UZB",
-      "烏茲別克"
+      "UZB"
     ],
     "_properties": {
       "GID_0": "UZB",
@@ -6079,16 +6327,16 @@
       "variants": [],
       "aliases": [
         "VATICAN CITY",
-        "VAT",
-        "梵蒂岡",
-        "HOLY SEE"
+        "VAT"
+      ],
+      "searchKeys": [
+        "VATICAN CITY",
+        "VAT"
       ]
     },
     "searchKeys": [
       "VATICAN CITY",
-      "VAT",
-      "梵蒂岡",
-      "HOLY SEE"
+      "VAT"
     ],
     "_properties": {
       "GID_0": "VAT",
@@ -6105,15 +6353,16 @@
       "variants": [],
       "aliases": [
         "SAINT VINCENT AND THE GRENADINES",
-        "VCT",
-        "聖文森及格瑞那丁",
-        "SAINT VINCENT AND THE GRENADINES"
+        "VCT"
+      ],
+      "searchKeys": [
+        "SAINT VINCENT AND THE GRENADINES",
+        "VCT"
       ]
     },
     "searchKeys": [
       "SAINT VINCENT AND THE GRENADINES",
-      "VCT",
-      "聖文森及格瑞那丁"
+      "VCT"
     ],
     "_properties": {
       "GID_0": "VCT",
@@ -6130,15 +6379,16 @@
       "variants": [],
       "aliases": [
         "VENEZUELA",
-        "VEN",
-        "委內瑞拉",
-        "VENEZUELA"
+        "VEN"
+      ],
+      "searchKeys": [
+        "VENEZUELA",
+        "VEN"
       ]
     },
     "searchKeys": [
       "VENEZUELA",
-      "VEN",
-      "委內瑞拉"
+      "VEN"
     ],
     "_properties": {
       "GID_0": "VEN",
@@ -6155,16 +6405,16 @@
       "variants": [],
       "aliases": [
         "BRITISH VIRGIN ISLANDS",
-        "VGB",
-        "英屬維京群島",
-        "VIRGIN ISLANDS (BRITISH)"
+        "VGB"
+      ],
+      "searchKeys": [
+        "BRITISH VIRGIN ISLANDS",
+        "VGB"
       ]
     },
     "searchKeys": [
       "BRITISH VIRGIN ISLANDS",
-      "VGB",
-      "英屬維京群島",
-      "VIRGIN ISLANDS (BRITISH)"
+      "VGB"
     ],
     "_properties": {
       "GID_0": "VGB",
@@ -6181,16 +6431,16 @@
       "variants": [],
       "aliases": [
         "VIRGIN ISLANDS, U.S.",
-        "VIR",
-        "美屬維京群島",
-        "VIRGIN ISLANDS (U.S.)"
+        "VIR"
+      ],
+      "searchKeys": [
+        "VIRGIN ISLANDS, U.S.",
+        "VIR"
       ]
     },
     "searchKeys": [
       "VIRGIN ISLANDS, U.S.",
-      "VIR",
-      "美屬維京群島",
-      "VIRGIN ISLANDS (U.S.)"
+      "VIR"
     ],
     "_properties": {
       "GID_0": "VIR",
@@ -6207,16 +6457,16 @@
       "variants": [],
       "aliases": [
         "VIETNAM",
-        "VNM",
-        "越南",
-        "VIET NAM"
+        "VNM"
+      ],
+      "searchKeys": [
+        "VIETNAM",
+        "VNM"
       ]
     },
     "searchKeys": [
       "VIETNAM",
-      "VNM",
-      "越南",
-      "VIET NAM"
+      "VNM"
     ],
     "_properties": {
       "GID_0": "VNM",
@@ -6233,15 +6483,16 @@
       "variants": [],
       "aliases": [
         "VANUATU",
-        "VUT",
-        "萬那杜",
-        "VANUATU"
+        "VUT"
+      ],
+      "searchKeys": [
+        "VANUATU",
+        "VUT"
       ]
     },
     "searchKeys": [
       "VANUATU",
-      "VUT",
-      "萬那杜"
+      "VUT"
     ],
     "_properties": {
       "GID_0": "VUT",
@@ -6258,15 +6509,16 @@
       "variants": [],
       "aliases": [
         "WALLIS AND FUTUNA",
-        "WLF",
-        "瓦利斯和富圖納",
-        "WALLIS AND FUTUNA"
+        "WLF"
+      ],
+      "searchKeys": [
+        "WALLIS AND FUTUNA",
+        "WLF"
       ]
     },
     "searchKeys": [
       "WALLIS AND FUTUNA",
-      "WLF",
-      "瓦利斯和富圖納"
+      "WLF"
     ],
     "_properties": {
       "GID_0": "WLF",
@@ -6283,15 +6535,16 @@
       "variants": [],
       "aliases": [
         "SAMOA",
-        "WSM",
-        "薩摩亞",
-        "SAMOA"
+        "WSM"
+      ],
+      "searchKeys": [
+        "SAMOA",
+        "WSM"
       ]
     },
     "searchKeys": [
       "SAMOA",
-      "WSM",
-      "薩摩亞"
+      "WSM"
     ],
     "_properties": {
       "GID_0": "WSM",
@@ -6307,6 +6560,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "AKROTIRI AND DHEKELIA",
+        "XAD"
+      ],
+      "searchKeys": [
         "AKROTIRI AND DHEKELIA",
         "XAD"
       ]
@@ -6331,6 +6588,10 @@
       "aliases": [
         "CASPIAN SEA",
         "XCA"
+      ],
+      "searchKeys": [
+        "CASPIAN SEA",
+        "XCA"
       ]
     },
     "searchKeys": [
@@ -6351,6 +6612,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "CLIPPERTON ISLAND",
+        "XCL"
+      ],
+      "searchKeys": [
         "CLIPPERTON ISLAND",
         "XCL"
       ]
@@ -6375,6 +6640,10 @@
       "aliases": [
         "KOSOVO",
         "XKO"
+      ],
+      "searchKeys": [
+        "KOSOVO",
+        "XKO"
       ]
     },
     "searchKeys": [
@@ -6395,6 +6664,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "PARACEL ISLANDS",
+        "XPI"
+      ],
+      "searchKeys": [
         "PARACEL ISLANDS",
         "XPI"
       ]
@@ -6419,6 +6692,10 @@
       "aliases": [
         "SPRATLY ISLANDS",
         "XSP"
+      ],
+      "searchKeys": [
+        "SPRATLY ISLANDS",
+        "XSP"
       ]
     },
     "searchKeys": [
@@ -6440,15 +6717,16 @@
       "variants": [],
       "aliases": [
         "YEMEN",
-        "YEM",
-        "葉門",
-        "YEMEN"
+        "YEM"
+      ],
+      "searchKeys": [
+        "YEMEN",
+        "YEM"
       ]
     },
     "searchKeys": [
       "YEMEN",
-      "YEM",
-      "葉門"
+      "YEM"
     ],
     "_properties": {
       "GID_0": "YEM",
@@ -6465,15 +6743,16 @@
       "variants": [],
       "aliases": [
         "SOUTH AFRICA",
-        "ZAF",
-        "南非",
-        "SOUTH AFRICA"
+        "ZAF"
+      ],
+      "searchKeys": [
+        "SOUTH AFRICA",
+        "ZAF"
       ]
     },
     "searchKeys": [
       "SOUTH AFRICA",
-      "ZAF",
-      "南非"
+      "ZAF"
     ],
     "_properties": {
       "GID_0": "ZAF",
@@ -6490,15 +6769,16 @@
       "variants": [],
       "aliases": [
         "ZAMBIA",
-        "ZMB",
-        "尚比亞",
-        "ZAMBIA"
+        "ZMB"
+      ],
+      "searchKeys": [
+        "ZAMBIA",
+        "ZMB"
       ]
     },
     "searchKeys": [
       "ZAMBIA",
-      "ZMB",
-      "尚比亞"
+      "ZMB"
     ],
     "_properties": {
       "GID_0": "ZMB",
@@ -6514,6 +6794,10 @@
       "local": [],
       "variants": [],
       "aliases": [
+        "NORTHERN CYPRUS",
+        "ZNC"
+      ],
+      "searchKeys": [
         "NORTHERN CYPRUS",
         "ZNC"
       ]
@@ -6537,15 +6821,16 @@
       "variants": [],
       "aliases": [
         "ZIMBABWE",
-        "ZWE",
-        "辛巴威",
-        "ZIMBABWE"
+        "ZWE"
+      ],
+      "searchKeys": [
+        "ZIMBABWE",
+        "ZWE"
       ]
     },
     "searchKeys": [
       "ZIMBABWE",
-      "ZWE",
-      "辛巴威"
+      "ZWE"
     ],
     "_properties": {
       "GID_0": "ZWE",

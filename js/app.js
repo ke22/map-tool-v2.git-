@@ -2185,6 +2185,164 @@ async function handleAdministrationSearch(query, locationResolver) {
   try {
     logger.info(`[handleAdministrationSearch] Starting search for: ${query}`);
     
+    // 城市到行政区的直接映射表（中文城市名称 -> GADM GID）
+    // 这个映射表优先于搜索索引，提供快速准确的匹配
+    const cityToAdminMap = {
+      // 俄罗斯城市
+      '莫斯科': { gid: 'RUS.43_1', name: 'Moscow City', country: 'RUS' },
+      '聖彼得堡': { gid: 'RUS.78_1', name: 'Saint Petersburg', country: 'RUS' },
+      '圣彼得堡': { gid: 'RUS.78_1', name: 'Saint Petersburg', country: 'RUS' },
+      // 美国城市
+      '華盛頓': { gid: 'USA.11_1', name: 'District of Columbia', country: 'USA' },
+      '华盛顿': { gid: 'USA.11_1', name: 'District of Columbia', country: 'USA' },
+      '華盛頓特區': { gid: 'USA.11_1', name: 'District of Columbia', country: 'USA' },
+      '华盛顿特区': { gid: 'USA.11_1', name: 'District of Columbia', country: 'USA' },
+      '紐約': { gid: 'USA.36_1', name: 'New York', country: 'USA' },
+      '纽约': { gid: 'USA.36_1', name: 'New York', country: 'USA' },
+      '洛杉磯': { gid: 'USA.6_1', name: 'California', country: 'USA' }, // Los Angeles is in CA
+      '洛杉矶': { gid: 'USA.6_1', name: 'California', country: 'USA' },
+      // 台湾城市
+      '台北': { gid: 'TWN.4_1', name: 'Taipei City', country: 'TWN' },
+      '臺北': { gid: 'TWN.4_1', name: 'Taipei City', country: 'TWN' },
+      '新北': { gid: 'TWN.3_1', name: 'New Taipei City', country: 'TWN' },
+      '桃園': { gid: 'TWN.13_1', name: 'Taoyuan', country: 'TWN' },
+      '台中': { gid: 'TWN.12_1', name: 'Taichung City', country: 'TWN' },
+      '臺中': { gid: 'TWN.12_1', name: 'Taichung City', country: 'TWN' },
+      '台南': { gid: 'TWN.15_1', name: 'Tainan City', country: 'TWN' },
+      '高雄': { gid: 'TWN.2_1', name: 'Kaohsiung City', country: 'TWN' }
+    };
+    
+    // 检查是否是已知的城市（优先使用直接映射）
+    const queryClean = query.replace(/[市縣省州]/g, '').trim();
+    const cityMapping = cityToAdminMap[query] || cityToAdminMap[queryClean];
+    
+    if (cityMapping) {
+      logger.info(`[handleAdministrationSearch] Found direct city mapping: ${query} -> ${cityMapping.gid} (${cityMapping.name})`);
+      
+      // 检查国家是否在选中的国家列表中
+      const state = stateManager.getState();
+      const countryAreas = state.countryStage?.areas || [];
+      const matchedCountry = countryAreas.find(a => {
+        const code = (a.gadmId || a.id).toUpperCase();
+        return code === cityMapping.country;
+      });
+      
+      if (!matchedCountry) {
+        logger.warn(`[handleAdministrationSearch] Country ${cityMapping.country} not found in selected countries`);
+        alert(`請先在國家區域階段選擇 ${cityMapping.country} (${cityMapping.name})`);
+        return;
+      }
+      
+      // 使用预定义坐标进行缩放
+      const CITY_COORDINATES_MAP = window.CITY_COORDINATES_MAP || {};
+      const predefCoords = CITY_COORDINATES_MAP[query] || CITY_COORDINATES_MAP[queryClean];
+      if (predefCoords) {
+        map.flyTo({
+          center: predefCoords,
+          zoom: 8,
+          duration: 1500,
+          essential: true
+        });
+        logger.info(`Zoomed to predefined location: [${predefCoords[0]}, ${predefCoords[1]}]`);
+      }
+      
+      // 直接获取该行政区的数据
+      const apiUrl = `/api/gadm?gadmId=${encodeURIComponent(cityMapping.country)}&level=1`;
+      logger.info(`[handleAdministrationSearch] Fetching from API: ${apiUrl}`);
+      const response = await fetch(apiUrl);
+      
+      if (response.ok) {
+        const geojson = await response.json();
+        
+        // 在 GeoJSON 中找到对应的 feature
+        const matchedFeature = geojson.features?.find(f => {
+          const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
+          return featureGid === cityMapping.gid.toUpperCase();
+        });
+        
+        if (matchedFeature) {
+          const props = matchedFeature.properties || {};
+          const gid1 = cityMapping.gid;
+          const gadmIdParts = String(gid1).split('_');
+          const gadmId = gadmIdParts[0] || gid1;
+          
+          // 使用映射中的名称，或从 feature properties 获取
+          const adminName = cityMapping.name || props.NL_NAME_1 || props.NAME_1 || query;
+          
+          logger.info(`[handleAdministrationSearch] Found administrative region via direct mapping: ${adminName} (${gadmId})`);
+          
+          // 預設顏色
+          const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
+          const stageData = state.administrationStage;
+          const colorIndex = (stageData?.areas?.length || 0) % defaultColors.length;
+          const color = defaultColors[colorIndex];
+
+          // 創建區域對象
+          const area = {
+            id: gadmId,
+            gadmId: gadmId,
+            name: adminName,
+            color: color,
+            opacity: 0.7
+          };
+
+          logger.info(`Attempting to add administrative area: ${JSON.stringify(area)}`);
+
+          // 使用 StageController 添加區域
+          if (!stageController) {
+            logger.error('StageController not initialized');
+            throw new Error('StageController not initialized');
+          }
+          
+          stageController.addArea('administration', area);
+          logger.info(`Area added to state: ${adminName}`);
+          
+          // 自動縮放到該區域
+          try {
+            // 計算簡單的 bbox
+            const geometry = matchedFeature.geometry;
+            let bbox = null;
+            
+            if (geometry.type === 'Polygon' && geometry.coordinates) {
+              const coords = geometry.coordinates[0]; // 外環
+              const lngs = coords.map(c => c[0]);
+              const lats = coords.map(c => c[1]);
+              bbox = [Math.min(...lngs), Math.min(...lats), Math.max(...lngs), Math.max(...lats)];
+            } else if (geometry.type === 'MultiPolygon' && geometry.coordinates) {
+              const allLngs = [];
+              const allLats = [];
+              geometry.coordinates.forEach(polygon => {
+                polygon[0].forEach(coord => {
+                  allLngs.push(coord[0]);
+                  allLats.push(coord[1]);
+                });
+              });
+              bbox = [Math.min(...allLngs), Math.min(...allLats), Math.max(...allLngs), Math.max(...allLats)];
+            }
+            
+            if (bbox) {
+              map.fitBounds(bbox, {
+                padding: 50,
+                duration: 1500
+              });
+              logger.info(`Zoomed to administrative region: ${adminName}`);
+            }
+          } catch (error) {
+            logger.error('Error calculating bounds:', error);
+          }
+          
+          return; // 成功添加，直接返回
+        } else {
+          logger.warn(`[handleAdministrationSearch] Feature with GID ${cityMapping.gid} not found in GeoJSON`);
+          // 继续使用常规搜索流程
+        }
+      } else {
+        logger.warn(`[handleAdministrationSearch] Failed to fetch GeoJSON for ${cityMapping.country}`);
+        // 继续使用常规搜索流程
+      }
+    }
+    
+    // 如果没有直接映射，继续使用常规搜索流程
     // 首先獲取座標（用於縮放）
     const coordinates = await locationResolver.resolve(query);
     if (coordinates && coordinates.length === 2) {

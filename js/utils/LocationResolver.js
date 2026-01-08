@@ -38,7 +38,71 @@ const LOCATION_NAME_MAPPINGS = {
   '臺北': 'Taipei, Taiwan',
   '高雄': 'Kaohsiung, Taiwan',
   '臺中': 'Taichung, Taiwan',
-  '台中': 'Taichung, Taiwan'
+  '台中': 'Taichung, Taiwan',
+  // 添加俄罗斯城市
+  '莫斯科': 'Moscow, Russia',
+  '聖彼得堡': 'Saint Petersburg, Russia',
+  '圣彼得堡': 'Saint Petersburg, Russia',
+  '新西伯利亞': 'Novosibirsk, Russia',
+  '新西伯利亚': 'Novosibirsk, Russia',
+  '葉卡捷琳堡': 'Yekaterinburg, Russia',
+  '叶卡捷琳堡': 'Yekaterinburg, Russia',
+  '喀山': 'Kazan, Russia',
+  '下諾夫哥羅德': 'Nizhny Novgorod, Russia',
+  '下诺夫哥罗德': 'Nizhny Novgorod, Russia',
+  '烏法': 'Ufa, Russia',
+  '乌法': 'Ufa, Russia',
+  '羅斯托夫': 'Rostov-on-Don, Russia',
+  '罗斯托夫': 'Rostov-on-Don, Russia'
+};
+
+/**
+ * 中文城市到坐标的预定义映射表（当 Mapbox API 返回错误时使用）
+ * 格式：城市名称 -> [lng, lat]
+ */
+const CITY_COORDINATES_MAP = {
+  '莫斯科': [37.6173, 55.7558],
+  '聖彼得堡': [30.3159, 59.9343],
+  '圣彼得堡': [30.3159, 59.9343],
+  '華盛頓': [-77.0369, 38.9072],
+  '华盛顿': [-77.0369, 38.9072],
+  '華盛頓特區': [-77.0369, 38.9072],
+  '华盛顿特区': [-77.0369, 38.9072],
+  '紐約': [-74.0060, 40.7128],
+  '纽约': [-74.0060, 40.7128],
+  '洛杉磯': [-118.2437, 34.0522],
+  '洛杉矶': [-118.2437, 34.0522],
+  '舊金山': [-122.4194, 37.7749],
+  '旧金山': [-122.4194, 37.7749],
+  '倫敦': [-0.1278, 51.5074],
+  '伦敦': [-0.1278, 51.5074],
+  '巴黎': [2.3522, 48.8566],
+  '東京': [139.6917, 35.6895],
+  '东京': [139.6917, 35.6895],
+  '北京': [116.4074, 39.9042],
+  '上海': [121.4737, 31.2304],
+  '廣州': [113.2644, 23.1291],
+  '广州': [113.2644, 23.1291],
+  '深圳': [114.0579, 22.5431],
+  '香港': [114.1694, 22.3193],
+  '澳門': [113.5439, 22.1987],
+  '澳门': [113.5439, 22.1987],
+  '台北': [121.5654, 25.0330],
+  '臺北': [121.5654, 25.0330],
+  '高雄': [120.3119, 22.6273],
+  '臺中': [120.6736, 24.1477],
+  '台中': [120.6736, 24.1477],
+  '新西伯利亞': [82.9346, 55.0084],
+  '新西伯利亚': [82.9346, 55.0084],
+  '葉卡捷琳堡': [60.6122, 56.8431],
+  '叶卡捷琳堡': [60.6122, 56.8431],
+  '喀山': [49.1064, 55.8304],
+  '下諾夫哥羅德': [44.0020, 56.2965],
+  '下诺夫哥罗德': [44.0020, 56.2965],
+  '烏法': [55.9678, 54.7348],
+  '乌法': [55.9678, 54.7348],
+  '羅斯托夫': [39.7139, 47.2357],
+  '罗斯托夫': [39.7139, 47.2357]
 };
 
 /**
@@ -105,9 +169,19 @@ class LocationResolver {
   async resolveCoordinates(locationName, countryCode = null) {
     const CONFIG = typeof window !== 'undefined' ? window.CONFIG : {};
     
+    // 首先检查是否有预定义坐标
+    const predefCoords = CITY_COORDINATES_MAP[locationName] || CITY_COORDINATES_MAP[locationName.trim()];
+    
     if (!CONFIG.MAPBOX || !CONFIG.MAPBOX.TOKEN) {
       if (this.logger) {
         this.logger.warn('Mapbox token not configured');
+      }
+      // 如果 Mapbox token 不可用，使用预定义坐标
+      if (predefCoords) {
+        if (this.logger) {
+          this.logger.info(`Using predefined coordinates for ${locationName}: ${predefCoords}`);
+        }
+        return predefCoords;
       }
       return null;
     }
@@ -144,6 +218,13 @@ class LocationResolver {
         if (this.logger) {
           this.logger.warn(`No coordinates found for: ${locationName}`);
         }
+        // Fallback to predefined coordinates
+        if (predefCoords) {
+          if (this.logger) {
+            this.logger.info(`Using predefined coordinates for ${locationName}: ${predefCoords}`);
+          }
+          return predefCoords;
+        }
         return null;
       }
 
@@ -161,6 +242,28 @@ class LocationResolver {
 
       const coords = bestFeature.center; // [lng, lat]
       
+      // 验证坐标是否合理：如果查询是已知城市，检查返回的坐标是否在合理范围内
+      if (predefCoords) {
+        const [predLng, predLat] = predefCoords;
+        const [retLng, retLat] = coords;
+        // 计算距离（粗略检查，如果距离超过500公里，可能返回错误）
+        const distance = Math.sqrt(Math.pow(retLng - predLng, 2) + Math.pow(retLat - predLat, 2)) * 111; // 粗略转换为公里
+        if (distance > 500) {
+          if (this.logger) {
+            this.logger.warn(`Geocoding result seems incorrect for ${locationName} (distance: ${distance.toFixed(0)}km), using predefined coordinates`);
+          }
+          if (this.eventBus) {
+            this.eventBus.emit('location:resolved', { 
+              locationName, 
+              coordinates: predefCoords,
+              feature: null,
+              fallback: true
+            });
+          }
+          return predefCoords;
+        }
+      }
+      
       if (this.eventBus) {
         this.eventBus.emit('location:resolved', { 
           locationName, 
@@ -173,6 +276,23 @@ class LocationResolver {
     } catch (error) {
       if (this.logger) {
         this.logger.error(`Error resolving coordinates for ${locationName}:`, error);
+      }
+      
+      // Fallback to predefined coordinates
+      if (predefCoords) {
+        if (this.logger) {
+          this.logger.info(`Using predefined coordinates for ${locationName} (error fallback): ${predefCoords}`);
+        }
+        if (this.eventBus) {
+          this.eventBus.emit('location:resolved', { 
+            locationName, 
+            coordinates: predefCoords,
+            feature: null,
+            fallback: true,
+            error: error.message
+          });
+        }
+        return predefCoords;
       }
       
       if (this.eventBus) {
@@ -242,11 +362,12 @@ class LocationResolver {
 if (typeof window !== 'undefined') {
   window.LocationResolver = LocationResolver;
   window.LOCATION_NAME_MAPPINGS = LOCATION_NAME_MAPPINGS;
+  window.CITY_COORDINATES_MAP = CITY_COORDINATES_MAP; // 导出坐标映射
 }
 
 // 導出（Node.js 環境）
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { LocationResolver, LOCATION_NAME_MAPPINGS };
+  module.exports = { LocationResolver, LOCATION_NAME_MAPPINGS, CITY_COORDINATES_MAP };
 }
 
 

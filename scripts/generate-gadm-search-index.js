@@ -16,6 +16,24 @@ const OUTPUT_LEVEL0 = path.join(OUTPUT_DIR, 'search-index-level0.json');
 const OUTPUT_LEVEL1 = path.join(OUTPUT_DIR, 'search-index-level1.json');
 
 /**
+ * 中文城市到行政区的映射表
+ * 用于在生成索引时添加中文搜索键
+ */
+const CHINESE_CITY_MAPPINGS = {
+  'RUS.43_1': ['莫斯科'],
+  'RUS.78_1': ['聖彼得堡', '圣彼得堡'],
+  'USA.11_1': ['華盛頓', '华盛顿', '華盛頓特區', '华盛顿特区'],
+  'USA.36_1': ['紐約', '纽约'],
+  'USA.6_1': ['洛杉磯', '洛杉矶', '舊金山', '旧金山'], // California
+  'TWN.4_1': ['台北', '臺北'],
+  'TWN.3_1': ['新北'],
+  'TWN.13_1': ['桃園'],
+  'TWN.12_1': ['台中', '臺中'],
+  'TWN.15_1': ['台南'],
+  'TWN.2_1': ['高雄']
+};
+
+/**
  * 提取所有可能的名称变体
  * @param {Object} feature - GeoJSON Feature
  * @param {number} level - 0 (country) 或 1 (administration)
@@ -110,12 +128,30 @@ function extractNames(feature, level) {
     // 添加 GID_1 作为搜索键
     const gid1 = props.GID_1 || props.gid_1;
     if (gid1) {
-      names.aliases.push(String(gid1).toUpperCase());
+      const gidUpper = String(gid1).toUpperCase();
+      names.aliases.push(gidUpper);
+      
+      // 检查是否有中文城市映射
+      if (CHINESE_CITY_MAPPINGS[gidUpper]) {
+        CHINESE_CITY_MAPPINGS[gidUpper].forEach(chineseName => {
+          if (!names.local.includes(chineseName)) {
+            names.local.push(chineseName);
+          }
+          names.aliases.push(chineseName.toUpperCase());
+        });
+      }
     }
   }
 
   // 去重 aliases
   names.aliases = [...new Set(names.aliases)];
+  
+  // 更新 searchKeys（包含所有可搜索的键）
+  if (level === 0) {
+    names.searchKeys = names.aliases;
+  } else if (level === 1) {
+    names.searchKeys = names.aliases;
+  }
 
   return names;
 }
@@ -221,7 +257,7 @@ function generateLevel1Index() {
       gid: gid,
       country: country,
       names: names,
-      searchKeys: names.aliases, // 所有可搜索的键（大写）
+      searchKeys: names.searchKeys || names.aliases, // 所有可搜索的键（大写，包含中文）
       // 保留原始属性以便调试
       _properties: {
         NAME_1: props.NAME_1,
