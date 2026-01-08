@@ -1,0 +1,6555 @@
+{
+  "ABW": {
+    "code": "ABW",
+    "names": {
+      "en": [
+        "Aruba"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ARUBA",
+        "ABW",
+        "阿魯巴"
+      ]
+    },
+    "searchKeys": [
+      "ARUBA",
+      "ABW",
+      "阿魯巴"
+    ],
+    "_properties": {
+      "GID_0": "ABW",
+      "COUNTRY": "Aruba"
+    }
+  },
+  "AFG": {
+    "code": "AFG",
+    "names": {
+      "en": [
+        "Afghanistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AFGHANISTAN",
+        "AFG",
+        "阿富汗",
+        "AFGHANISTAN"
+      ]
+    },
+    "searchKeys": [
+      "AFGHANISTAN",
+      "AFG",
+      "阿富汗"
+    ],
+    "_properties": {
+      "GID_0": "AFG",
+      "COUNTRY": "Afghanistan"
+    }
+  },
+  "AGO": {
+    "code": "AGO",
+    "names": {
+      "en": [
+        "Angola"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ANGOLA",
+        "AGO",
+        "安哥拉",
+        "ANGOLA"
+      ]
+    },
+    "searchKeys": [
+      "ANGOLA",
+      "AGO",
+      "安哥拉"
+    ],
+    "_properties": {
+      "GID_0": "AGO",
+      "COUNTRY": "Angola"
+    }
+  },
+  "AIA": {
+    "code": "AIA",
+    "names": {
+      "en": [
+        "Anguilla"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ANGUILLA",
+        "AIA",
+        "安吉拉",
+        "ANGUILLA"
+      ]
+    },
+    "searchKeys": [
+      "ANGUILLA",
+      "AIA",
+      "安吉拉"
+    ],
+    "_properties": {
+      "GID_0": "AIA",
+      "COUNTRY": "Anguilla"
+    }
+  },
+  "ALA": {
+    "code": "ALA",
+    "names": {
+      "en": [
+        "Åland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ÅLAND",
+        "ALA",
+        "亞蘭群島",
+        "ALAND ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "ÅLAND",
+      "ALA",
+      "亞蘭群島",
+      "ALAND ISLANDS"
+    ],
+    "_properties": {
+      "GID_0": "ALA",
+      "COUNTRY": "Åland"
+    }
+  },
+  "ALB": {
+    "code": "ALB",
+    "names": {
+      "en": [
+        "Albania"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ALBANIA",
+        "ALB",
+        "阿爾巴尼亞",
+        "ALBANIA"
+      ]
+    },
+    "searchKeys": [
+      "ALBANIA",
+      "ALB",
+      "阿爾巴尼亞"
+    ],
+    "_properties": {
+      "GID_0": "ALB",
+      "COUNTRY": "Albania"
+    }
+  },
+  "AND": {
+    "code": "AND",
+    "names": {
+      "en": [
+        "Andorra"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ANDORRA",
+        "AND",
+        "安道爾",
+        "ANDORRA"
+      ]
+    },
+    "searchKeys": [
+      "ANDORRA",
+      "AND",
+      "安道爾"
+    ],
+    "_properties": {
+      "GID_0": "AND",
+      "COUNTRY": "Andorra"
+    }
+  },
+  "ARE": {
+    "code": "ARE",
+    "names": {
+      "en": [
+        "United Arab Emirates"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UNITED ARAB EMIRATES",
+        "ARE",
+        "阿拉伯聯合大公國",
+        "UNITED ARAB EMIRATES"
+      ]
+    },
+    "searchKeys": [
+      "UNITED ARAB EMIRATES",
+      "ARE",
+      "阿拉伯聯合大公國"
+    ],
+    "_properties": {
+      "GID_0": "ARE",
+      "COUNTRY": "United Arab Emirates"
+    }
+  },
+  "ARG": {
+    "code": "ARG",
+    "names": {
+      "en": [
+        "Argentina"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ARGENTINA",
+        "ARG",
+        "阿根廷",
+        "ARGENTINA"
+      ]
+    },
+    "searchKeys": [
+      "ARGENTINA",
+      "ARG",
+      "阿根廷"
+    ],
+    "_properties": {
+      "GID_0": "ARG",
+      "COUNTRY": "Argentina"
+    }
+  },
+  "ARM": {
+    "code": "ARM",
+    "names": {
+      "en": [
+        "Armenia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ARMENIA",
+        "ARM",
+        "亞美尼亞",
+        "ARMENIA"
+      ]
+    },
+    "searchKeys": [
+      "ARMENIA",
+      "ARM",
+      "亞美尼亞"
+    ],
+    "_properties": {
+      "GID_0": "ARM",
+      "COUNTRY": "Armenia"
+    }
+  },
+  "ASM": {
+    "code": "ASM",
+    "names": {
+      "en": [
+        "American Samoa"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AMERICAN SAMOA",
+        "ASM",
+        "薩摩亞",
+        "AMERICAN SAMOA"
+      ]
+    },
+    "searchKeys": [
+      "AMERICAN SAMOA",
+      "ASM",
+      "薩摩亞"
+    ],
+    "_properties": {
+      "GID_0": "ASM",
+      "COUNTRY": "American Samoa"
+    }
+  },
+  "ATA": {
+    "code": "ATA",
+    "names": {
+      "en": [
+        "Antarctica"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ANTARCTICA",
+        "ATA",
+        "南極洲",
+        "ANTARCTICA"
+      ]
+    },
+    "searchKeys": [
+      "ANTARCTICA",
+      "ATA",
+      "南極洲"
+    ],
+    "_properties": {
+      "GID_0": "ATA",
+      "COUNTRY": "Antarctica"
+    }
+  },
+  "ATF": {
+    "code": "ATF",
+    "names": {
+      "en": [
+        "French Southern Territories"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FRENCH SOUTHERN TERRITORIES",
+        "ATF",
+        "法屬南部領地",
+        "FRENCH SOUTHERN TERRITORIES"
+      ]
+    },
+    "searchKeys": [
+      "FRENCH SOUTHERN TERRITORIES",
+      "ATF",
+      "法屬南部領地"
+    ],
+    "_properties": {
+      "GID_0": "ATF",
+      "COUNTRY": "French Southern Territories"
+    }
+  },
+  "ATG": {
+    "code": "ATG",
+    "names": {
+      "en": [
+        "Antigua and Barbuda"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ANTIGUA AND BARBUDA",
+        "ATG",
+        "安地卡及巴布達",
+        "ANTIGUA AND BARBUDA"
+      ]
+    },
+    "searchKeys": [
+      "ANTIGUA AND BARBUDA",
+      "ATG",
+      "安地卡及巴布達"
+    ],
+    "_properties": {
+      "GID_0": "ATG",
+      "COUNTRY": "Antigua and Barbuda"
+    }
+  },
+  "AUS": {
+    "code": "AUS",
+    "names": {
+      "en": [
+        "Australia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AUSTRALIA",
+        "AUS",
+        "澳洲",
+        "AUSTRALIA"
+      ]
+    },
+    "searchKeys": [
+      "AUSTRALIA",
+      "AUS",
+      "澳洲"
+    ],
+    "_properties": {
+      "GID_0": "AUS",
+      "COUNTRY": "Australia"
+    }
+  },
+  "AUT": {
+    "code": "AUT",
+    "names": {
+      "en": [
+        "Austria"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AUSTRIA",
+        "AUT",
+        "奧地利",
+        "AUSTRIA"
+      ]
+    },
+    "searchKeys": [
+      "AUSTRIA",
+      "AUT",
+      "奧地利"
+    ],
+    "_properties": {
+      "GID_0": "AUT",
+      "COUNTRY": "Austria"
+    }
+  },
+  "AZE": {
+    "code": "AZE",
+    "names": {
+      "en": [
+        "Azerbaijan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AZERBAIJAN",
+        "AZE",
+        "亞塞拜然",
+        "AZERBAIJAN"
+      ]
+    },
+    "searchKeys": [
+      "AZERBAIJAN",
+      "AZE",
+      "亞塞拜然"
+    ],
+    "_properties": {
+      "GID_0": "AZE",
+      "COUNTRY": "Azerbaijan"
+    }
+  },
+  "BDI": {
+    "code": "BDI",
+    "names": {
+      "en": [
+        "Burundi"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BURUNDI",
+        "BDI",
+        "蒲隆地",
+        "BURUNDI"
+      ]
+    },
+    "searchKeys": [
+      "BURUNDI",
+      "BDI",
+      "蒲隆地"
+    ],
+    "_properties": {
+      "GID_0": "BDI",
+      "COUNTRY": "Burundi"
+    }
+  },
+  "BEL": {
+    "code": "BEL",
+    "names": {
+      "en": [
+        "Belgium"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BELGIUM",
+        "BEL",
+        "比利時",
+        "BELGIUM"
+      ]
+    },
+    "searchKeys": [
+      "BELGIUM",
+      "BEL",
+      "比利時"
+    ],
+    "_properties": {
+      "GID_0": "BEL",
+      "COUNTRY": "Belgium"
+    }
+  },
+  "BEN": {
+    "code": "BEN",
+    "names": {
+      "en": [
+        "Benin"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BENIN",
+        "BEN",
+        "貝南",
+        "BENIN"
+      ]
+    },
+    "searchKeys": [
+      "BENIN",
+      "BEN",
+      "貝南"
+    ],
+    "_properties": {
+      "GID_0": "BEN",
+      "COUNTRY": "Benin"
+    }
+  },
+  "BES": {
+    "code": "BES",
+    "names": {
+      "en": [
+        "Bonaire, Sint Eustatius and Saba"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BONAIRE, SINT EUSTATIUS AND SABA",
+        "BES",
+        "波奈、聖佑達修斯與沙巴",
+        "BONAIRE, SINT EUSTATIUS AND SABA"
+      ]
+    },
+    "searchKeys": [
+      "BONAIRE, SINT EUSTATIUS AND SABA",
+      "BES",
+      "波奈、聖佑達修斯與沙巴"
+    ],
+    "_properties": {
+      "GID_0": "BES",
+      "COUNTRY": "Bonaire, Sint Eustatius and Saba"
+    }
+  },
+  "BFA": {
+    "code": "BFA",
+    "names": {
+      "en": [
+        "Burkina Faso"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BURKINA FASO",
+        "BFA",
+        "布吉納法索",
+        "BURKINA FASO"
+      ]
+    },
+    "searchKeys": [
+      "BURKINA FASO",
+      "BFA",
+      "布吉納法索"
+    ],
+    "_properties": {
+      "GID_0": "BFA",
+      "COUNTRY": "Burkina Faso"
+    }
+  },
+  "BGD": {
+    "code": "BGD",
+    "names": {
+      "en": [
+        "Bangladesh"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BANGLADESH",
+        "BGD",
+        "孟加拉",
+        "BANGLADESH"
+      ]
+    },
+    "searchKeys": [
+      "BANGLADESH",
+      "BGD",
+      "孟加拉"
+    ],
+    "_properties": {
+      "GID_0": "BGD",
+      "COUNTRY": "Bangladesh"
+    }
+  },
+  "BGR": {
+    "code": "BGR",
+    "names": {
+      "en": [
+        "Bulgaria"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BULGARIA",
+        "BGR",
+        "保加利亞",
+        "BULGARIA"
+      ]
+    },
+    "searchKeys": [
+      "BULGARIA",
+      "BGR",
+      "保加利亞"
+    ],
+    "_properties": {
+      "GID_0": "BGR",
+      "COUNTRY": "Bulgaria"
+    }
+  },
+  "BHR": {
+    "code": "BHR",
+    "names": {
+      "en": [
+        "Bahrain"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BAHRAIN",
+        "BHR",
+        "巴林",
+        "BAHRAIN"
+      ]
+    },
+    "searchKeys": [
+      "BAHRAIN",
+      "BHR",
+      "巴林"
+    ],
+    "_properties": {
+      "GID_0": "BHR",
+      "COUNTRY": "Bahrain"
+    }
+  },
+  "BHS": {
+    "code": "BHS",
+    "names": {
+      "en": [
+        "Bahamas"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BAHAMAS",
+        "BHS",
+        "巴哈馬",
+        "BAHAMAS"
+      ]
+    },
+    "searchKeys": [
+      "BAHAMAS",
+      "BHS",
+      "巴哈馬"
+    ],
+    "_properties": {
+      "GID_0": "BHS",
+      "COUNTRY": "Bahamas"
+    }
+  },
+  "BIH": {
+    "code": "BIH",
+    "names": {
+      "en": [
+        "Bosnia and Herzegovina"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BOSNIA AND HERZEGOVINA",
+        "BIH",
+        "波士尼亞與赫塞哥維納",
+        "BOSNIA AND HERZEGOVINA"
+      ]
+    },
+    "searchKeys": [
+      "BOSNIA AND HERZEGOVINA",
+      "BIH",
+      "波士尼亞與赫塞哥維納"
+    ],
+    "_properties": {
+      "GID_0": "BIH",
+      "COUNTRY": "Bosnia and Herzegovina"
+    }
+  },
+  "BLM": {
+    "code": "BLM",
+    "names": {
+      "en": [
+        "Saint-Barthélemy"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT-BARTHÉLEMY",
+        "BLM",
+        "聖巴瑟米",
+        "SAINT BARTHÉLEMY"
+      ]
+    },
+    "searchKeys": [
+      "SAINT-BARTHÉLEMY",
+      "BLM",
+      "聖巴瑟米",
+      "SAINT BARTHÉLEMY"
+    ],
+    "_properties": {
+      "GID_0": "BLM",
+      "COUNTRY": "Saint-Barthélemy"
+    }
+  },
+  "BLR": {
+    "code": "BLR",
+    "names": {
+      "en": [
+        "Belarus"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BELARUS",
+        "BLR",
+        "白俄羅斯",
+        "BELARUS"
+      ]
+    },
+    "searchKeys": [
+      "BELARUS",
+      "BLR",
+      "白俄羅斯"
+    ],
+    "_properties": {
+      "GID_0": "BLR",
+      "COUNTRY": "Belarus"
+    }
+  },
+  "BLZ": {
+    "code": "BLZ",
+    "names": {
+      "en": [
+        "Belize"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BELIZE",
+        "BLZ",
+        "貝里斯",
+        "BELIZE"
+      ]
+    },
+    "searchKeys": [
+      "BELIZE",
+      "BLZ",
+      "貝里斯"
+    ],
+    "_properties": {
+      "GID_0": "BLZ",
+      "COUNTRY": "Belize"
+    }
+  },
+  "BMU": {
+    "code": "BMU",
+    "names": {
+      "en": [
+        "Bermuda"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BERMUDA",
+        "BMU",
+        "百慕達",
+        "BERMUDA"
+      ]
+    },
+    "searchKeys": [
+      "BERMUDA",
+      "BMU",
+      "百慕達"
+    ],
+    "_properties": {
+      "GID_0": "BMU",
+      "COUNTRY": "Bermuda"
+    }
+  },
+  "BOL": {
+    "code": "BOL",
+    "names": {
+      "en": [
+        "Bolivia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BOLIVIA",
+        "BOL",
+        "玻利維亞",
+        "BOLIVIA"
+      ]
+    },
+    "searchKeys": [
+      "BOLIVIA",
+      "BOL",
+      "玻利維亞"
+    ],
+    "_properties": {
+      "GID_0": "BOL",
+      "COUNTRY": "Bolivia"
+    }
+  },
+  "BRA": {
+    "code": "BRA",
+    "names": {
+      "en": [
+        "Brazil"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BRAZIL",
+        "BRA",
+        "巴西",
+        "BRAZIL"
+      ]
+    },
+    "searchKeys": [
+      "BRAZIL",
+      "BRA",
+      "巴西"
+    ],
+    "_properties": {
+      "GID_0": "BRA",
+      "COUNTRY": "Brazil"
+    }
+  },
+  "BRB": {
+    "code": "BRB",
+    "names": {
+      "en": [
+        "Barbados"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BARBADOS",
+        "BRB",
+        "巴貝多",
+        "BARBADOS"
+      ]
+    },
+    "searchKeys": [
+      "BARBADOS",
+      "BRB",
+      "巴貝多"
+    ],
+    "_properties": {
+      "GID_0": "BRB",
+      "COUNTRY": "Barbados"
+    }
+  },
+  "BRN": {
+    "code": "BRN",
+    "names": {
+      "en": [
+        "Brunei"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BRUNEI",
+        "BRN",
+        "汶萊",
+        "BRUNEI DARUSSALAM"
+      ]
+    },
+    "searchKeys": [
+      "BRUNEI",
+      "BRN",
+      "汶萊",
+      "BRUNEI DARUSSALAM"
+    ],
+    "_properties": {
+      "GID_0": "BRN",
+      "COUNTRY": "Brunei"
+    }
+  },
+  "BTN": {
+    "code": "BTN",
+    "names": {
+      "en": [
+        "Bhutan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BHUTAN",
+        "BTN",
+        "不丹",
+        "BHUTAN"
+      ]
+    },
+    "searchKeys": [
+      "BHUTAN",
+      "BTN",
+      "不丹"
+    ],
+    "_properties": {
+      "GID_0": "BTN",
+      "COUNTRY": "Bhutan"
+    }
+  },
+  "BVT": {
+    "code": "BVT",
+    "names": {
+      "en": [
+        "Bouvet Island"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BOUVET ISLAND",
+        "BVT",
+        "布威島",
+        "BOUVET ISLAND"
+      ]
+    },
+    "searchKeys": [
+      "BOUVET ISLAND",
+      "BVT",
+      "布威島"
+    ],
+    "_properties": {
+      "GID_0": "BVT",
+      "COUNTRY": "Bouvet Island"
+    }
+  },
+  "BWA": {
+    "code": "BWA",
+    "names": {
+      "en": [
+        "Botswana"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BOTSWANA",
+        "BWA",
+        "波札那",
+        "BOTSWANA"
+      ]
+    },
+    "searchKeys": [
+      "BOTSWANA",
+      "BWA",
+      "波札那"
+    ],
+    "_properties": {
+      "GID_0": "BWA",
+      "COUNTRY": "Botswana"
+    }
+  },
+  "CAF": {
+    "code": "CAF",
+    "names": {
+      "en": [
+        "Central African Republic"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CENTRAL AFRICAN REPUBLIC",
+        "CAF",
+        "中非",
+        "CENTRAL AFRICAN REPUBLIC"
+      ]
+    },
+    "searchKeys": [
+      "CENTRAL AFRICAN REPUBLIC",
+      "CAF",
+      "中非"
+    ],
+    "_properties": {
+      "GID_0": "CAF",
+      "COUNTRY": "Central African Republic"
+    }
+  },
+  "CAN": {
+    "code": "CAN",
+    "names": {
+      "en": [
+        "Canada"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CANADA",
+        "CAN",
+        "加拿大",
+        "CANADA"
+      ]
+    },
+    "searchKeys": [
+      "CANADA",
+      "CAN",
+      "加拿大"
+    ],
+    "_properties": {
+      "GID_0": "CAN",
+      "COUNTRY": "Canada"
+    }
+  },
+  "CCK": {
+    "code": "CCK",
+    "names": {
+      "en": [
+        "Cocos Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "COCOS ISLANDS",
+        "CCK",
+        "科克斯（基靈）群島",
+        "COCOS (KEELING) ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "COCOS ISLANDS",
+      "CCK",
+      "科克斯（基靈）群島",
+      "COCOS (KEELING) ISLANDS"
+    ],
+    "_properties": {
+      "GID_0": "CCK",
+      "COUNTRY": "Cocos Islands"
+    }
+  },
+  "CHE": {
+    "code": "CHE",
+    "names": {
+      "en": [
+        "Switzerland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SWITZERLAND",
+        "CHE",
+        "瑞士",
+        "SWITZERLAND"
+      ]
+    },
+    "searchKeys": [
+      "SWITZERLAND",
+      "CHE",
+      "瑞士"
+    ],
+    "_properties": {
+      "GID_0": "CHE",
+      "COUNTRY": "Switzerland"
+    }
+  },
+  "CHL": {
+    "code": "CHL",
+    "names": {
+      "en": [
+        "Chile"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHILE",
+        "CHL",
+        "智利",
+        "CHILE"
+      ]
+    },
+    "searchKeys": [
+      "CHILE",
+      "CHL",
+      "智利"
+    ],
+    "_properties": {
+      "GID_0": "CHL",
+      "COUNTRY": "Chile"
+    }
+  },
+  "CHN": {
+    "code": "CHN",
+    "names": {
+      "en": [
+        "China"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHINA",
+        "CHN",
+        "中國",
+        "CHINA"
+      ]
+    },
+    "searchKeys": [
+      "CHINA",
+      "CHN",
+      "中國"
+    ],
+    "_properties": {
+      "GID_0": "CHN",
+      "COUNTRY": "China"
+    }
+  },
+  "Z02": {
+    "code": "Z02",
+    "names": {
+      "en": [
+        "China"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHINA",
+        "Z02"
+      ]
+    },
+    "searchKeys": [
+      "CHINA",
+      "Z02"
+    ],
+    "_properties": {
+      "GID_0": "Z02",
+      "COUNTRY": "China"
+    }
+  },
+  "Z03": {
+    "code": "Z03",
+    "names": {
+      "en": [
+        "China"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHINA",
+        "Z03"
+      ]
+    },
+    "searchKeys": [
+      "CHINA",
+      "Z03"
+    ],
+    "_properties": {
+      "GID_0": "Z03",
+      "COUNTRY": "China"
+    }
+  },
+  "Z08": {
+    "code": "Z08",
+    "names": {
+      "en": [
+        "China"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHINA",
+        "Z08"
+      ]
+    },
+    "searchKeys": [
+      "CHINA",
+      "Z08"
+    ],
+    "_properties": {
+      "GID_0": "Z08",
+      "COUNTRY": "China"
+    }
+  },
+  "CIV": {
+    "code": "CIV",
+    "names": {
+      "en": [
+        "Côte d'Ivoire"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CÔTE D'IVOIRE",
+        "CIV",
+        "象牙海岸",
+        "CÔTE D'IVOIRE"
+      ]
+    },
+    "searchKeys": [
+      "CÔTE D'IVOIRE",
+      "CIV",
+      "象牙海岸"
+    ],
+    "_properties": {
+      "GID_0": "CIV",
+      "COUNTRY": "Côte d'Ivoire"
+    }
+  },
+  "CMR": {
+    "code": "CMR",
+    "names": {
+      "en": [
+        "Cameroon"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CAMEROON",
+        "CMR",
+        "喀麥隆",
+        "CAMEROON"
+      ]
+    },
+    "searchKeys": [
+      "CAMEROON",
+      "CMR",
+      "喀麥隆"
+    ],
+    "_properties": {
+      "GID_0": "CMR",
+      "COUNTRY": "Cameroon"
+    }
+  },
+  "COD": {
+    "code": "COD",
+    "names": {
+      "en": [
+        "Democratic Republic of the Congo"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "DEMOCRATIC REPUBLIC OF THE CONGO",
+        "COD",
+        "剛果民主共和國",
+        "CONGO (DEMOCRATIC REPUBLIC OF THE)"
+      ]
+    },
+    "searchKeys": [
+      "DEMOCRATIC REPUBLIC OF THE CONGO",
+      "COD",
+      "剛果民主共和國",
+      "CONGO (DEMOCRATIC REPUBLIC OF THE)"
+    ],
+    "_properties": {
+      "GID_0": "COD",
+      "COUNTRY": "Democratic Republic of the Congo"
+    }
+  },
+  "COG": {
+    "code": "COG",
+    "names": {
+      "en": [
+        "Republic of the Congo"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "REPUBLIC OF THE CONGO",
+        "COG",
+        "剛果共和國",
+        "CONGO"
+      ]
+    },
+    "searchKeys": [
+      "REPUBLIC OF THE CONGO",
+      "COG",
+      "剛果共和國",
+      "CONGO"
+    ],
+    "_properties": {
+      "GID_0": "COG",
+      "COUNTRY": "Republic of the Congo"
+    }
+  },
+  "COK": {
+    "code": "COK",
+    "names": {
+      "en": [
+        "Cook Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "COOK ISLANDS",
+        "COK",
+        "庫克群島",
+        "COOK ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "COOK ISLANDS",
+      "COK",
+      "庫克群島"
+    ],
+    "_properties": {
+      "GID_0": "COK",
+      "COUNTRY": "Cook Islands"
+    }
+  },
+  "COL": {
+    "code": "COL",
+    "names": {
+      "en": [
+        "Colombia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "COLOMBIA",
+        "COL",
+        "哥倫比亞",
+        "COLOMBIA"
+      ]
+    },
+    "searchKeys": [
+      "COLOMBIA",
+      "COL",
+      "哥倫比亞"
+    ],
+    "_properties": {
+      "GID_0": "COL",
+      "COUNTRY": "Colombia"
+    }
+  },
+  "COM": {
+    "code": "COM",
+    "names": {
+      "en": [
+        "Comoros"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "COMOROS",
+        "COM",
+        "葛摩",
+        "COMOROS"
+      ]
+    },
+    "searchKeys": [
+      "COMOROS",
+      "COM",
+      "葛摩"
+    ],
+    "_properties": {
+      "GID_0": "COM",
+      "COUNTRY": "Comoros"
+    }
+  },
+  "CPV": {
+    "code": "CPV",
+    "names": {
+      "en": [
+        "Cabo Verde"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CABO VERDE",
+        "CPV",
+        "維德角",
+        "CABO VERDE"
+      ]
+    },
+    "searchKeys": [
+      "CABO VERDE",
+      "CPV",
+      "維德角"
+    ],
+    "_properties": {
+      "GID_0": "CPV",
+      "COUNTRY": "Cabo Verde"
+    }
+  },
+  "CRI": {
+    "code": "CRI",
+    "names": {
+      "en": [
+        "Costa Rica"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "COSTA RICA",
+        "CRI",
+        "哥斯大黎加",
+        "COSTA RICA"
+      ]
+    },
+    "searchKeys": [
+      "COSTA RICA",
+      "CRI",
+      "哥斯大黎加"
+    ],
+    "_properties": {
+      "GID_0": "CRI",
+      "COUNTRY": "Costa Rica"
+    }
+  },
+  "CUB": {
+    "code": "CUB",
+    "names": {
+      "en": [
+        "Cuba"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CUBA",
+        "CUB",
+        "古巴",
+        "CUBA"
+      ]
+    },
+    "searchKeys": [
+      "CUBA",
+      "CUB",
+      "古巴"
+    ],
+    "_properties": {
+      "GID_0": "CUB",
+      "COUNTRY": "Cuba"
+    }
+  },
+  "CUW": {
+    "code": "CUW",
+    "names": {
+      "en": [
+        "Curaçao"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CURAÇAO",
+        "CUW",
+        "古拉索",
+        "CURAÇAO"
+      ]
+    },
+    "searchKeys": [
+      "CURAÇAO",
+      "CUW",
+      "古拉索"
+    ],
+    "_properties": {
+      "GID_0": "CUW",
+      "COUNTRY": "Curaçao"
+    }
+  },
+  "CXR": {
+    "code": "CXR",
+    "names": {
+      "en": [
+        "Christmas Island"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHRISTMAS ISLAND",
+        "CXR",
+        "聖誕島",
+        "CHRISTMAS ISLAND"
+      ]
+    },
+    "searchKeys": [
+      "CHRISTMAS ISLAND",
+      "CXR",
+      "聖誕島"
+    ],
+    "_properties": {
+      "GID_0": "CXR",
+      "COUNTRY": "Christmas Island"
+    }
+  },
+  "CYM": {
+    "code": "CYM",
+    "names": {
+      "en": [
+        "Cayman Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CAYMAN ISLANDS",
+        "CYM",
+        "開曼群島",
+        "CAYMAN ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "CAYMAN ISLANDS",
+      "CYM",
+      "開曼群島"
+    ],
+    "_properties": {
+      "GID_0": "CYM",
+      "COUNTRY": "Cayman Islands"
+    }
+  },
+  "CYP": {
+    "code": "CYP",
+    "names": {
+      "en": [
+        "Cyprus"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CYPRUS",
+        "CYP",
+        "賽普勒斯",
+        "CYPRUS"
+      ]
+    },
+    "searchKeys": [
+      "CYPRUS",
+      "CYP",
+      "賽普勒斯"
+    ],
+    "_properties": {
+      "GID_0": "CYP",
+      "COUNTRY": "Cyprus"
+    }
+  },
+  "CZE": {
+    "code": "CZE",
+    "names": {
+      "en": [
+        "Czechia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CZECHIA",
+        "CZE",
+        "捷克",
+        "CZECHIA"
+      ]
+    },
+    "searchKeys": [
+      "CZECHIA",
+      "CZE",
+      "捷克"
+    ],
+    "_properties": {
+      "GID_0": "CZE",
+      "COUNTRY": "Czechia"
+    }
+  },
+  "DEU": {
+    "code": "DEU",
+    "names": {
+      "en": [
+        "Germany"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GERMANY",
+        "DEU",
+        "德國",
+        "GERMANY"
+      ]
+    },
+    "searchKeys": [
+      "GERMANY",
+      "DEU",
+      "德國"
+    ],
+    "_properties": {
+      "GID_0": "DEU",
+      "COUNTRY": "Germany"
+    }
+  },
+  "DJI": {
+    "code": "DJI",
+    "names": {
+      "en": [
+        "Djibouti"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "DJIBOUTI",
+        "DJI",
+        "吉布地",
+        "DJIBOUTI"
+      ]
+    },
+    "searchKeys": [
+      "DJIBOUTI",
+      "DJI",
+      "吉布地"
+    ],
+    "_properties": {
+      "GID_0": "DJI",
+      "COUNTRY": "Djibouti"
+    }
+  },
+  "DMA": {
+    "code": "DMA",
+    "names": {
+      "en": [
+        "Dominica"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "DOMINICA",
+        "DMA",
+        "多米尼克",
+        "DOMINICA"
+      ]
+    },
+    "searchKeys": [
+      "DOMINICA",
+      "DMA",
+      "多米尼克"
+    ],
+    "_properties": {
+      "GID_0": "DMA",
+      "COUNTRY": "Dominica"
+    }
+  },
+  "DNK": {
+    "code": "DNK",
+    "names": {
+      "en": [
+        "Denmark"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "DENMARK",
+        "DNK",
+        "丹麥",
+        "DENMARK"
+      ]
+    },
+    "searchKeys": [
+      "DENMARK",
+      "DNK",
+      "丹麥"
+    ],
+    "_properties": {
+      "GID_0": "DNK",
+      "COUNTRY": "Denmark"
+    }
+  },
+  "DOM": {
+    "code": "DOM",
+    "names": {
+      "en": [
+        "Dominican Republic"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "DOMINICAN REPUBLIC",
+        "DOM",
+        "多明尼加",
+        "DOMINICAN REPUBLIC"
+      ]
+    },
+    "searchKeys": [
+      "DOMINICAN REPUBLIC",
+      "DOM",
+      "多明尼加"
+    ],
+    "_properties": {
+      "GID_0": "DOM",
+      "COUNTRY": "Dominican Republic"
+    }
+  },
+  "DZA": {
+    "code": "DZA",
+    "names": {
+      "en": [
+        "Algeria"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ALGERIA",
+        "DZA",
+        "阿爾及利亞",
+        "ALGERIA"
+      ]
+    },
+    "searchKeys": [
+      "ALGERIA",
+      "DZA",
+      "阿爾及利亞"
+    ],
+    "_properties": {
+      "GID_0": "DZA",
+      "COUNTRY": "Algeria"
+    }
+  },
+  "ECU": {
+    "code": "ECU",
+    "names": {
+      "en": [
+        "Ecuador"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ECUADOR",
+        "ECU",
+        "厄瓜多",
+        "ECUADOR"
+      ]
+    },
+    "searchKeys": [
+      "ECUADOR",
+      "ECU",
+      "厄瓜多"
+    ],
+    "_properties": {
+      "GID_0": "ECU",
+      "COUNTRY": "Ecuador"
+    }
+  },
+  "EGY": {
+    "code": "EGY",
+    "names": {
+      "en": [
+        "Egypt"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "EGYPT",
+        "EGY",
+        "埃及",
+        "EGYPT"
+      ]
+    },
+    "searchKeys": [
+      "EGYPT",
+      "EGY",
+      "埃及"
+    ],
+    "_properties": {
+      "GID_0": "EGY",
+      "COUNTRY": "Egypt"
+    }
+  },
+  "ERI": {
+    "code": "ERI",
+    "names": {
+      "en": [
+        "Eritrea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ERITREA",
+        "ERI",
+        "厄利垂亞",
+        "ERITREA"
+      ]
+    },
+    "searchKeys": [
+      "ERITREA",
+      "ERI",
+      "厄利垂亞"
+    ],
+    "_properties": {
+      "GID_0": "ERI",
+      "COUNTRY": "Eritrea"
+    }
+  },
+  "ESH": {
+    "code": "ESH",
+    "names": {
+      "en": [
+        "Western Sahara"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "WESTERN SAHARA",
+        "ESH",
+        "西撒哈拉",
+        "WESTERN SAHARA"
+      ]
+    },
+    "searchKeys": [
+      "WESTERN SAHARA",
+      "ESH",
+      "西撒哈拉"
+    ],
+    "_properties": {
+      "GID_0": "ESH",
+      "COUNTRY": "Western Sahara"
+    }
+  },
+  "ESP": {
+    "code": "ESP",
+    "names": {
+      "en": [
+        "Spain"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SPAIN",
+        "ESP",
+        "西班牙",
+        "SPAIN"
+      ]
+    },
+    "searchKeys": [
+      "SPAIN",
+      "ESP",
+      "西班牙"
+    ],
+    "_properties": {
+      "GID_0": "ESP",
+      "COUNTRY": "Spain"
+    }
+  },
+  "EST": {
+    "code": "EST",
+    "names": {
+      "en": [
+        "Estonia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ESTONIA",
+        "EST",
+        "愛沙尼亞",
+        "ESTONIA"
+      ]
+    },
+    "searchKeys": [
+      "ESTONIA",
+      "EST",
+      "愛沙尼亞"
+    ],
+    "_properties": {
+      "GID_0": "EST",
+      "COUNTRY": "Estonia"
+    }
+  },
+  "ETH": {
+    "code": "ETH",
+    "names": {
+      "en": [
+        "Ethiopia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ETHIOPIA",
+        "ETH",
+        "衣索比亞",
+        "ETHIOPIA"
+      ]
+    },
+    "searchKeys": [
+      "ETHIOPIA",
+      "ETH",
+      "衣索比亞"
+    ],
+    "_properties": {
+      "GID_0": "ETH",
+      "COUNTRY": "Ethiopia"
+    }
+  },
+  "FIN": {
+    "code": "FIN",
+    "names": {
+      "en": [
+        "Finland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FINLAND",
+        "FIN",
+        "芬蘭",
+        "FINLAND"
+      ]
+    },
+    "searchKeys": [
+      "FINLAND",
+      "FIN",
+      "芬蘭"
+    ],
+    "_properties": {
+      "GID_0": "FIN",
+      "COUNTRY": "Finland"
+    }
+  },
+  "FJI": {
+    "code": "FJI",
+    "names": {
+      "en": [
+        "Fiji"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FIJI",
+        "FJI",
+        "斐濟",
+        "FIJI"
+      ]
+    },
+    "searchKeys": [
+      "FIJI",
+      "FJI",
+      "斐濟"
+    ],
+    "_properties": {
+      "GID_0": "FJI",
+      "COUNTRY": "Fiji"
+    }
+  },
+  "FLK": {
+    "code": "FLK",
+    "names": {
+      "en": [
+        "Falkland Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FALKLAND ISLANDS",
+        "FLK",
+        "福克蘭群島",
+        "FALKLAND ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "FALKLAND ISLANDS",
+      "FLK",
+      "福克蘭群島"
+    ],
+    "_properties": {
+      "GID_0": "FLK",
+      "COUNTRY": "Falkland Islands"
+    }
+  },
+  "FRA": {
+    "code": "FRA",
+    "names": {
+      "en": [
+        "France"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FRANCE",
+        "FRA",
+        "法國",
+        "FRANCE"
+      ]
+    },
+    "searchKeys": [
+      "FRANCE",
+      "FRA",
+      "法國"
+    ],
+    "_properties": {
+      "GID_0": "FRA",
+      "COUNTRY": "France"
+    }
+  },
+  "FRO": {
+    "code": "FRO",
+    "names": {
+      "en": [
+        "Faroe Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FAROE ISLANDS",
+        "FRO",
+        "法羅群島",
+        "FAROE ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "FAROE ISLANDS",
+      "FRO",
+      "法羅群島"
+    ],
+    "_properties": {
+      "GID_0": "FRO",
+      "COUNTRY": "Faroe Islands"
+    }
+  },
+  "FSM": {
+    "code": "FSM",
+    "names": {
+      "en": [
+        "Micronesia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MICRONESIA",
+        "FSM",
+        "密克羅尼西亞",
+        "MICRONESIA"
+      ]
+    },
+    "searchKeys": [
+      "MICRONESIA",
+      "FSM",
+      "密克羅尼西亞"
+    ],
+    "_properties": {
+      "GID_0": "FSM",
+      "COUNTRY": "Micronesia"
+    }
+  },
+  "GAB": {
+    "code": "GAB",
+    "names": {
+      "en": [
+        "Gabon"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GABON",
+        "GAB",
+        "加彭",
+        "GABON"
+      ]
+    },
+    "searchKeys": [
+      "GABON",
+      "GAB",
+      "加彭"
+    ],
+    "_properties": {
+      "GID_0": "GAB",
+      "COUNTRY": "Gabon"
+    }
+  },
+  "GBR": {
+    "code": "GBR",
+    "names": {
+      "en": [
+        "United Kingdom"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UNITED KINGDOM",
+        "GBR",
+        "英國",
+        "UNITED KINGDOM"
+      ]
+    },
+    "searchKeys": [
+      "UNITED KINGDOM",
+      "GBR",
+      "英國"
+    ],
+    "_properties": {
+      "GID_0": "GBR",
+      "COUNTRY": "United Kingdom"
+    }
+  },
+  "GEO": {
+    "code": "GEO",
+    "names": {
+      "en": [
+        "Georgia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GEORGIA",
+        "GEO",
+        "喬治亞",
+        "GEORGIA"
+      ]
+    },
+    "searchKeys": [
+      "GEORGIA",
+      "GEO",
+      "喬治亞"
+    ],
+    "_properties": {
+      "GID_0": "GEO",
+      "COUNTRY": "Georgia"
+    }
+  },
+  "GGY": {
+    "code": "GGY",
+    "names": {
+      "en": [
+        "Guernsey"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUERNSEY",
+        "GGY",
+        "根西",
+        "GUERNSEY"
+      ]
+    },
+    "searchKeys": [
+      "GUERNSEY",
+      "GGY",
+      "根西"
+    ],
+    "_properties": {
+      "GID_0": "GGY",
+      "COUNTRY": "Guernsey"
+    }
+  },
+  "GHA": {
+    "code": "GHA",
+    "names": {
+      "en": [
+        "Ghana"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GHANA",
+        "GHA",
+        "迦納",
+        "GHANA"
+      ]
+    },
+    "searchKeys": [
+      "GHANA",
+      "GHA",
+      "迦納"
+    ],
+    "_properties": {
+      "GID_0": "GHA",
+      "COUNTRY": "Ghana"
+    }
+  },
+  "GIB": {
+    "code": "GIB",
+    "names": {
+      "en": [
+        "Gibraltar"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GIBRALTAR",
+        "GIB",
+        "直布羅陀",
+        "GIBRALTAR"
+      ]
+    },
+    "searchKeys": [
+      "GIBRALTAR",
+      "GIB",
+      "直布羅陀"
+    ],
+    "_properties": {
+      "GID_0": "GIB",
+      "COUNTRY": "Gibraltar"
+    }
+  },
+  "GIN": {
+    "code": "GIN",
+    "names": {
+      "en": [
+        "Guinea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUINEA",
+        "GIN",
+        "幾內亞",
+        "GUINEA"
+      ]
+    },
+    "searchKeys": [
+      "GUINEA",
+      "GIN",
+      "幾內亞"
+    ],
+    "_properties": {
+      "GID_0": "GIN",
+      "COUNTRY": "Guinea"
+    }
+  },
+  "GLP": {
+    "code": "GLP",
+    "names": {
+      "en": [
+        "Guadeloupe"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUADELOUPE",
+        "GLP",
+        "瓜地洛普",
+        "GUADELOUPE"
+      ]
+    },
+    "searchKeys": [
+      "GUADELOUPE",
+      "GLP",
+      "瓜地洛普"
+    ],
+    "_properties": {
+      "GID_0": "GLP",
+      "COUNTRY": "Guadeloupe"
+    }
+  },
+  "GMB": {
+    "code": "GMB",
+    "names": {
+      "en": [
+        "Gambia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GAMBIA",
+        "GMB",
+        "甘比亞",
+        "GAMBIA"
+      ]
+    },
+    "searchKeys": [
+      "GAMBIA",
+      "GMB",
+      "甘比亞"
+    ],
+    "_properties": {
+      "GID_0": "GMB",
+      "COUNTRY": "Gambia"
+    }
+  },
+  "GNB": {
+    "code": "GNB",
+    "names": {
+      "en": [
+        "Guinea-Bissau"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUINEA-BISSAU",
+        "GNB",
+        "幾內亞比索",
+        "GUINEA-BISSAU"
+      ]
+    },
+    "searchKeys": [
+      "GUINEA-BISSAU",
+      "GNB",
+      "幾內亞比索"
+    ],
+    "_properties": {
+      "GID_0": "GNB",
+      "COUNTRY": "Guinea-Bissau"
+    }
+  },
+  "GNQ": {
+    "code": "GNQ",
+    "names": {
+      "en": [
+        "Equatorial Guinea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "EQUATORIAL GUINEA",
+        "GNQ",
+        "赤道幾內亞",
+        "EQUATORIAL GUINEA"
+      ]
+    },
+    "searchKeys": [
+      "EQUATORIAL GUINEA",
+      "GNQ",
+      "赤道幾內亞"
+    ],
+    "_properties": {
+      "GID_0": "GNQ",
+      "COUNTRY": "Equatorial Guinea"
+    }
+  },
+  "GRC": {
+    "code": "GRC",
+    "names": {
+      "en": [
+        "Greece"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GREECE",
+        "GRC",
+        "希臘",
+        "GREECE"
+      ]
+    },
+    "searchKeys": [
+      "GREECE",
+      "GRC",
+      "希臘"
+    ],
+    "_properties": {
+      "GID_0": "GRC",
+      "COUNTRY": "Greece"
+    }
+  },
+  "GRD": {
+    "code": "GRD",
+    "names": {
+      "en": [
+        "Grenada"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GRENADA",
+        "GRD",
+        "格瑞那達",
+        "GRENADA"
+      ]
+    },
+    "searchKeys": [
+      "GRENADA",
+      "GRD",
+      "格瑞那達"
+    ],
+    "_properties": {
+      "GID_0": "GRD",
+      "COUNTRY": "Grenada"
+    }
+  },
+  "GRL": {
+    "code": "GRL",
+    "names": {
+      "en": [
+        "Greenland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GREENLAND",
+        "GRL",
+        "格陵蘭",
+        "GREENLAND"
+      ]
+    },
+    "searchKeys": [
+      "GREENLAND",
+      "GRL",
+      "格陵蘭"
+    ],
+    "_properties": {
+      "GID_0": "GRL",
+      "COUNTRY": "Greenland"
+    }
+  },
+  "GTM": {
+    "code": "GTM",
+    "names": {
+      "en": [
+        "Guatemala"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUATEMALA",
+        "GTM",
+        "瓜地馬拉",
+        "GUATEMALA"
+      ]
+    },
+    "searchKeys": [
+      "GUATEMALA",
+      "GTM",
+      "瓜地馬拉"
+    ],
+    "_properties": {
+      "GID_0": "GTM",
+      "COUNTRY": "Guatemala"
+    }
+  },
+  "GUF": {
+    "code": "GUF",
+    "names": {
+      "en": [
+        "French Guiana"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FRENCH GUIANA",
+        "GUF",
+        "法屬圭亞那",
+        "FRENCH GUIANA"
+      ]
+    },
+    "searchKeys": [
+      "FRENCH GUIANA",
+      "GUF",
+      "法屬圭亞那"
+    ],
+    "_properties": {
+      "GID_0": "GUF",
+      "COUNTRY": "French Guiana"
+    }
+  },
+  "GUM": {
+    "code": "GUM",
+    "names": {
+      "en": [
+        "Guam"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUAM",
+        "GUM",
+        "關島",
+        "GUAM"
+      ]
+    },
+    "searchKeys": [
+      "GUAM",
+      "GUM",
+      "關島"
+    ],
+    "_properties": {
+      "GID_0": "GUM",
+      "COUNTRY": "Guam"
+    }
+  },
+  "GUY": {
+    "code": "GUY",
+    "names": {
+      "en": [
+        "Guyana"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "GUYANA",
+        "GUY",
+        "蓋亞那",
+        "GUYANA"
+      ]
+    },
+    "searchKeys": [
+      "GUYANA",
+      "GUY",
+      "蓋亞那"
+    ],
+    "_properties": {
+      "GID_0": "GUY",
+      "COUNTRY": "Guyana"
+    }
+  },
+  "HMD": {
+    "code": "HMD",
+    "names": {
+      "en": [
+        "Heard Island and McDonald Island"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "HEARD ISLAND AND MCDONALD ISLAND",
+        "HMD",
+        "赫德島和麥當勞群島",
+        "HEARD ISLAND AND MCDONALD ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "HEARD ISLAND AND MCDONALD ISLAND",
+      "HMD",
+      "赫德島和麥當勞群島",
+      "HEARD ISLAND AND MCDONALD ISLANDS"
+    ],
+    "_properties": {
+      "GID_0": "HMD",
+      "COUNTRY": "Heard Island and McDonald Island"
+    }
+  },
+  "HND": {
+    "code": "HND",
+    "names": {
+      "en": [
+        "Honduras"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "HONDURAS",
+        "HND",
+        "宏都拉斯",
+        "HONDURAS"
+      ]
+    },
+    "searchKeys": [
+      "HONDURAS",
+      "HND",
+      "宏都拉斯"
+    ],
+    "_properties": {
+      "GID_0": "HND",
+      "COUNTRY": "Honduras"
+    }
+  },
+  "HRV": {
+    "code": "HRV",
+    "names": {
+      "en": [
+        "Croatia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CROATIA",
+        "HRV",
+        "克羅埃西亞",
+        "CROATIA"
+      ]
+    },
+    "searchKeys": [
+      "CROATIA",
+      "HRV",
+      "克羅埃西亞"
+    ],
+    "_properties": {
+      "GID_0": "HRV",
+      "COUNTRY": "Croatia"
+    }
+  },
+  "HTI": {
+    "code": "HTI",
+    "names": {
+      "en": [
+        "Haiti"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "HAITI",
+        "HTI",
+        "海地",
+        "HAITI"
+      ]
+    },
+    "searchKeys": [
+      "HAITI",
+      "HTI",
+      "海地"
+    ],
+    "_properties": {
+      "GID_0": "HTI",
+      "COUNTRY": "Haiti"
+    }
+  },
+  "HUN": {
+    "code": "HUN",
+    "names": {
+      "en": [
+        "Hungary"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "HUNGARY",
+        "HUN",
+        "匈牙利",
+        "HUNGARY"
+      ]
+    },
+    "searchKeys": [
+      "HUNGARY",
+      "HUN",
+      "匈牙利"
+    ],
+    "_properties": {
+      "GID_0": "HUN",
+      "COUNTRY": "Hungary"
+    }
+  },
+  "IDN": {
+    "code": "IDN",
+    "names": {
+      "en": [
+        "Indonesia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDONESIA",
+        "IDN",
+        "印尼",
+        "INDONESIA"
+      ]
+    },
+    "searchKeys": [
+      "INDONESIA",
+      "IDN",
+      "印尼"
+    ],
+    "_properties": {
+      "GID_0": "IDN",
+      "COUNTRY": "Indonesia"
+    }
+  },
+  "IMN": {
+    "code": "IMN",
+    "names": {
+      "en": [
+        "Isle of Man"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ISLE OF MAN",
+        "IMN",
+        "曼島",
+        "ISLE OF MAN"
+      ]
+    },
+    "searchKeys": [
+      "ISLE OF MAN",
+      "IMN",
+      "曼島"
+    ],
+    "_properties": {
+      "GID_0": "IMN",
+      "COUNTRY": "Isle of Man"
+    }
+  },
+  "IND": {
+    "code": "IND",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "IND",
+        "印度",
+        "INDIA"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "IND",
+      "印度"
+    ],
+    "_properties": {
+      "GID_0": "IND",
+      "COUNTRY": "India"
+    }
+  },
+  "Z01": {
+    "code": "Z01",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "Z01"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "Z01"
+    ],
+    "_properties": {
+      "GID_0": "Z01",
+      "COUNTRY": "India"
+    }
+  },
+  "Z04": {
+    "code": "Z04",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "Z04"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "Z04"
+    ],
+    "_properties": {
+      "GID_0": "Z04",
+      "COUNTRY": "India"
+    }
+  },
+  "Z05": {
+    "code": "Z05",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "Z05"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "Z05"
+    ],
+    "_properties": {
+      "GID_0": "Z05",
+      "COUNTRY": "India"
+    }
+  },
+  "Z07": {
+    "code": "Z07",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "Z07"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "Z07"
+    ],
+    "_properties": {
+      "GID_0": "Z07",
+      "COUNTRY": "India"
+    }
+  },
+  "Z09": {
+    "code": "Z09",
+    "names": {
+      "en": [
+        "India"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "INDIA",
+        "Z09"
+      ]
+    },
+    "searchKeys": [
+      "INDIA",
+      "Z09"
+    ],
+    "_properties": {
+      "GID_0": "Z09",
+      "COUNTRY": "India"
+    }
+  },
+  "IOT": {
+    "code": "IOT",
+    "names": {
+      "en": [
+        "British Indian Ocean Territory"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BRITISH INDIAN OCEAN TERRITORY",
+        "IOT",
+        "英屬印度洋領地",
+        "BRITISH INDIAN OCEAN TERRITORY"
+      ]
+    },
+    "searchKeys": [
+      "BRITISH INDIAN OCEAN TERRITORY",
+      "IOT",
+      "英屬印度洋領地"
+    ],
+    "_properties": {
+      "GID_0": "IOT",
+      "COUNTRY": "British Indian Ocean Territory"
+    }
+  },
+  "IRL": {
+    "code": "IRL",
+    "names": {
+      "en": [
+        "Ireland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "IRELAND",
+        "IRL",
+        "愛爾蘭",
+        "IRELAND"
+      ]
+    },
+    "searchKeys": [
+      "IRELAND",
+      "IRL",
+      "愛爾蘭"
+    ],
+    "_properties": {
+      "GID_0": "IRL",
+      "COUNTRY": "Ireland"
+    }
+  },
+  "IRN": {
+    "code": "IRN",
+    "names": {
+      "en": [
+        "Iran"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "IRAN",
+        "IRN",
+        "伊朗",
+        "IRAN"
+      ]
+    },
+    "searchKeys": [
+      "IRAN",
+      "IRN",
+      "伊朗"
+    ],
+    "_properties": {
+      "GID_0": "IRN",
+      "COUNTRY": "Iran"
+    }
+  },
+  "IRQ": {
+    "code": "IRQ",
+    "names": {
+      "en": [
+        "Iraq"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "IRAQ",
+        "IRQ",
+        "伊拉克",
+        "IRAQ"
+      ]
+    },
+    "searchKeys": [
+      "IRAQ",
+      "IRQ",
+      "伊拉克"
+    ],
+    "_properties": {
+      "GID_0": "IRQ",
+      "COUNTRY": "Iraq"
+    }
+  },
+  "ISL": {
+    "code": "ISL",
+    "names": {
+      "en": [
+        "Iceland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ICELAND",
+        "ISL",
+        "冰島",
+        "ICELAND"
+      ]
+    },
+    "searchKeys": [
+      "ICELAND",
+      "ISL",
+      "冰島"
+    ],
+    "_properties": {
+      "GID_0": "ISL",
+      "COUNTRY": "Iceland"
+    }
+  },
+  "ISR": {
+    "code": "ISR",
+    "names": {
+      "en": [
+        "Israel"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ISRAEL",
+        "ISR",
+        "以色列",
+        "ISRAEL"
+      ]
+    },
+    "searchKeys": [
+      "ISRAEL",
+      "ISR",
+      "以色列"
+    ],
+    "_properties": {
+      "GID_0": "ISR",
+      "COUNTRY": "Israel"
+    }
+  },
+  "ITA": {
+    "code": "ITA",
+    "names": {
+      "en": [
+        "Italy"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ITALY",
+        "ITA",
+        "義大利",
+        "ITALY"
+      ]
+    },
+    "searchKeys": [
+      "ITALY",
+      "ITA",
+      "義大利"
+    ],
+    "_properties": {
+      "GID_0": "ITA",
+      "COUNTRY": "Italy"
+    }
+  },
+  "JAM": {
+    "code": "JAM",
+    "names": {
+      "en": [
+        "Jamaica"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "JAMAICA",
+        "JAM",
+        "牙買加",
+        "JAMAICA"
+      ]
+    },
+    "searchKeys": [
+      "JAMAICA",
+      "JAM",
+      "牙買加"
+    ],
+    "_properties": {
+      "GID_0": "JAM",
+      "COUNTRY": "Jamaica"
+    }
+  },
+  "JEY": {
+    "code": "JEY",
+    "names": {
+      "en": [
+        "Jersey"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "JERSEY",
+        "JEY",
+        "澤西",
+        "JERSEY"
+      ]
+    },
+    "searchKeys": [
+      "JERSEY",
+      "JEY",
+      "澤西"
+    ],
+    "_properties": {
+      "GID_0": "JEY",
+      "COUNTRY": "Jersey"
+    }
+  },
+  "JOR": {
+    "code": "JOR",
+    "names": {
+      "en": [
+        "Jordan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "JORDAN",
+        "JOR",
+        "約旦",
+        "JORDAN"
+      ]
+    },
+    "searchKeys": [
+      "JORDAN",
+      "JOR",
+      "約旦"
+    ],
+    "_properties": {
+      "GID_0": "JOR",
+      "COUNTRY": "Jordan"
+    }
+  },
+  "JPN": {
+    "code": "JPN",
+    "names": {
+      "en": [
+        "Japan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "JAPAN",
+        "JPN",
+        "日本",
+        "JAPAN"
+      ]
+    },
+    "searchKeys": [
+      "JAPAN",
+      "JPN",
+      "日本"
+    ],
+    "_properties": {
+      "GID_0": "JPN",
+      "COUNTRY": "Japan"
+    }
+  },
+  "KAZ": {
+    "code": "KAZ",
+    "names": {
+      "en": [
+        "Kazakhstan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KAZAKHSTAN",
+        "KAZ",
+        "哈薩克",
+        "KAZAKHSTAN"
+      ]
+    },
+    "searchKeys": [
+      "KAZAKHSTAN",
+      "KAZ",
+      "哈薩克"
+    ],
+    "_properties": {
+      "GID_0": "KAZ",
+      "COUNTRY": "Kazakhstan"
+    }
+  },
+  "KEN": {
+    "code": "KEN",
+    "names": {
+      "en": [
+        "Kenya"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KENYA",
+        "KEN",
+        "肯亞",
+        "KENYA"
+      ]
+    },
+    "searchKeys": [
+      "KENYA",
+      "KEN",
+      "肯亞"
+    ],
+    "_properties": {
+      "GID_0": "KEN",
+      "COUNTRY": "Kenya"
+    }
+  },
+  "KGZ": {
+    "code": "KGZ",
+    "names": {
+      "en": [
+        "Kyrgyzstan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KYRGYZSTAN",
+        "KGZ",
+        "吉爾吉斯",
+        "KYRGYZSTAN"
+      ]
+    },
+    "searchKeys": [
+      "KYRGYZSTAN",
+      "KGZ",
+      "吉爾吉斯"
+    ],
+    "_properties": {
+      "GID_0": "KGZ",
+      "COUNTRY": "Kyrgyzstan"
+    }
+  },
+  "KHM": {
+    "code": "KHM",
+    "names": {
+      "en": [
+        "Cambodia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CAMBODIA",
+        "KHM",
+        "柬埔寨",
+        "CAMBODIA"
+      ]
+    },
+    "searchKeys": [
+      "CAMBODIA",
+      "KHM",
+      "柬埔寨"
+    ],
+    "_properties": {
+      "GID_0": "KHM",
+      "COUNTRY": "Cambodia"
+    }
+  },
+  "KIR": {
+    "code": "KIR",
+    "names": {
+      "en": [
+        "Kiribati"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KIRIBATI",
+        "KIR",
+        "吉里巴斯",
+        "KIRIBATI"
+      ]
+    },
+    "searchKeys": [
+      "KIRIBATI",
+      "KIR",
+      "吉里巴斯"
+    ],
+    "_properties": {
+      "GID_0": "KIR",
+      "COUNTRY": "Kiribati"
+    }
+  },
+  "KNA": {
+    "code": "KNA",
+    "names": {
+      "en": [
+        "Saint Kitts and Nevis"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT KITTS AND NEVIS",
+        "KNA",
+        "聖克里斯多福及尼維斯",
+        "SAINT KITTS AND NEVIS"
+      ]
+    },
+    "searchKeys": [
+      "SAINT KITTS AND NEVIS",
+      "KNA",
+      "聖克里斯多福及尼維斯"
+    ],
+    "_properties": {
+      "GID_0": "KNA",
+      "COUNTRY": "Saint Kitts and Nevis"
+    }
+  },
+  "KOR": {
+    "code": "KOR",
+    "names": {
+      "en": [
+        "South Korea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOUTH KOREA",
+        "KOR",
+        "南韓",
+        "KOREA (REPUBLIC OF)"
+      ]
+    },
+    "searchKeys": [
+      "SOUTH KOREA",
+      "KOR",
+      "南韓",
+      "KOREA (REPUBLIC OF)"
+    ],
+    "_properties": {
+      "GID_0": "KOR",
+      "COUNTRY": "South Korea"
+    }
+  },
+  "KWT": {
+    "code": "KWT",
+    "names": {
+      "en": [
+        "Kuwait"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KUWAIT",
+        "KWT",
+        "科威特",
+        "KUWAIT"
+      ]
+    },
+    "searchKeys": [
+      "KUWAIT",
+      "KWT",
+      "科威特"
+    ],
+    "_properties": {
+      "GID_0": "KWT",
+      "COUNTRY": "Kuwait"
+    }
+  },
+  "LAO": {
+    "code": "LAO",
+    "names": {
+      "en": [
+        "Laos"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LAOS",
+        "LAO",
+        "寮國",
+        "LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+      ]
+    },
+    "searchKeys": [
+      "LAOS",
+      "LAO",
+      "寮國",
+      "LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+    ],
+    "_properties": {
+      "GID_0": "LAO",
+      "COUNTRY": "Laos"
+    }
+  },
+  "LBN": {
+    "code": "LBN",
+    "names": {
+      "en": [
+        "Lebanon"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LEBANON",
+        "LBN",
+        "黎巴嫩",
+        "LEBANON"
+      ]
+    },
+    "searchKeys": [
+      "LEBANON",
+      "LBN",
+      "黎巴嫩"
+    ],
+    "_properties": {
+      "GID_0": "LBN",
+      "COUNTRY": "Lebanon"
+    }
+  },
+  "LBR": {
+    "code": "LBR",
+    "names": {
+      "en": [
+        "Liberia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LIBERIA",
+        "LBR",
+        "賴比瑞亞",
+        "LIBERIA"
+      ]
+    },
+    "searchKeys": [
+      "LIBERIA",
+      "LBR",
+      "賴比瑞亞"
+    ],
+    "_properties": {
+      "GID_0": "LBR",
+      "COUNTRY": "Liberia"
+    }
+  },
+  "LBY": {
+    "code": "LBY",
+    "names": {
+      "en": [
+        "Libya"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LIBYA",
+        "LBY",
+        "利比亞",
+        "LIBYA"
+      ]
+    },
+    "searchKeys": [
+      "LIBYA",
+      "LBY",
+      "利比亞"
+    ],
+    "_properties": {
+      "GID_0": "LBY",
+      "COUNTRY": "Libya"
+    }
+  },
+  "LCA": {
+    "code": "LCA",
+    "names": {
+      "en": [
+        "Saint Lucia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT LUCIA",
+        "LCA",
+        "聖露西亞",
+        "SAINT LUCIA"
+      ]
+    },
+    "searchKeys": [
+      "SAINT LUCIA",
+      "LCA",
+      "聖露西亞"
+    ],
+    "_properties": {
+      "GID_0": "LCA",
+      "COUNTRY": "Saint Lucia"
+    }
+  },
+  "LIE": {
+    "code": "LIE",
+    "names": {
+      "en": [
+        "Liechtenstein"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LIECHTENSTEIN",
+        "LIE",
+        "列支敦斯登",
+        "LIECHTENSTEIN"
+      ]
+    },
+    "searchKeys": [
+      "LIECHTENSTEIN",
+      "LIE",
+      "列支敦斯登"
+    ],
+    "_properties": {
+      "GID_0": "LIE",
+      "COUNTRY": "Liechtenstein"
+    }
+  },
+  "LKA": {
+    "code": "LKA",
+    "names": {
+      "en": [
+        "Sri Lanka"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SRI LANKA",
+        "LKA",
+        "斯里蘭卡",
+        "SRI LANKA"
+      ]
+    },
+    "searchKeys": [
+      "SRI LANKA",
+      "LKA",
+      "斯里蘭卡"
+    ],
+    "_properties": {
+      "GID_0": "LKA",
+      "COUNTRY": "Sri Lanka"
+    }
+  },
+  "LSO": {
+    "code": "LSO",
+    "names": {
+      "en": [
+        "Lesotho"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LESOTHO",
+        "LSO",
+        "賴索托",
+        "LESOTHO"
+      ]
+    },
+    "searchKeys": [
+      "LESOTHO",
+      "LSO",
+      "賴索托"
+    ],
+    "_properties": {
+      "GID_0": "LSO",
+      "COUNTRY": "Lesotho"
+    }
+  },
+  "LTU": {
+    "code": "LTU",
+    "names": {
+      "en": [
+        "Lithuania"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LITHUANIA",
+        "LTU",
+        "立陶宛",
+        "LITHUANIA"
+      ]
+    },
+    "searchKeys": [
+      "LITHUANIA",
+      "LTU",
+      "立陶宛"
+    ],
+    "_properties": {
+      "GID_0": "LTU",
+      "COUNTRY": "Lithuania"
+    }
+  },
+  "LUX": {
+    "code": "LUX",
+    "names": {
+      "en": [
+        "Luxembourg"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LUXEMBOURG",
+        "LUX",
+        "盧森堡",
+        "LUXEMBOURG"
+      ]
+    },
+    "searchKeys": [
+      "LUXEMBOURG",
+      "LUX",
+      "盧森堡"
+    ],
+    "_properties": {
+      "GID_0": "LUX",
+      "COUNTRY": "Luxembourg"
+    }
+  },
+  "LVA": {
+    "code": "LVA",
+    "names": {
+      "en": [
+        "Latvia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "LATVIA",
+        "LVA",
+        "拉脫維亞",
+        "LATVIA"
+      ]
+    },
+    "searchKeys": [
+      "LATVIA",
+      "LVA",
+      "拉脫維亞"
+    ],
+    "_properties": {
+      "GID_0": "LVA",
+      "COUNTRY": "Latvia"
+    }
+  },
+  "MAF": {
+    "code": "MAF",
+    "names": {
+      "en": [
+        "Saint-Martin"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT-MARTIN",
+        "MAF",
+        "法屬聖馬丁",
+        "SAINT MARTIN (FRENCH PART)"
+      ]
+    },
+    "searchKeys": [
+      "SAINT-MARTIN",
+      "MAF",
+      "法屬聖馬丁",
+      "SAINT MARTIN (FRENCH PART)"
+    ],
+    "_properties": {
+      "GID_0": "MAF",
+      "COUNTRY": "Saint-Martin"
+    }
+  },
+  "MAR": {
+    "code": "MAR",
+    "names": {
+      "en": [
+        "Morocco"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MOROCCO",
+        "MAR",
+        "摩洛哥",
+        "MOROCCO"
+      ]
+    },
+    "searchKeys": [
+      "MOROCCO",
+      "MAR",
+      "摩洛哥"
+    ],
+    "_properties": {
+      "GID_0": "MAR",
+      "COUNTRY": "Morocco"
+    }
+  },
+  "MCO": {
+    "code": "MCO",
+    "names": {
+      "en": [
+        "Monaco"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MONACO",
+        "MCO",
+        "摩納哥",
+        "MONACO"
+      ]
+    },
+    "searchKeys": [
+      "MONACO",
+      "MCO",
+      "摩納哥"
+    ],
+    "_properties": {
+      "GID_0": "MCO",
+      "COUNTRY": "Monaco"
+    }
+  },
+  "MDA": {
+    "code": "MDA",
+    "names": {
+      "en": [
+        "Moldova"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MOLDOVA",
+        "MDA",
+        "摩爾多瓦",
+        "MOLDOVA"
+      ]
+    },
+    "searchKeys": [
+      "MOLDOVA",
+      "MDA",
+      "摩爾多瓦"
+    ],
+    "_properties": {
+      "GID_0": "MDA",
+      "COUNTRY": "Moldova"
+    }
+  },
+  "MDG": {
+    "code": "MDG",
+    "names": {
+      "en": [
+        "Madagascar"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MADAGASCAR",
+        "MDG",
+        "馬達加斯加",
+        "MADAGASCAR"
+      ]
+    },
+    "searchKeys": [
+      "MADAGASCAR",
+      "MDG",
+      "馬達加斯加"
+    ],
+    "_properties": {
+      "GID_0": "MDG",
+      "COUNTRY": "Madagascar"
+    }
+  },
+  "MDV": {
+    "code": "MDV",
+    "names": {
+      "en": [
+        "Maldives"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MALDIVES",
+        "MDV",
+        "馬爾地夫",
+        "MALDIVES"
+      ]
+    },
+    "searchKeys": [
+      "MALDIVES",
+      "MDV",
+      "馬爾地夫"
+    ],
+    "_properties": {
+      "GID_0": "MDV",
+      "COUNTRY": "Maldives"
+    }
+  },
+  "MEX": {
+    "code": "MEX",
+    "names": {
+      "en": [
+        "México"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MÉXICO",
+        "MEX",
+        "墨西哥",
+        "MEXICO"
+      ]
+    },
+    "searchKeys": [
+      "MÉXICO",
+      "MEX",
+      "墨西哥",
+      "MEXICO"
+    ],
+    "_properties": {
+      "GID_0": "MEX",
+      "COUNTRY": "México"
+    }
+  },
+  "MHL": {
+    "code": "MHL",
+    "names": {
+      "en": [
+        "Marshall Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MARSHALL ISLANDS",
+        "MHL",
+        "馬紹爾群島",
+        "MARSHALL ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "MARSHALL ISLANDS",
+      "MHL",
+      "馬紹爾群島"
+    ],
+    "_properties": {
+      "GID_0": "MHL",
+      "COUNTRY": "Marshall Islands"
+    }
+  },
+  "MKD": {
+    "code": "MKD",
+    "names": {
+      "en": [
+        "North Macedonia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORTH MACEDONIA",
+        "MKD",
+        "北馬其頓",
+        "NORTH MACEDONIA"
+      ]
+    },
+    "searchKeys": [
+      "NORTH MACEDONIA",
+      "MKD",
+      "北馬其頓"
+    ],
+    "_properties": {
+      "GID_0": "MKD",
+      "COUNTRY": "North Macedonia"
+    }
+  },
+  "MLI": {
+    "code": "MLI",
+    "names": {
+      "en": [
+        "Mali"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MALI",
+        "MLI",
+        "馬利",
+        "MALI"
+      ]
+    },
+    "searchKeys": [
+      "MALI",
+      "MLI",
+      "馬利"
+    ],
+    "_properties": {
+      "GID_0": "MLI",
+      "COUNTRY": "Mali"
+    }
+  },
+  "MLT": {
+    "code": "MLT",
+    "names": {
+      "en": [
+        "Malta"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MALTA",
+        "MLT",
+        "馬爾他",
+        "MALTA"
+      ]
+    },
+    "searchKeys": [
+      "MALTA",
+      "MLT",
+      "馬爾他"
+    ],
+    "_properties": {
+      "GID_0": "MLT",
+      "COUNTRY": "Malta"
+    }
+  },
+  "MMR": {
+    "code": "MMR",
+    "names": {
+      "en": [
+        "Myanmar"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MYANMAR",
+        "MMR",
+        "緬甸",
+        "MYANMAR"
+      ]
+    },
+    "searchKeys": [
+      "MYANMAR",
+      "MMR",
+      "緬甸"
+    ],
+    "_properties": {
+      "GID_0": "MMR",
+      "COUNTRY": "Myanmar"
+    }
+  },
+  "MNE": {
+    "code": "MNE",
+    "names": {
+      "en": [
+        "Montenegro"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MONTENEGRO",
+        "MNE",
+        "蒙特內哥羅",
+        "MONTENEGRO"
+      ]
+    },
+    "searchKeys": [
+      "MONTENEGRO",
+      "MNE",
+      "蒙特內哥羅"
+    ],
+    "_properties": {
+      "GID_0": "MNE",
+      "COUNTRY": "Montenegro"
+    }
+  },
+  "MNG": {
+    "code": "MNG",
+    "names": {
+      "en": [
+        "Mongolia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MONGOLIA",
+        "MNG",
+        "蒙古",
+        "MONGOLIA"
+      ]
+    },
+    "searchKeys": [
+      "MONGOLIA",
+      "MNG",
+      "蒙古"
+    ],
+    "_properties": {
+      "GID_0": "MNG",
+      "COUNTRY": "Mongolia"
+    }
+  },
+  "MNP": {
+    "code": "MNP",
+    "names": {
+      "en": [
+        "Northern Mariana Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORTHERN MARIANA ISLANDS",
+        "MNP",
+        "北馬里亞納群島",
+        "NORTHERN MARIANA ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "NORTHERN MARIANA ISLANDS",
+      "MNP",
+      "北馬里亞納群島"
+    ],
+    "_properties": {
+      "GID_0": "MNP",
+      "COUNTRY": "Northern Mariana Islands"
+    }
+  },
+  "MOZ": {
+    "code": "MOZ",
+    "names": {
+      "en": [
+        "Mozambique"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MOZAMBIQUE",
+        "MOZ",
+        "莫三比克",
+        "MOZAMBIQUE"
+      ]
+    },
+    "searchKeys": [
+      "MOZAMBIQUE",
+      "MOZ",
+      "莫三比克"
+    ],
+    "_properties": {
+      "GID_0": "MOZ",
+      "COUNTRY": "Mozambique"
+    }
+  },
+  "MRT": {
+    "code": "MRT",
+    "names": {
+      "en": [
+        "Mauritania"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MAURITANIA",
+        "MRT",
+        "茅利塔尼亞",
+        "MAURITANIA"
+      ]
+    },
+    "searchKeys": [
+      "MAURITANIA",
+      "MRT",
+      "茅利塔尼亞"
+    ],
+    "_properties": {
+      "GID_0": "MRT",
+      "COUNTRY": "Mauritania"
+    }
+  },
+  "MSR": {
+    "code": "MSR",
+    "names": {
+      "en": [
+        "Montserrat"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MONTSERRAT",
+        "MSR",
+        "蒙哲臘",
+        "MONTSERRAT"
+      ]
+    },
+    "searchKeys": [
+      "MONTSERRAT",
+      "MSR",
+      "蒙哲臘"
+    ],
+    "_properties": {
+      "GID_0": "MSR",
+      "COUNTRY": "Montserrat"
+    }
+  },
+  "MTQ": {
+    "code": "MTQ",
+    "names": {
+      "en": [
+        "Martinique"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MARTINIQUE",
+        "MTQ",
+        "馬丁尼克",
+        "MARTINIQUE"
+      ]
+    },
+    "searchKeys": [
+      "MARTINIQUE",
+      "MTQ",
+      "馬丁尼克"
+    ],
+    "_properties": {
+      "GID_0": "MTQ",
+      "COUNTRY": "Martinique"
+    }
+  },
+  "MUS": {
+    "code": "MUS",
+    "names": {
+      "en": [
+        "Mauritius"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MAURITIUS",
+        "MUS",
+        "模里西斯",
+        "MAURITIUS"
+      ]
+    },
+    "searchKeys": [
+      "MAURITIUS",
+      "MUS",
+      "模里西斯"
+    ],
+    "_properties": {
+      "GID_0": "MUS",
+      "COUNTRY": "Mauritius"
+    }
+  },
+  "MWI": {
+    "code": "MWI",
+    "names": {
+      "en": [
+        "Malawi"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MALAWI",
+        "MWI",
+        "馬拉威",
+        "MALAWI"
+      ]
+    },
+    "searchKeys": [
+      "MALAWI",
+      "MWI",
+      "馬拉威"
+    ],
+    "_properties": {
+      "GID_0": "MWI",
+      "COUNTRY": "Malawi"
+    }
+  },
+  "MYS": {
+    "code": "MYS",
+    "names": {
+      "en": [
+        "Malaysia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MALAYSIA",
+        "MYS",
+        "馬來西亞",
+        "MALAYSIA"
+      ]
+    },
+    "searchKeys": [
+      "MALAYSIA",
+      "MYS",
+      "馬來西亞"
+    ],
+    "_properties": {
+      "GID_0": "MYS",
+      "COUNTRY": "Malaysia"
+    }
+  },
+  "MYT": {
+    "code": "MYT",
+    "names": {
+      "en": [
+        "Mayotte"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "MAYOTTE",
+        "MYT",
+        "馬約特",
+        "MAYOTTE"
+      ]
+    },
+    "searchKeys": [
+      "MAYOTTE",
+      "MYT",
+      "馬約特"
+    ],
+    "_properties": {
+      "GID_0": "MYT",
+      "COUNTRY": "Mayotte"
+    }
+  },
+  "NAM": {
+    "code": "NAM",
+    "names": {
+      "en": [
+        "Namibia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NAMIBIA",
+        "NAM",
+        "納米比亞",
+        "NAMIBIA"
+      ]
+    },
+    "searchKeys": [
+      "NAMIBIA",
+      "NAM",
+      "納米比亞"
+    ],
+    "_properties": {
+      "GID_0": "NAM",
+      "COUNTRY": "Namibia"
+    }
+  },
+  "NCL": {
+    "code": "NCL",
+    "names": {
+      "en": [
+        "New Caledonia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NEW CALEDONIA",
+        "NCL",
+        "新喀里多尼亞",
+        "NEW CALEDONIA"
+      ]
+    },
+    "searchKeys": [
+      "NEW CALEDONIA",
+      "NCL",
+      "新喀里多尼亞"
+    ],
+    "_properties": {
+      "GID_0": "NCL",
+      "COUNTRY": "New Caledonia"
+    }
+  },
+  "NER": {
+    "code": "NER",
+    "names": {
+      "en": [
+        "Niger"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NIGER",
+        "NER",
+        "尼日",
+        "NIGER"
+      ]
+    },
+    "searchKeys": [
+      "NIGER",
+      "NER",
+      "尼日"
+    ],
+    "_properties": {
+      "GID_0": "NER",
+      "COUNTRY": "Niger"
+    }
+  },
+  "NFK": {
+    "code": "NFK",
+    "names": {
+      "en": [
+        "Norfolk Island"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORFOLK ISLAND",
+        "NFK",
+        "諾福克島",
+        "NORFOLK ISLAND"
+      ]
+    },
+    "searchKeys": [
+      "NORFOLK ISLAND",
+      "NFK",
+      "諾福克島"
+    ],
+    "_properties": {
+      "GID_0": "NFK",
+      "COUNTRY": "Norfolk Island"
+    }
+  },
+  "NGA": {
+    "code": "NGA",
+    "names": {
+      "en": [
+        "Nigeria"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NIGERIA",
+        "NGA",
+        "奈及利亞",
+        "NIGERIA"
+      ]
+    },
+    "searchKeys": [
+      "NIGERIA",
+      "NGA",
+      "奈及利亞"
+    ],
+    "_properties": {
+      "GID_0": "NGA",
+      "COUNTRY": "Nigeria"
+    }
+  },
+  "NIC": {
+    "code": "NIC",
+    "names": {
+      "en": [
+        "Nicaragua"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NICARAGUA",
+        "NIC",
+        "尼加拉瓜",
+        "NICARAGUA"
+      ]
+    },
+    "searchKeys": [
+      "NICARAGUA",
+      "NIC",
+      "尼加拉瓜"
+    ],
+    "_properties": {
+      "GID_0": "NIC",
+      "COUNTRY": "Nicaragua"
+    }
+  },
+  "NIU": {
+    "code": "NIU",
+    "names": {
+      "en": [
+        "Niue"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NIUE",
+        "NIU",
+        "紐埃",
+        "NIUE"
+      ]
+    },
+    "searchKeys": [
+      "NIUE",
+      "NIU",
+      "紐埃"
+    ],
+    "_properties": {
+      "GID_0": "NIU",
+      "COUNTRY": "Niue"
+    }
+  },
+  "NLD": {
+    "code": "NLD",
+    "names": {
+      "en": [
+        "Netherlands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NETHERLANDS",
+        "NLD",
+        "荷蘭",
+        "NETHERLANDS"
+      ]
+    },
+    "searchKeys": [
+      "NETHERLANDS",
+      "NLD",
+      "荷蘭"
+    ],
+    "_properties": {
+      "GID_0": "NLD",
+      "COUNTRY": "Netherlands"
+    }
+  },
+  "NOR": {
+    "code": "NOR",
+    "names": {
+      "en": [
+        "Norway"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORWAY",
+        "NOR",
+        "挪威",
+        "NORWAY"
+      ]
+    },
+    "searchKeys": [
+      "NORWAY",
+      "NOR",
+      "挪威"
+    ],
+    "_properties": {
+      "GID_0": "NOR",
+      "COUNTRY": "Norway"
+    }
+  },
+  "NPL": {
+    "code": "NPL",
+    "names": {
+      "en": [
+        "Nepal"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NEPAL",
+        "NPL",
+        "尼泊爾",
+        "NEPAL"
+      ]
+    },
+    "searchKeys": [
+      "NEPAL",
+      "NPL",
+      "尼泊爾"
+    ],
+    "_properties": {
+      "GID_0": "NPL",
+      "COUNTRY": "Nepal"
+    }
+  },
+  "NRU": {
+    "code": "NRU",
+    "names": {
+      "en": [
+        "Nauru"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NAURU",
+        "NRU",
+        "諾魯",
+        "NAURU"
+      ]
+    },
+    "searchKeys": [
+      "NAURU",
+      "NRU",
+      "諾魯"
+    ],
+    "_properties": {
+      "GID_0": "NRU",
+      "COUNTRY": "Nauru"
+    }
+  },
+  "NZL": {
+    "code": "NZL",
+    "names": {
+      "en": [
+        "New Zealand"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NEW ZEALAND",
+        "NZL",
+        "紐西蘭",
+        "NEW ZEALAND"
+      ]
+    },
+    "searchKeys": [
+      "NEW ZEALAND",
+      "NZL",
+      "紐西蘭"
+    ],
+    "_properties": {
+      "GID_0": "NZL",
+      "COUNTRY": "New Zealand"
+    }
+  },
+  "OMN": {
+    "code": "OMN",
+    "names": {
+      "en": [
+        "Oman"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "OMAN",
+        "OMN",
+        "阿曼",
+        "OMAN"
+      ]
+    },
+    "searchKeys": [
+      "OMAN",
+      "OMN",
+      "阿曼"
+    ],
+    "_properties": {
+      "GID_0": "OMN",
+      "COUNTRY": "Oman"
+    }
+  },
+  "PAK": {
+    "code": "PAK",
+    "names": {
+      "en": [
+        "Pakistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PAKISTAN",
+        "PAK",
+        "巴基斯坦",
+        "PAKISTAN"
+      ]
+    },
+    "searchKeys": [
+      "PAKISTAN",
+      "PAK",
+      "巴基斯坦"
+    ],
+    "_properties": {
+      "GID_0": "PAK",
+      "COUNTRY": "Pakistan"
+    }
+  },
+  "Z06": {
+    "code": "Z06",
+    "names": {
+      "en": [
+        "Pakistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PAKISTAN",
+        "Z06"
+      ]
+    },
+    "searchKeys": [
+      "PAKISTAN",
+      "Z06"
+    ],
+    "_properties": {
+      "GID_0": "Z06",
+      "COUNTRY": "Pakistan"
+    }
+  },
+  "PAN": {
+    "code": "PAN",
+    "names": {
+      "en": [
+        "Panama"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PANAMA",
+        "PAN",
+        "巴拿馬",
+        "PANAMA"
+      ]
+    },
+    "searchKeys": [
+      "PANAMA",
+      "PAN",
+      "巴拿馬"
+    ],
+    "_properties": {
+      "GID_0": "PAN",
+      "COUNTRY": "Panama"
+    }
+  },
+  "PCN": {
+    "code": "PCN",
+    "names": {
+      "en": [
+        "Pitcairn Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PITCAIRN ISLANDS",
+        "PCN",
+        "皮特肯群島",
+        "PITCAIRN"
+      ]
+    },
+    "searchKeys": [
+      "PITCAIRN ISLANDS",
+      "PCN",
+      "皮特肯群島",
+      "PITCAIRN"
+    ],
+    "_properties": {
+      "GID_0": "PCN",
+      "COUNTRY": "Pitcairn Islands"
+    }
+  },
+  "PER": {
+    "code": "PER",
+    "names": {
+      "en": [
+        "Peru"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PERU",
+        "PER",
+        "秘魯",
+        "PERU"
+      ]
+    },
+    "searchKeys": [
+      "PERU",
+      "PER",
+      "秘魯"
+    ],
+    "_properties": {
+      "GID_0": "PER",
+      "COUNTRY": "Peru"
+    }
+  },
+  "PHL": {
+    "code": "PHL",
+    "names": {
+      "en": [
+        "Philippines"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PHILIPPINES",
+        "PHL",
+        "菲律賓",
+        "PHILIPPINES"
+      ]
+    },
+    "searchKeys": [
+      "PHILIPPINES",
+      "PHL",
+      "菲律賓"
+    ],
+    "_properties": {
+      "GID_0": "PHL",
+      "COUNTRY": "Philippines"
+    }
+  },
+  "PLW": {
+    "code": "PLW",
+    "names": {
+      "en": [
+        "Palau"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PALAU",
+        "PLW",
+        "帛琉",
+        "PALAU"
+      ]
+    },
+    "searchKeys": [
+      "PALAU",
+      "PLW",
+      "帛琉"
+    ],
+    "_properties": {
+      "GID_0": "PLW",
+      "COUNTRY": "Palau"
+    }
+  },
+  "PNG": {
+    "code": "PNG",
+    "names": {
+      "en": [
+        "Papua New Guinea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PAPUA NEW GUINEA",
+        "PNG",
+        "巴布亞紐幾內亞",
+        "PAPUA NEW GUINEA"
+      ]
+    },
+    "searchKeys": [
+      "PAPUA NEW GUINEA",
+      "PNG",
+      "巴布亞紐幾內亞"
+    ],
+    "_properties": {
+      "GID_0": "PNG",
+      "COUNTRY": "Papua New Guinea"
+    }
+  },
+  "POL": {
+    "code": "POL",
+    "names": {
+      "en": [
+        "Poland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "POLAND",
+        "POL",
+        "波蘭",
+        "POLAND"
+      ]
+    },
+    "searchKeys": [
+      "POLAND",
+      "POL",
+      "波蘭"
+    ],
+    "_properties": {
+      "GID_0": "POL",
+      "COUNTRY": "Poland"
+    }
+  },
+  "PRI": {
+    "code": "PRI",
+    "names": {
+      "en": [
+        "Puerto Rico"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PUERTO RICO",
+        "PRI",
+        "波多黎各",
+        "PUERTO RICO"
+      ]
+    },
+    "searchKeys": [
+      "PUERTO RICO",
+      "PRI",
+      "波多黎各"
+    ],
+    "_properties": {
+      "GID_0": "PRI",
+      "COUNTRY": "Puerto Rico"
+    }
+  },
+  "PRK": {
+    "code": "PRK",
+    "names": {
+      "en": [
+        "North Korea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORTH KOREA",
+        "PRK",
+        "北韓",
+        "KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+      ]
+    },
+    "searchKeys": [
+      "NORTH KOREA",
+      "PRK",
+      "北韓",
+      "KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+    ],
+    "_properties": {
+      "GID_0": "PRK",
+      "COUNTRY": "North Korea"
+    }
+  },
+  "PRT": {
+    "code": "PRT",
+    "names": {
+      "en": [
+        "Portugal"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PORTUGAL",
+        "PRT",
+        "葡萄牙",
+        "PORTUGAL"
+      ]
+    },
+    "searchKeys": [
+      "PORTUGAL",
+      "PRT",
+      "葡萄牙"
+    ],
+    "_properties": {
+      "GID_0": "PRT",
+      "COUNTRY": "Portugal"
+    }
+  },
+  "PRY": {
+    "code": "PRY",
+    "names": {
+      "en": [
+        "Paraguay"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PARAGUAY",
+        "PRY",
+        "巴拉圭",
+        "PARAGUAY"
+      ]
+    },
+    "searchKeys": [
+      "PARAGUAY",
+      "PRY",
+      "巴拉圭"
+    ],
+    "_properties": {
+      "GID_0": "PRY",
+      "COUNTRY": "Paraguay"
+    }
+  },
+  "PSE": {
+    "code": "PSE",
+    "names": {
+      "en": [
+        "Palestine"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PALESTINE",
+        "PSE",
+        "巴勒斯坦",
+        "PALESTINE, STATE OF"
+      ]
+    },
+    "searchKeys": [
+      "PALESTINE",
+      "PSE",
+      "巴勒斯坦",
+      "PALESTINE, STATE OF"
+    ],
+    "_properties": {
+      "GID_0": "PSE",
+      "COUNTRY": "Palestine"
+    }
+  },
+  "PYF": {
+    "code": "PYF",
+    "names": {
+      "en": [
+        "French Polynesia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "FRENCH POLYNESIA",
+        "PYF",
+        "法屬玻里尼西亞",
+        "FRENCH POLYNESIA"
+      ]
+    },
+    "searchKeys": [
+      "FRENCH POLYNESIA",
+      "PYF",
+      "法屬玻里尼西亞"
+    ],
+    "_properties": {
+      "GID_0": "PYF",
+      "COUNTRY": "French Polynesia"
+    }
+  },
+  "QAT": {
+    "code": "QAT",
+    "names": {
+      "en": [
+        "Qatar"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "QATAR",
+        "QAT",
+        "卡達",
+        "QATAR"
+      ]
+    },
+    "searchKeys": [
+      "QATAR",
+      "QAT",
+      "卡達"
+    ],
+    "_properties": {
+      "GID_0": "QAT",
+      "COUNTRY": "Qatar"
+    }
+  },
+  "REU": {
+    "code": "REU",
+    "names": {
+      "en": [
+        "Réunion"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "RÉUNION",
+        "REU",
+        "留尼旺",
+        "RÉUNION"
+      ]
+    },
+    "searchKeys": [
+      "RÉUNION",
+      "REU",
+      "留尼旺"
+    ],
+    "_properties": {
+      "GID_0": "REU",
+      "COUNTRY": "Réunion"
+    }
+  },
+  "ROU": {
+    "code": "ROU",
+    "names": {
+      "en": [
+        "Romania"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ROMANIA",
+        "ROU",
+        "羅馬尼亞",
+        "ROMANIA"
+      ]
+    },
+    "searchKeys": [
+      "ROMANIA",
+      "ROU",
+      "羅馬尼亞"
+    ],
+    "_properties": {
+      "GID_0": "ROU",
+      "COUNTRY": "Romania"
+    }
+  },
+  "RUS": {
+    "code": "RUS",
+    "names": {
+      "en": [
+        "Russia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "RUSSIA",
+        "RUS",
+        "俄羅斯",
+        "RUSSIAN FEDERATION"
+      ]
+    },
+    "searchKeys": [
+      "RUSSIA",
+      "RUS",
+      "俄羅斯",
+      "RUSSIAN FEDERATION"
+    ],
+    "_properties": {
+      "GID_0": "RUS",
+      "COUNTRY": "Russia"
+    }
+  },
+  "RWA": {
+    "code": "RWA",
+    "names": {
+      "en": [
+        "Rwanda"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "RWANDA",
+        "RWA",
+        "盧安達",
+        "RWANDA"
+      ]
+    },
+    "searchKeys": [
+      "RWANDA",
+      "RWA",
+      "盧安達"
+    ],
+    "_properties": {
+      "GID_0": "RWA",
+      "COUNTRY": "Rwanda"
+    }
+  },
+  "SAU": {
+    "code": "SAU",
+    "names": {
+      "en": [
+        "Saudi Arabia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAUDI ARABIA",
+        "SAU",
+        "沙烏地阿拉伯",
+        "SAUDI ARABIA"
+      ]
+    },
+    "searchKeys": [
+      "SAUDI ARABIA",
+      "SAU",
+      "沙烏地阿拉伯"
+    ],
+    "_properties": {
+      "GID_0": "SAU",
+      "COUNTRY": "Saudi Arabia"
+    }
+  },
+  "SDN": {
+    "code": "SDN",
+    "names": {
+      "en": [
+        "Sudan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SUDAN",
+        "SDN",
+        "蘇丹",
+        "SUDAN"
+      ]
+    },
+    "searchKeys": [
+      "SUDAN",
+      "SDN",
+      "蘇丹"
+    ],
+    "_properties": {
+      "GID_0": "SDN",
+      "COUNTRY": "Sudan"
+    }
+  },
+  "SEN": {
+    "code": "SEN",
+    "names": {
+      "en": [
+        "Senegal"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SENEGAL",
+        "SEN",
+        "塞內加爾",
+        "SENEGAL"
+      ]
+    },
+    "searchKeys": [
+      "SENEGAL",
+      "SEN",
+      "塞內加爾"
+    ],
+    "_properties": {
+      "GID_0": "SEN",
+      "COUNTRY": "Senegal"
+    }
+  },
+  "SGP": {
+    "code": "SGP",
+    "names": {
+      "en": [
+        "Singapore"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SINGAPORE",
+        "SGP",
+        "新加坡",
+        "SINGAPORE"
+      ]
+    },
+    "searchKeys": [
+      "SINGAPORE",
+      "SGP",
+      "新加坡"
+    ],
+    "_properties": {
+      "GID_0": "SGP",
+      "COUNTRY": "Singapore"
+    }
+  },
+  "SGS": {
+    "code": "SGS",
+    "names": {
+      "en": [
+        "South Georgia and the South Sand"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOUTH GEORGIA AND THE SOUTH SAND",
+        "SGS",
+        "南喬治亞和南桑威奇群島",
+        "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "SOUTH GEORGIA AND THE SOUTH SAND",
+      "SGS",
+      "南喬治亞和南桑威奇群島",
+      "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+    ],
+    "_properties": {
+      "GID_0": "SGS",
+      "COUNTRY": "South Georgia and the South Sand"
+    }
+  },
+  "SHN": {
+    "code": "SHN",
+    "names": {
+      "en": [
+        "Saint Helena, Ascension and Tris"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT HELENA, ASCENSION AND TRIS",
+        "SHN",
+        "聖赫勒拿",
+        "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+      ]
+    },
+    "searchKeys": [
+      "SAINT HELENA, ASCENSION AND TRIS",
+      "SHN",
+      "聖赫勒拿",
+      "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+    ],
+    "_properties": {
+      "GID_0": "SHN",
+      "COUNTRY": "Saint Helena, Ascension and Tris"
+    }
+  },
+  "SJM": {
+    "code": "SJM",
+    "names": {
+      "en": [
+        "Svalbard and Jan Mayen"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SVALBARD AND JAN MAYEN",
+        "SJM",
+        "斯瓦爾巴和揚馬延",
+        "SVALBARD AND JAN MAYEN"
+      ]
+    },
+    "searchKeys": [
+      "SVALBARD AND JAN MAYEN",
+      "SJM",
+      "斯瓦爾巴和揚馬延"
+    ],
+    "_properties": {
+      "GID_0": "SJM",
+      "COUNTRY": "Svalbard and Jan Mayen"
+    }
+  },
+  "SLB": {
+    "code": "SLB",
+    "names": {
+      "en": [
+        "Solomon Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOLOMON ISLANDS",
+        "SLB",
+        "索羅門群島",
+        "SOLOMON ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "SOLOMON ISLANDS",
+      "SLB",
+      "索羅門群島"
+    ],
+    "_properties": {
+      "GID_0": "SLB",
+      "COUNTRY": "Solomon Islands"
+    }
+  },
+  "SLE": {
+    "code": "SLE",
+    "names": {
+      "en": [
+        "Sierra Leone"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SIERRA LEONE",
+        "SLE",
+        "獅子山",
+        "SIERRA LEONE"
+      ]
+    },
+    "searchKeys": [
+      "SIERRA LEONE",
+      "SLE",
+      "獅子山"
+    ],
+    "_properties": {
+      "GID_0": "SLE",
+      "COUNTRY": "Sierra Leone"
+    }
+  },
+  "SLV": {
+    "code": "SLV",
+    "names": {
+      "en": [
+        "El Salvador"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "EL SALVADOR",
+        "SLV",
+        "薩爾瓦多",
+        "EL SALVADOR"
+      ]
+    },
+    "searchKeys": [
+      "EL SALVADOR",
+      "SLV",
+      "薩爾瓦多"
+    ],
+    "_properties": {
+      "GID_0": "SLV",
+      "COUNTRY": "El Salvador"
+    }
+  },
+  "SMR": {
+    "code": "SMR",
+    "names": {
+      "en": [
+        "San Marino"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAN MARINO",
+        "SMR",
+        "聖馬利諾",
+        "SAN MARINO"
+      ]
+    },
+    "searchKeys": [
+      "SAN MARINO",
+      "SMR",
+      "聖馬利諾"
+    ],
+    "_properties": {
+      "GID_0": "SMR",
+      "COUNTRY": "San Marino"
+    }
+  },
+  "SOM": {
+    "code": "SOM",
+    "names": {
+      "en": [
+        "Somalia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOMALIA",
+        "SOM",
+        "索馬利亞",
+        "SOMALIA"
+      ]
+    },
+    "searchKeys": [
+      "SOMALIA",
+      "SOM",
+      "索馬利亞"
+    ],
+    "_properties": {
+      "GID_0": "SOM",
+      "COUNTRY": "Somalia"
+    }
+  },
+  "SPM": {
+    "code": "SPM",
+    "names": {
+      "en": [
+        "Saint Pierre and Miquelon"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT PIERRE AND MIQUELON",
+        "SPM",
+        "聖皮耶與密克隆",
+        "SAINT PIERRE AND MIQUELON"
+      ]
+    },
+    "searchKeys": [
+      "SAINT PIERRE AND MIQUELON",
+      "SPM",
+      "聖皮耶與密克隆"
+    ],
+    "_properties": {
+      "GID_0": "SPM",
+      "COUNTRY": "Saint Pierre and Miquelon"
+    }
+  },
+  "SRB": {
+    "code": "SRB",
+    "names": {
+      "en": [
+        "Serbia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SERBIA",
+        "SRB",
+        "塞爾維亞",
+        "SERBIA"
+      ]
+    },
+    "searchKeys": [
+      "SERBIA",
+      "SRB",
+      "塞爾維亞"
+    ],
+    "_properties": {
+      "GID_0": "SRB",
+      "COUNTRY": "Serbia"
+    }
+  },
+  "SSD": {
+    "code": "SSD",
+    "names": {
+      "en": [
+        "South Sudan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOUTH SUDAN",
+        "SSD",
+        "南蘇丹",
+        "SOUTH SUDAN"
+      ]
+    },
+    "searchKeys": [
+      "SOUTH SUDAN",
+      "SSD",
+      "南蘇丹"
+    ],
+    "_properties": {
+      "GID_0": "SSD",
+      "COUNTRY": "South Sudan"
+    }
+  },
+  "STP": {
+    "code": "STP",
+    "names": {
+      "en": [
+        "São Tomé and Príncipe"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SÃO TOMÉ AND PRÍNCIPE",
+        "STP",
+        "聖多美普林西比",
+        "SAO TOME AND PRINCIPE"
+      ]
+    },
+    "searchKeys": [
+      "SÃO TOMÉ AND PRÍNCIPE",
+      "STP",
+      "聖多美普林西比",
+      "SAO TOME AND PRINCIPE"
+    ],
+    "_properties": {
+      "GID_0": "STP",
+      "COUNTRY": "São Tomé and Príncipe"
+    }
+  },
+  "SUR": {
+    "code": "SUR",
+    "names": {
+      "en": [
+        "Suriname"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SURINAME",
+        "SUR",
+        "蘇利南",
+        "SURINAME"
+      ]
+    },
+    "searchKeys": [
+      "SURINAME",
+      "SUR",
+      "蘇利南"
+    ],
+    "_properties": {
+      "GID_0": "SUR",
+      "COUNTRY": "Suriname"
+    }
+  },
+  "SVK": {
+    "code": "SVK",
+    "names": {
+      "en": [
+        "Slovakia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SLOVAKIA",
+        "SVK",
+        "斯洛伐克",
+        "SLOVAKIA"
+      ]
+    },
+    "searchKeys": [
+      "SLOVAKIA",
+      "SVK",
+      "斯洛伐克"
+    ],
+    "_properties": {
+      "GID_0": "SVK",
+      "COUNTRY": "Slovakia"
+    }
+  },
+  "SVN": {
+    "code": "SVN",
+    "names": {
+      "en": [
+        "Slovenia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SLOVENIA",
+        "SVN",
+        "斯洛維尼亞",
+        "SLOVENIA"
+      ]
+    },
+    "searchKeys": [
+      "SLOVENIA",
+      "SVN",
+      "斯洛維尼亞"
+    ],
+    "_properties": {
+      "GID_0": "SVN",
+      "COUNTRY": "Slovenia"
+    }
+  },
+  "SWE": {
+    "code": "SWE",
+    "names": {
+      "en": [
+        "Sweden"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SWEDEN",
+        "SWE",
+        "瑞典",
+        "SWEDEN"
+      ]
+    },
+    "searchKeys": [
+      "SWEDEN",
+      "SWE",
+      "瑞典"
+    ],
+    "_properties": {
+      "GID_0": "SWE",
+      "COUNTRY": "Sweden"
+    }
+  },
+  "SWZ": {
+    "code": "SWZ",
+    "names": {
+      "en": [
+        "Swaziland"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SWAZILAND",
+        "SWZ",
+        "史瓦帝尼",
+        "ESWATINI"
+      ]
+    },
+    "searchKeys": [
+      "SWAZILAND",
+      "SWZ",
+      "史瓦帝尼",
+      "ESWATINI"
+    ],
+    "_properties": {
+      "GID_0": "SWZ",
+      "COUNTRY": "Swaziland"
+    }
+  },
+  "SXM": {
+    "code": "SXM",
+    "names": {
+      "en": [
+        "Sint Maarten"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SINT MAARTEN",
+        "SXM",
+        "荷屬聖馬丁",
+        "SINT MAARTEN (DUTCH PART)"
+      ]
+    },
+    "searchKeys": [
+      "SINT MAARTEN",
+      "SXM",
+      "荷屬聖馬丁",
+      "SINT MAARTEN (DUTCH PART)"
+    ],
+    "_properties": {
+      "GID_0": "SXM",
+      "COUNTRY": "Sint Maarten"
+    }
+  },
+  "SYC": {
+    "code": "SYC",
+    "names": {
+      "en": [
+        "Seychelles"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SEYCHELLES",
+        "SYC",
+        "塞席爾",
+        "SEYCHELLES"
+      ]
+    },
+    "searchKeys": [
+      "SEYCHELLES",
+      "SYC",
+      "塞席爾"
+    ],
+    "_properties": {
+      "GID_0": "SYC",
+      "COUNTRY": "Seychelles"
+    }
+  },
+  "SYR": {
+    "code": "SYR",
+    "names": {
+      "en": [
+        "Syria"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SYRIA",
+        "SYR",
+        "敘利亞",
+        "SYRIAN ARAB REPUBLIC"
+      ]
+    },
+    "searchKeys": [
+      "SYRIA",
+      "SYR",
+      "敘利亞",
+      "SYRIAN ARAB REPUBLIC"
+    ],
+    "_properties": {
+      "GID_0": "SYR",
+      "COUNTRY": "Syria"
+    }
+  },
+  "TCA": {
+    "code": "TCA",
+    "names": {
+      "en": [
+        "Turks and Caicos Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TURKS AND CAICOS ISLANDS",
+        "TCA",
+        "特克斯和凱科斯群島",
+        "TURKS AND CAICOS ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "TURKS AND CAICOS ISLANDS",
+      "TCA",
+      "特克斯和凱科斯群島"
+    ],
+    "_properties": {
+      "GID_0": "TCA",
+      "COUNTRY": "Turks and Caicos Islands"
+    }
+  },
+  "TCD": {
+    "code": "TCD",
+    "names": {
+      "en": [
+        "Chad"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CHAD",
+        "TCD",
+        "查德",
+        "CHAD"
+      ]
+    },
+    "searchKeys": [
+      "CHAD",
+      "TCD",
+      "查德"
+    ],
+    "_properties": {
+      "GID_0": "TCD",
+      "COUNTRY": "Chad"
+    }
+  },
+  "TGO": {
+    "code": "TGO",
+    "names": {
+      "en": [
+        "Togo"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TOGO",
+        "TGO",
+        "多哥",
+        "TOGO"
+      ]
+    },
+    "searchKeys": [
+      "TOGO",
+      "TGO",
+      "多哥"
+    ],
+    "_properties": {
+      "GID_0": "TGO",
+      "COUNTRY": "Togo"
+    }
+  },
+  "THA": {
+    "code": "THA",
+    "names": {
+      "en": [
+        "Thailand"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "THAILAND",
+        "THA",
+        "泰國",
+        "THAILAND"
+      ]
+    },
+    "searchKeys": [
+      "THAILAND",
+      "THA",
+      "泰國"
+    ],
+    "_properties": {
+      "GID_0": "THA",
+      "COUNTRY": "Thailand"
+    }
+  },
+  "TJK": {
+    "code": "TJK",
+    "names": {
+      "en": [
+        "Tajikistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TAJIKISTAN",
+        "TJK",
+        "塔吉克",
+        "TAJIKISTAN"
+      ]
+    },
+    "searchKeys": [
+      "TAJIKISTAN",
+      "TJK",
+      "塔吉克"
+    ],
+    "_properties": {
+      "GID_0": "TJK",
+      "COUNTRY": "Tajikistan"
+    }
+  },
+  "TKL": {
+    "code": "TKL",
+    "names": {
+      "en": [
+        "Tokelau"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TOKELAU",
+        "TKL",
+        "托克勞",
+        "TOKELAU"
+      ]
+    },
+    "searchKeys": [
+      "TOKELAU",
+      "TKL",
+      "托克勞"
+    ],
+    "_properties": {
+      "GID_0": "TKL",
+      "COUNTRY": "Tokelau"
+    }
+  },
+  "TKM": {
+    "code": "TKM",
+    "names": {
+      "en": [
+        "Turkmenistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TURKMENISTAN",
+        "TKM",
+        "土庫曼",
+        "TURKMENISTAN"
+      ]
+    },
+    "searchKeys": [
+      "TURKMENISTAN",
+      "TKM",
+      "土庫曼"
+    ],
+    "_properties": {
+      "GID_0": "TKM",
+      "COUNTRY": "Turkmenistan"
+    }
+  },
+  "TLS": {
+    "code": "TLS",
+    "names": {
+      "en": [
+        "Timor-Leste"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TIMOR-LESTE",
+        "TLS",
+        "東帝汶",
+        "TIMOR-LESTE"
+      ]
+    },
+    "searchKeys": [
+      "TIMOR-LESTE",
+      "TLS",
+      "東帝汶"
+    ],
+    "_properties": {
+      "GID_0": "TLS",
+      "COUNTRY": "Timor-Leste"
+    }
+  },
+  "TON": {
+    "code": "TON",
+    "names": {
+      "en": [
+        "Tonga"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TONGA",
+        "TON",
+        "東加",
+        "TONGA"
+      ]
+    },
+    "searchKeys": [
+      "TONGA",
+      "TON",
+      "東加"
+    ],
+    "_properties": {
+      "GID_0": "TON",
+      "COUNTRY": "Tonga"
+    }
+  },
+  "TTO": {
+    "code": "TTO",
+    "names": {
+      "en": [
+        "Trinidad and Tobago"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TRINIDAD AND TOBAGO",
+        "TTO",
+        "千里達及托巴哥",
+        "TRINIDAD AND TOBAGO"
+      ]
+    },
+    "searchKeys": [
+      "TRINIDAD AND TOBAGO",
+      "TTO",
+      "千里達及托巴哥"
+    ],
+    "_properties": {
+      "GID_0": "TTO",
+      "COUNTRY": "Trinidad and Tobago"
+    }
+  },
+  "TUN": {
+    "code": "TUN",
+    "names": {
+      "en": [
+        "Tunisia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TUNISIA",
+        "TUN",
+        "突尼西亞",
+        "TUNISIA"
+      ]
+    },
+    "searchKeys": [
+      "TUNISIA",
+      "TUN",
+      "突尼西亞"
+    ],
+    "_properties": {
+      "GID_0": "TUN",
+      "COUNTRY": "Tunisia"
+    }
+  },
+  "TUR": {
+    "code": "TUR",
+    "names": {
+      "en": [
+        "Turkey"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TURKEY",
+        "TUR",
+        "土耳其",
+        "TURKEY"
+      ]
+    },
+    "searchKeys": [
+      "TURKEY",
+      "TUR",
+      "土耳其"
+    ],
+    "_properties": {
+      "GID_0": "TUR",
+      "COUNTRY": "Turkey"
+    }
+  },
+  "TUV": {
+    "code": "TUV",
+    "names": {
+      "en": [
+        "Tuvalu"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TUVALU",
+        "TUV",
+        "吐瓦魯",
+        "TUVALU"
+      ]
+    },
+    "searchKeys": [
+      "TUVALU",
+      "TUV",
+      "吐瓦魯"
+    ],
+    "_properties": {
+      "GID_0": "TUV",
+      "COUNTRY": "Tuvalu"
+    }
+  },
+  "TWN": {
+    "code": "TWN",
+    "names": {
+      "en": [
+        "Taiwan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TAIWAN",
+        "TWN",
+        "台灣",
+        "TAIWAN"
+      ]
+    },
+    "searchKeys": [
+      "TAIWAN",
+      "TWN",
+      "台灣"
+    ],
+    "_properties": {
+      "GID_0": "TWN",
+      "COUNTRY": "Taiwan"
+    }
+  },
+  "TZA": {
+    "code": "TZA",
+    "names": {
+      "en": [
+        "Tanzania"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "TANZANIA",
+        "TZA",
+        "坦尚尼亞",
+        "TANZANIA"
+      ]
+    },
+    "searchKeys": [
+      "TANZANIA",
+      "TZA",
+      "坦尚尼亞"
+    ],
+    "_properties": {
+      "GID_0": "TZA",
+      "COUNTRY": "Tanzania"
+    }
+  },
+  "UGA": {
+    "code": "UGA",
+    "names": {
+      "en": [
+        "Uganda"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UGANDA",
+        "UGA",
+        "烏干達",
+        "UGANDA"
+      ]
+    },
+    "searchKeys": [
+      "UGANDA",
+      "UGA",
+      "烏干達"
+    ],
+    "_properties": {
+      "GID_0": "UGA",
+      "COUNTRY": "Uganda"
+    }
+  },
+  "UKR": {
+    "code": "UKR",
+    "names": {
+      "en": [
+        "Ukraine"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UKRAINE",
+        "UKR",
+        "烏克蘭",
+        "UKRAINE"
+      ]
+    },
+    "searchKeys": [
+      "UKRAINE",
+      "UKR",
+      "烏克蘭"
+    ],
+    "_properties": {
+      "GID_0": "UKR",
+      "COUNTRY": "Ukraine"
+    }
+  },
+  "UMI": {
+    "code": "UMI",
+    "names": {
+      "en": [
+        "United States Minor Outlying Isl"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UNITED STATES MINOR OUTLYING ISL",
+        "UMI",
+        "美國本土外小島嶼",
+        "UNITED STATES MINOR OUTLYING ISLANDS"
+      ]
+    },
+    "searchKeys": [
+      "UNITED STATES MINOR OUTLYING ISL",
+      "UMI",
+      "美國本土外小島嶼",
+      "UNITED STATES MINOR OUTLYING ISLANDS"
+    ],
+    "_properties": {
+      "GID_0": "UMI",
+      "COUNTRY": "United States Minor Outlying Isl"
+    }
+  },
+  "URY": {
+    "code": "URY",
+    "names": {
+      "en": [
+        "Uruguay"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "URUGUAY",
+        "URY",
+        "烏拉圭",
+        "URUGUAY"
+      ]
+    },
+    "searchKeys": [
+      "URUGUAY",
+      "URY",
+      "烏拉圭"
+    ],
+    "_properties": {
+      "GID_0": "URY",
+      "COUNTRY": "Uruguay"
+    }
+  },
+  "USA": {
+    "code": "USA",
+    "names": {
+      "en": [
+        "United States"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UNITED STATES",
+        "USA",
+        "美國",
+        "UNITED STATES OF AMERICA"
+      ]
+    },
+    "searchKeys": [
+      "UNITED STATES",
+      "USA",
+      "美國",
+      "UNITED STATES OF AMERICA"
+    ],
+    "_properties": {
+      "GID_0": "USA",
+      "COUNTRY": "United States"
+    }
+  },
+  "UZB": {
+    "code": "UZB",
+    "names": {
+      "en": [
+        "Uzbekistan"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "UZBEKISTAN",
+        "UZB",
+        "烏茲別克",
+        "UZBEKISTAN"
+      ]
+    },
+    "searchKeys": [
+      "UZBEKISTAN",
+      "UZB",
+      "烏茲別克"
+    ],
+    "_properties": {
+      "GID_0": "UZB",
+      "COUNTRY": "Uzbekistan"
+    }
+  },
+  "VAT": {
+    "code": "VAT",
+    "names": {
+      "en": [
+        "Vatican City"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "VATICAN CITY",
+        "VAT",
+        "梵蒂岡",
+        "HOLY SEE"
+      ]
+    },
+    "searchKeys": [
+      "VATICAN CITY",
+      "VAT",
+      "梵蒂岡",
+      "HOLY SEE"
+    ],
+    "_properties": {
+      "GID_0": "VAT",
+      "COUNTRY": "Vatican City"
+    }
+  },
+  "VCT": {
+    "code": "VCT",
+    "names": {
+      "en": [
+        "Saint Vincent and the Grenadines"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAINT VINCENT AND THE GRENADINES",
+        "VCT",
+        "聖文森及格瑞那丁",
+        "SAINT VINCENT AND THE GRENADINES"
+      ]
+    },
+    "searchKeys": [
+      "SAINT VINCENT AND THE GRENADINES",
+      "VCT",
+      "聖文森及格瑞那丁"
+    ],
+    "_properties": {
+      "GID_0": "VCT",
+      "COUNTRY": "Saint Vincent and the Grenadines"
+    }
+  },
+  "VEN": {
+    "code": "VEN",
+    "names": {
+      "en": [
+        "Venezuela"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "VENEZUELA",
+        "VEN",
+        "委內瑞拉",
+        "VENEZUELA"
+      ]
+    },
+    "searchKeys": [
+      "VENEZUELA",
+      "VEN",
+      "委內瑞拉"
+    ],
+    "_properties": {
+      "GID_0": "VEN",
+      "COUNTRY": "Venezuela"
+    }
+  },
+  "VGB": {
+    "code": "VGB",
+    "names": {
+      "en": [
+        "British Virgin Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "BRITISH VIRGIN ISLANDS",
+        "VGB",
+        "英屬維京群島",
+        "VIRGIN ISLANDS (BRITISH)"
+      ]
+    },
+    "searchKeys": [
+      "BRITISH VIRGIN ISLANDS",
+      "VGB",
+      "英屬維京群島",
+      "VIRGIN ISLANDS (BRITISH)"
+    ],
+    "_properties": {
+      "GID_0": "VGB",
+      "COUNTRY": "British Virgin Islands"
+    }
+  },
+  "VIR": {
+    "code": "VIR",
+    "names": {
+      "en": [
+        "Virgin Islands, U.S."
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "VIRGIN ISLANDS, U.S.",
+        "VIR",
+        "美屬維京群島",
+        "VIRGIN ISLANDS (U.S.)"
+      ]
+    },
+    "searchKeys": [
+      "VIRGIN ISLANDS, U.S.",
+      "VIR",
+      "美屬維京群島",
+      "VIRGIN ISLANDS (U.S.)"
+    ],
+    "_properties": {
+      "GID_0": "VIR",
+      "COUNTRY": "Virgin Islands, U.S."
+    }
+  },
+  "VNM": {
+    "code": "VNM",
+    "names": {
+      "en": [
+        "Vietnam"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "VIETNAM",
+        "VNM",
+        "越南",
+        "VIET NAM"
+      ]
+    },
+    "searchKeys": [
+      "VIETNAM",
+      "VNM",
+      "越南",
+      "VIET NAM"
+    ],
+    "_properties": {
+      "GID_0": "VNM",
+      "COUNTRY": "Vietnam"
+    }
+  },
+  "VUT": {
+    "code": "VUT",
+    "names": {
+      "en": [
+        "Vanuatu"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "VANUATU",
+        "VUT",
+        "萬那杜",
+        "VANUATU"
+      ]
+    },
+    "searchKeys": [
+      "VANUATU",
+      "VUT",
+      "萬那杜"
+    ],
+    "_properties": {
+      "GID_0": "VUT",
+      "COUNTRY": "Vanuatu"
+    }
+  },
+  "WLF": {
+    "code": "WLF",
+    "names": {
+      "en": [
+        "Wallis and Futuna"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "WALLIS AND FUTUNA",
+        "WLF",
+        "瓦利斯和富圖納",
+        "WALLIS AND FUTUNA"
+      ]
+    },
+    "searchKeys": [
+      "WALLIS AND FUTUNA",
+      "WLF",
+      "瓦利斯和富圖納"
+    ],
+    "_properties": {
+      "GID_0": "WLF",
+      "COUNTRY": "Wallis and Futuna"
+    }
+  },
+  "WSM": {
+    "code": "WSM",
+    "names": {
+      "en": [
+        "Samoa"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SAMOA",
+        "WSM",
+        "薩摩亞",
+        "SAMOA"
+      ]
+    },
+    "searchKeys": [
+      "SAMOA",
+      "WSM",
+      "薩摩亞"
+    ],
+    "_properties": {
+      "GID_0": "WSM",
+      "COUNTRY": "Samoa"
+    }
+  },
+  "XAD": {
+    "code": "XAD",
+    "names": {
+      "en": [
+        "Akrotiri and Dhekelia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "AKROTIRI AND DHEKELIA",
+        "XAD"
+      ]
+    },
+    "searchKeys": [
+      "AKROTIRI AND DHEKELIA",
+      "XAD"
+    ],
+    "_properties": {
+      "GID_0": "XAD",
+      "COUNTRY": "Akrotiri and Dhekelia"
+    }
+  },
+  "XCA": {
+    "code": "XCA",
+    "names": {
+      "en": [
+        "Caspian Sea"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CASPIAN SEA",
+        "XCA"
+      ]
+    },
+    "searchKeys": [
+      "CASPIAN SEA",
+      "XCA"
+    ],
+    "_properties": {
+      "GID_0": "XCA",
+      "COUNTRY": "Caspian Sea"
+    }
+  },
+  "XCL": {
+    "code": "XCL",
+    "names": {
+      "en": [
+        "Clipperton Island"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "CLIPPERTON ISLAND",
+        "XCL"
+      ]
+    },
+    "searchKeys": [
+      "CLIPPERTON ISLAND",
+      "XCL"
+    ],
+    "_properties": {
+      "GID_0": "XCL",
+      "COUNTRY": "Clipperton Island"
+    }
+  },
+  "XKO": {
+    "code": "XKO",
+    "names": {
+      "en": [
+        "Kosovo"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "KOSOVO",
+        "XKO"
+      ]
+    },
+    "searchKeys": [
+      "KOSOVO",
+      "XKO"
+    ],
+    "_properties": {
+      "GID_0": "XKO",
+      "COUNTRY": "Kosovo"
+    }
+  },
+  "XPI": {
+    "code": "XPI",
+    "names": {
+      "en": [
+        "Paracel Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "PARACEL ISLANDS",
+        "XPI"
+      ]
+    },
+    "searchKeys": [
+      "PARACEL ISLANDS",
+      "XPI"
+    ],
+    "_properties": {
+      "GID_0": "XPI",
+      "COUNTRY": "Paracel Islands"
+    }
+  },
+  "XSP": {
+    "code": "XSP",
+    "names": {
+      "en": [
+        "Spratly Islands"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SPRATLY ISLANDS",
+        "XSP"
+      ]
+    },
+    "searchKeys": [
+      "SPRATLY ISLANDS",
+      "XSP"
+    ],
+    "_properties": {
+      "GID_0": "XSP",
+      "COUNTRY": "Spratly Islands"
+    }
+  },
+  "YEM": {
+    "code": "YEM",
+    "names": {
+      "en": [
+        "Yemen"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "YEMEN",
+        "YEM",
+        "葉門",
+        "YEMEN"
+      ]
+    },
+    "searchKeys": [
+      "YEMEN",
+      "YEM",
+      "葉門"
+    ],
+    "_properties": {
+      "GID_0": "YEM",
+      "COUNTRY": "Yemen"
+    }
+  },
+  "ZAF": {
+    "code": "ZAF",
+    "names": {
+      "en": [
+        "South Africa"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "SOUTH AFRICA",
+        "ZAF",
+        "南非",
+        "SOUTH AFRICA"
+      ]
+    },
+    "searchKeys": [
+      "SOUTH AFRICA",
+      "ZAF",
+      "南非"
+    ],
+    "_properties": {
+      "GID_0": "ZAF",
+      "COUNTRY": "South Africa"
+    }
+  },
+  "ZMB": {
+    "code": "ZMB",
+    "names": {
+      "en": [
+        "Zambia"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ZAMBIA",
+        "ZMB",
+        "尚比亞",
+        "ZAMBIA"
+      ]
+    },
+    "searchKeys": [
+      "ZAMBIA",
+      "ZMB",
+      "尚比亞"
+    ],
+    "_properties": {
+      "GID_0": "ZMB",
+      "COUNTRY": "Zambia"
+    }
+  },
+  "ZNC": {
+    "code": "ZNC",
+    "names": {
+      "en": [
+        "Northern Cyprus"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "NORTHERN CYPRUS",
+        "ZNC"
+      ]
+    },
+    "searchKeys": [
+      "NORTHERN CYPRUS",
+      "ZNC"
+    ],
+    "_properties": {
+      "GID_0": "ZNC",
+      "COUNTRY": "Northern Cyprus"
+    }
+  },
+  "ZWE": {
+    "code": "ZWE",
+    "names": {
+      "en": [
+        "Zimbabwe"
+      ],
+      "local": [],
+      "variants": [],
+      "aliases": [
+        "ZIMBABWE",
+        "ZWE",
+        "辛巴威",
+        "ZIMBABWE"
+      ]
+    },
+    "searchKeys": [
+      "ZIMBABWE",
+      "ZWE",
+      "辛巴威"
+    ],
+    "_properties": {
+      "GID_0": "ZWE",
+      "COUNTRY": "Zimbabwe"
+    }
+  }
+}

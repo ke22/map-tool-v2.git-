@@ -19,6 +19,7 @@ let contentListManager;
 let placeNameTranslator;
 let chineseLabelManager;
 let basemapSwitcher;
+let gadmSearchIndex;
 
 // 標註模式狀態
 let markerAddMode = false;
@@ -668,6 +669,29 @@ function initModules() {
   
   // 初始化標籤管理器
   labelManager = new LabelManager(map, eventBus);
+  
+  // 初始化 GADM 搜索索引
+  if (typeof window !== 'undefined' && window.GADMSearchIndex) {
+    gadmSearchIndex = new window.GADMSearchIndex();
+    
+    // 异步加载搜索索引（不阻塞主流程）
+    Promise.all([
+      gadmSearchIndex.loadLevel0('/data/gadm/search-index-level0.json').catch(error => {
+        logger.warn('Failed to load Level 0 search index:', error);
+      }),
+      gadmSearchIndex.loadLevel1('/data/gadm/search-index-level1.json').catch(error => {
+        logger.warn('Failed to load Level 1 search index:', error);
+      })
+    ]).then(() => {
+      const stats = gadmSearchIndex.getStats();
+      logger.info(`GADM search indices loaded - Level 0: ${stats.level0.count} countries, Level 1: ${stats.level1.regionCount} regions`);
+    });
+    
+    // 导出到全局供调试使用
+    if (typeof window !== 'undefined') {
+      window.gadmSearchIndex = gadmSearchIndex;
+    }
+  }
   
   // 初始化地名翻譯器
   const CONFIG = window.CONFIG || {};
@@ -2338,53 +2362,99 @@ async function handleAdministrationSearch(query, locationResolver) {
       logger.info(`[handleAdministrationSearch] Received GeoJSON with ${geojson?.features?.length || 0} features`);
       
       if (geojson && geojson.features && geojson.features.length > 0) {
-        // 在客戶端搜索匹配的行政區
-        const queryUpper = query.toUpperCase();
-        logger.info(`[handleAdministrationSearch] Searching for query: ${queryUpper} in ${geojson.features.length} features`);
-        
-        // 先列出所有可用的行政區名稱（用於調試）
-        if (CONFIG && CONFIG.DEBUG) {
-          const availableNames = geojson.features.map(f => {
-            const p = f.properties || {};
-            return `${p.NL_NAME_1 || p.NAME_1} (${p.GID_1})`;
-          });
-          logger.info(`[handleAdministrationSearch] Available administrative regions: ${availableNames.join(', ')}`);
+        let matchedFeature = null;
+        let matchedGid = null;
+        let adminName = query;
+
+        // 優先使用 GADM 搜索索引（如果已加載）
+        if (gadmSearchIndex && gadmSearchIndex.isLevel1Loaded()) {
+          const results = gadmSearchIndex.search(query, 1, countryCode);
+          
+          if (results.length > 0) {
+            const bestMatch = results[0];
+            matchedGid = bestMatch.gid;
+            // 優先使用中文名稱，其次英文名稱，最後本地名稱
+            adminName = bestMatch.names.en?.[0] || 
+                       bestMatch.names.local?.[0] || 
+                       bestMatch._properties?.NAME_1 || 
+                       query;
+            
+            logger.info(`[handleAdministrationSearch] Found via search index: ${matchedGid} (${adminName}, score: ${bestMatch.matchScore})`);
+            
+            // 在 GeoJSON 中找到對應的 feature
+            matchedFeature = geojson.features.find(f => {
+              const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
+              return featureGid === matchedGid || 
+                     featureGid.includes(matchedGid) || 
+                     matchedGid.includes(featureGid);
+            });
+          }
         }
-        
-        const matchedFeature = geojson.features.find(feature => {
-          const props = feature.properties || {};
-          const name1 = String(props.NAME_1 || '').toUpperCase();
-          const nlName1 = String(props.NL_NAME_1 || '').toUpperCase();
-          const varname1 = String(props.VARNAME_1 || '').toUpperCase();
+
+        // Fallback: 使用原有的搜索邏輯（如果索引未加載或無結果）
+        if (!matchedFeature) {
+          const queryUpper = query.toUpperCase();
+          logger.info(`[handleAdministrationSearch] Searching for query: ${queryUpper} in ${geojson.features.length} features (fallback mode)`);
           
-          // 移除常見後綴進行匹配（例如 "台北市" 匹配 "台北"）
-          const queryClean = queryUpper.replace(/[市縣省州]/g, '');
-          const name1Clean = name1.replace(/[市縣省州]/g, '');
-          const nlName1Clean = nlName1.replace(/[市縣省州]/g, '');
-          
-          const matches = name1.includes(queryUpper) || 
-                 nlName1.includes(queryUpper) ||
-                 varname1.includes(queryUpper) ||
-                 name1Clean.includes(queryClean) ||
-                 nlName1Clean.includes(queryClean);
-          
-          if (matches) {
-            logger.info(`[handleAdministrationSearch] Match found: ${props.NL_NAME_1 || props.NAME_1} (GID_1: ${props.GID_1})`);
+          // 先列出所有可用的行政區名稱（用於調試）
+          if (CONFIG && CONFIG.DEBUG) {
+            const availableNames = geojson.features.slice(0, 5).map(f => {
+              const p = f.properties || {};
+              const names = [p.NAME_1, p.NL_NAME_1, p.VARNAME_1].filter(Boolean);
+              return names.length > 0 ? names.join('/') : `GID:${p.GID_1}`;
+            });
+            logger.info(`[handleAdministrationSearch] Sample regions: ${availableNames.join(', ')}...`);
           }
           
-          return matches;
-        });
+          matchedFeature = geojson.features.find(feature => {
+            const props = feature.properties || {};
+            const name1 = String(props.NAME_1 || '').toUpperCase();
+            const nlName1 = String(props.NL_NAME_1 || '').toUpperCase();
+            const varname1 = String(props.VARNAME_1 || '').toUpperCase();
+            
+            // 移除常見後綴進行匹配（例如 "台北市" 匹配 "台北"）
+            const queryClean = queryUpper.replace(/[市縣省州]/g, '');
+            const name1Clean = name1.replace(/[市縣省州]/g, '');
+            const nlName1Clean = nlName1.replace(/[市縣省州]/g, '');
+            
+            const matches = name1.includes(queryUpper) || 
+                   nlName1.includes(queryUpper) ||
+                   varname1.includes(queryUpper) ||
+                   name1Clean.includes(queryClean) ||
+                   nlName1Clean.includes(queryClean);
+            
+            if (matches) {
+              logger.info(`[handleAdministrationSearch] Match found (fallback): ${props.NL_NAME_1 || props.NAME_1} (GID_1: ${props.GID_1})`);
+            }
+            
+            return matches;
+          });
+
+          if (matchedFeature) {
+            const props = matchedFeature.properties || {};
+            if (!matchedGid) {
+              matchedGid = props.GID_1 || props.gid_1 || '';
+            }
+            if (!adminName || adminName === query) {
+              adminName = props.NL_NAME_1 || props.NAME_1 || props.NAME_1_EN || query;
+            }
+          }
+        }
 
         if (matchedFeature) {
           const props = matchedFeature.properties || {};
-          const gid1 = props.GID_1 || props.gid_1 || '';
-          const adminName = props.NL_NAME_1 || props.NAME_1 || query;
+          const gid1 = matchedGid || props.GID_1 || props.gid_1 || '';
+          
+          // 確保 adminName 已正確設置
+          if (!adminName || adminName === query) {
+            adminName = props.NL_NAME_1 || props.NAME_1 || props.NAME_1_EN || props.STATE_NAME || props.PROVINCE_NAME || query;
+          }
           
           // 構建 GADM ID（移除 _1 後綴，使用標準格式）
           const gadmIdParts = String(gid1).split('_');
           const gadmId = gadmIdParts[0] || gid1; // 例如 "TWN.3_1" -> "TWN.3"
           
-          logger.info(`Found administrative region: ${adminName} (${gadmId})`);
+          logger.info(`[handleAdministrationSearch] Found administrative region: ${adminName} (${gadmId})`);
           
           // 預設顏色
           const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
@@ -2529,50 +2599,65 @@ async function handleAdministrationSearch(query, locationResolver) {
  */
 async function handleCountrySearch(query, locationResolver) {
   try {
-    // 首先嘗試從國家代碼映射表查找
-    const CountryCodes = typeof window !== 'undefined' ? window.CountryCodes : null;
     let countryCode = null;
     let countryName = query;
 
-    if (CountryCodes) {
-      // 優先使用增強的搜尋功能（支持模糊匹配）
-      if (typeof CountryCodes.search === 'function') {
-        const results = CountryCodes.search(query.trim());
+    // 優先使用 GADM 搜索索引（如果已加載）
+    if (gadmSearchIndex && gadmSearchIndex.isLevel0Loaded()) {
+      const results = gadmSearchIndex.search(query, 0);
+      
+      if (results.length > 0) {
+        const bestMatch = results[0];
+        countryCode = bestMatch.code;
+        // 優先使用中文名稱，其次英文名稱
+        countryName = bestMatch.names.local?.[0] || 
+                     bestMatch.names.en?.[0] || 
+                     query;
         
-        if (results.length > 0) {
-          // 使用最匹配的結果
-          const bestMatch = results[0];
-          countryCode = bestMatch.code;
-          countryName = bestMatch.name; // 使用中文名稱作為顯示名稱
-          
-          logger.info(`Found country via enhanced search: ${countryCode} (${countryName}, ${bestMatch.nameEn})`);
-          logger.info(`Match type: ${bestMatch.match}, Score: ${bestMatch.score}, Source: ${bestMatch.source}`);
-          
-          // 如果有多個結果且分數相近，記錄日志以便調試
-          if (results.length > 1 && results[1].score >= bestMatch.score - 10) {
-            logger.info(`Multiple matches found: ${results.slice(0, 3).map(r => `${r.name}(${r.code})`).join(', ')}`);
-          }
+        logger.info(`[handleCountrySearch] Found via search index: ${countryCode} (${countryName}, score: ${bestMatch.matchScore})`);
+        
+        if (results.length > 1 && results[1].matchScore >= bestMatch.matchScore - 10) {
+          logger.info(`[handleCountrySearch] Multiple matches: ${results.slice(0, 3).map(r => `${r.code}(${r.matchScore})`).join(', ')}`);
         }
       }
+    }
+
+    // Fallback: 使用現有的 CountryCodes（如果索引未加載或無結果）
+    if (!countryCode) {
+      const CountryCodes = typeof window !== 'undefined' ? window.CountryCodes : null;
       
-      // Fallback: 使用舊的精確匹配方法（如果新方法不可用或無結果）
-      if (!countryCode) {
-        // 嘗試通過中文名稱查找
-        countryCode = CountryCodes.findByChineseName(query.trim());
-        if (countryCode) {
-          countryName = CountryCodes.get(countryCode)?.name || query;
-          logger.info(`Found country code via Chinese name (exact): ${countryCode} (${countryName})`);
-        } else {
-          // 嘗試通過英文名稱查找
-          countryCode = CountryCodes.findByEnglishName(query.trim());
+      if (CountryCodes) {
+        // 優先使用增強的搜尋功能（支持模糊匹配）
+        if (typeof CountryCodes.search === 'function') {
+          const results = CountryCodes.search(query.trim());
+          
+          if (results.length > 0) {
+            const bestMatch = results[0];
+            countryCode = bestMatch.code;
+            countryName = bestMatch.name;
+            
+            logger.info(`[handleCountrySearch] Found via CountryCodes.search: ${countryCode} (${countryName}, ${bestMatch.nameEn})`);
+          }
+        }
+        
+        // Fallback: 使用精確匹配
+        if (!countryCode) {
+          countryCode = CountryCodes.findByChineseName(query.trim());
           if (countryCode) {
             countryName = CountryCodes.get(countryCode)?.name || query;
-            logger.info(`Found country code via English name (exact): ${countryCode} (${countryName})`);
+            logger.info(`[handleCountrySearch] Found via Chinese name (exact): ${countryCode} (${countryName})`);
           } else {
-            logger.warn(`Country code not found for: ${query}`);
+            countryCode = CountryCodes.findByEnglishName(query.trim());
+            if (countryCode) {
+              countryName = CountryCodes.get(countryCode)?.name || query;
+              logger.info(`[handleCountrySearch] Found via English name (exact): ${countryCode} (${countryName})`);
+            } else {
+              logger.warn(`[handleCountrySearch] Country code not found for: ${query}`);
+            }
           }
         }
       }
+    }
     } else {
       logger.warn('CountryCodes not available');
     }
