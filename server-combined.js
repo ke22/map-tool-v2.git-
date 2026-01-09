@@ -254,22 +254,101 @@ function handleGADMRequest(req, res, parsedUrl) {
         let isOptimized = false;
         let useSplitFile = false;
         
-        // 優先使用分割後的國家文件（只適用於 level 0，因為 by_country 文件只包含 level 0 數據）
-        // 注意：level 1 請求應該使用 gadm_level1_optimized.geojson 或流式處理大文件
-        if (level === 0) {
+        // 優先使用分割後的國家文件（適用於 level 0 和 level 1）
+        // Level 0: 每個國家 1 個 feature（已合併）
+        // Level 1: 每個國家多個 features（行政區）
+        if (level === 0 || level === 1) {
             try {
+                console.log(`   🔍 Checking for split country file: ${splitCountryPath}`);
                 const stats = fs.statSync(splitCountryPath);
-                filePath = splitCountryPath;
-                useSplitFile = true;
-                isOptimized = true;
-                console.log(`   ⚡ Using split country file: ${countryCode.toUpperCase()}.geojson (${(stats.size / 1024).toFixed(2)} KB)`);
                 
                 // 直接讀取文件（無需流式處理）
                 const fileContent = fs.readFileSync(splitCountryPath, 'utf8');
                 const geojson = JSON.parse(fileContent);
                 
-                // Level 0 文件每個國家只有 1 個 feature（已合併），直接返回
+                // 關鍵修復：對於 Level 0，驗證文件只包含 Level 0 數據
+                if (level === 0 && geojson.features && geojson.features.length > 0) {
+                    // 檢查是否有 Level 1 數據（包含 GID_1 或類似屬性）
+                    const hasLevel1Data = geojson.features.some(f => {
+                        const props = f.properties || {};
+                        // 檢查是否存在 Level 1 的標識符
+                        return props.GID_1 || props.gid_1 || 
+                               (props.GID_0 && String(props.GID_0).includes('_1')) ||
+                               (props.NAME_1 || props.NL_NAME_1); // Level 1 特有屬性
+                    });
+                    
+                    if (hasLevel1Data) {
+                        console.log(`   ❌ ERROR: Split file contains Level 1 data for Level 0 request!`);
+                        console.log(`   ❌ File path: ${splitCountryPath}`);
+                        console.log(`   ❌ Falling back to streaming from merged file`);
+                        throw new Error('Split file contains wrong level data');
+                    }
+                    
+                    // 確保 Level 0 只有 1 個 feature（合併後的外框）
+                    // 如果有多個 features，可能是分割文件生成時未正確合併
+                    if (geojson.features.length > 1) {
+                        console.log(`   ⚠️  Level 0 file has ${geojson.features.length} features, should be 1. Using first feature only.`);
+                        console.log(`   ⚠️  Note: This suggests the split file may not be correctly generated.`);
+                        // 只使用第一個 feature（臨時方案）
+                        // 理想情況下，分割文件生成時應該已經合併為 1 個 feature
+                        geojson.features = [geojson.features[0]];
+                    }
+                    
+                    console.log(`   ✅ Level 0 validation passed: 1 feature, no Level 1 data detected`);
+                }
+                
+                filePath = splitCountryPath;
+                useSplitFile = true;
+                isOptimized = true;
+                console.log(`   ⚡ Using split country file: ${countryCode.toUpperCase()}.geojson (Level ${level}, ${(stats.size / 1024).toFixed(2)} KB)`);
+                
+                // Level 0: 每個國家只有 1 個 feature（已合併），直接返回
+                // Level 1: 包含該國家的所有行政區 features，直接返回
                 let result = geojson;
+                
+                // 如果是 Level 1，確保所有 features 都屬於該國家（額外驗證）
+                // 關鍵修復：如果 gadmId 包含具體的行政區 ID（例如 "RUS.43"），只返回匹配的 feature
+                if (level === 1 && geojson.features) {
+                    const originalCount = geojson.features.length;
+                    const gadmIdParts = gadmId.split('.');
+                    
+                    if (gadmIdParts.length >= 2) {
+                        // 有具體的行政區 ID，需要精確匹配
+                        // 例如：gadmId = "RUS.43"，需要匹配 GID_1 = "RUS.43_1"
+                        const targetAdminCode = gadmIdParts[1]; // "43"
+                        const targetGid1 = `${gadmIdParts[0]}.${targetAdminCode}_1`.toUpperCase();
+                        
+                        console.log(`   🔍 Filtering Level 1 features for specific admin: ${targetGid1}`);
+                        result.features = geojson.features.filter(f => {
+                            const featureGid1 = (f.properties?.GID_1 || f.properties?.gid_1 || '').toUpperCase();
+                            // 精確匹配 GID_1（例如 "RUS.43_1"）或部分匹配
+                            return featureGid1 === targetGid1 || 
+                                   featureGid1.startsWith(targetGid1.split('_')[0]) ||
+                                   featureGid1.includes(targetGid1);
+                        });
+                        
+                        if (result.features.length === 0) {
+                            console.log(`   ⚠️  No exact match found for ${targetGid1}, trying fuzzy match...`);
+                            // 模糊匹配：只匹配前綴（例如 "RUS.43"）
+                            result.features = geojson.features.filter(f => {
+                                const featureGid1 = (f.properties?.GID_1 || f.properties?.gid_1 || '').toUpperCase();
+                                return featureGid1.startsWith(`${gadmIdParts[0]}.${targetAdminCode}`);
+                            });
+                        }
+                        
+                        console.log(`   ✅ Filtered to ${result.features.length} feature(s) for ${gadmId}`);
+                    } else {
+                        // 只有國家代碼（例如 "RUS"），返回該國家的所有行政區
+                        result.features = geojson.features.filter(f => {
+                            const gid0 = (f.properties?.GID_0 || f.properties?.gid_0 || '').toUpperCase();
+                            return gid0 === countryCode.toUpperCase();
+                        });
+                    }
+                    
+                    if (result.features.length !== originalCount) {
+                        console.log(`   ⚠️  Filtered ${originalCount - result.features.length} features that don't match`);
+                    }
+                }
                 
                 // 緩存結果
                 gadmCache.set(cacheKey, {
@@ -293,11 +372,12 @@ function handleGADMRequest(req, res, parsedUrl) {
                     'Content-Length': Buffer.byteLength(jsonString, 'utf8')
                 });
                 res.end(jsonString);
-                console.log(`   ✅ Response sent from split file (${(jsonString.length / 1024).toFixed(2)} KB)`);
+                console.log(`   ✅ Response sent from split file (${(jsonString.length / 1024).toFixed(2)} KB, ${result.features?.length || 0} features)`);
                 return;
             } catch (splitError) {
                 // 分割文件不存在，繼續使用大文件
-                console.log(`   ⚠️  Split country file not found, falling back to merged file`);
+                console.log(`   ⚠️  Split country file not found for Level ${level} (${splitCountryPath}): ${splitError.message}`);
+                console.log(`   ⚠️  Falling back to merged file`);
             }
         }
         
@@ -456,9 +536,12 @@ function handleGADMRequest(req, res, parsedUrl) {
                     
                     // 對於 level 1（行政區級別），可能需要多個 features，繼續處理
                     // 但如果在找到 10 個匹配後仍然沒有發送響應，也可以考慮提前停止
-                    if (level === 1 && filteredFeatures.length >= 10 && !responseSent) {
+                    // 注意：這個 early stop 只適用於流式處理大文件，不適用於分割文件
+                    // 如果使用分割文件，應該已經在之前返回了，不會執行到這裡
+                    if (level === 1 && filteredFeatures.length >= 10 && !responseSent && !useSplitFile) {
                         const elapsed = Date.now() - startTime;
-                        console.log(`   ⚡ Early stop for level 1: Found ${filteredFeatures.length} matches (took ${elapsed}ms)`);
+                        console.log(`   ⚡ Early stop for level 1 (streaming mode): Found ${filteredFeatures.length} matches (took ${elapsed}ms)`);
+                        console.log(`   ⚠️  Note: This is a performance optimization for large files. Consider using split files for better performance.`);
                         sendResponse(filteredFeatures);
                         pipeline.destroy();
                         clearTimeout(timeout);

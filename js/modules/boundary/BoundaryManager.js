@@ -190,18 +190,30 @@ class BoundaryManager {
     // 獲取當前數據
     const data = source._data || { type: 'FeatureCollection', features: [] };
     
-    // 更新指定區域的屬性
-    const feature = data.features.find(f => f.id === areaId);
-    if (feature && feature.properties) {
-      if (style.color !== undefined) {
-        feature.properties.color = style.color;
+    // 關鍵修復：更新所有相關的 features（包括 areaId 和 areaId-* 格式的）
+    // 這確保同一區域的所有 features（例如多個島嶼）都使用相同的樣式
+    let updatedCount = 0;
+    data.features.forEach(feature => {
+      if (feature.id === areaId || 
+          (typeof feature.id === 'string' && feature.id.startsWith(`${areaId}-`))) {
+        if (feature.properties) {
+          if (style.color !== undefined) {
+            feature.properties.color = style.color;
+          }
+          if (style.opacity !== undefined) {
+            feature.properties.opacity = style.opacity;
+          }
+          updatedCount++;
+        }
       }
-      if (style.opacity !== undefined) {
-        feature.properties.opacity = style.opacity;
-      }
-      
+    });
+    
+    if (updatedCount > 0) {
       // 更新數據源
       source.setData(data);
+      console.log(`[BoundaryManager] Updated style for ${updatedCount} feature(s) of area ${areaId}`);
+    } else {
+      console.warn(`[BoundaryManager] No features found to update for area ${areaId}`);
     }
 
     // 触发事件
@@ -672,17 +684,32 @@ class BoundaryManager {
     if (geojson.type === 'FeatureCollection' && geojson.features) {
       // FeatureCollection: 保留所有 features，但更新 properties
       console.log(`[BoundaryManager] Processing FeatureCollection with ${geojson.features.length} features`);
+      
+      // 關鍵修復：確保所有 features 使用相同的顏色和屬性（來自 area 對象）
+      // 這確保同一區域的所有 features（例如多個島嶼）使用相同的顏色
       featuresToAdd = geojson.features.map((f, index) => ({
         ...f,
         id: index === 0 ? featureId : `${featureId}-${index}`, // 第一個使用原始 ID，其他的添加索引
         properties: {
           ...f.properties, // 保留原始 properties（如 GID_0, NAME 等）
-          gadmId: area.gadmId,
-          name: area.name,
-          color: area.color || '#3388ff',
-          opacity: area.opacity !== undefined ? area.opacity : 0.5
+          gadmId: area.gadmId || area.id, // 使用 area 的 gadmId
+          name: area.name, // 使用 area 的 name
+          color: area.color || '#3388ff', // 使用 area 的 color（重要！）
+          opacity: area.opacity !== undefined ? area.opacity : 0.5 // 使用 area 的 opacity
         }
       }));
+      
+      // 驗證：確保所有 features 都有正確的顏色屬性
+      const colorSet = new Set(featuresToAdd.map(f => f.properties.color));
+      if (colorSet.size > 1) {
+        console.warn(`[BoundaryManager] ⚠️  Multiple colors detected in features for ${featureId}:`, Array.from(colorSet));
+        // 強制統一顏色（使用 area.color 或第一個 feature 的顏色）
+        const unifiedColor = area.color || featuresToAdd[0].properties.color || '#3388ff';
+        featuresToAdd.forEach(f => {
+          f.properties.color = unifiedColor;
+        });
+        console.log(`[BoundaryManager] ✅ Unified color to: ${unifiedColor}`);
+      }
     } else if (geojson.type === 'Feature') {
       // Feature: 更新 properties
       console.log(`[BoundaryManager] Processing single Feature`);

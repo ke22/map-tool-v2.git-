@@ -2249,19 +2249,26 @@ async function handleAdministrationSearch(query, locationResolver) {
       // 直接获取该行政区的数据
       const apiUrl = `/api/gadm?gadmId=${encodeURIComponent(cityMapping.country)}&level=1`;
       logger.info(`[handleAdministrationSearch] Fetching from API: ${apiUrl}`);
-      const response = await fetch(apiUrl);
       
-      if (response.ok) {
-        const geojson = await response.json();
+      try {
+        const response = await fetch(apiUrl);
+        logger.info(`[handleAdministrationSearch] API response status: ${response.status} ${response.statusText}`);
         
-        // 在 GeoJSON 中找到对应的 feature
-        const matchedFeature = geojson.features?.find(f => {
-          const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
-          return featureGid === cityMapping.gid.toUpperCase();
-        });
-        
-        if (matchedFeature) {
-          const props = matchedFeature.properties || {};
+        if (response.ok) {
+          const geojson = await response.json();
+          logger.info(`[handleAdministrationSearch] Received GeoJSON with ${geojson?.features?.length || 0} features`);
+          
+          // 在 GeoJSON 中找到对应的 feature
+          const matchedFeature = geojson.features?.find(f => {
+            const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
+            const targetGid = cityMapping.gid.toUpperCase();
+            logger.debug(`[handleAdministrationSearch] Comparing: ${featureGid} with ${targetGid}`);
+            return featureGid === targetGid;
+          });
+          
+          if (matchedFeature) {
+            logger.info(`[handleAdministrationSearch] Feature matched: ${cityMapping.gid} (${matchedFeature.properties?.NAME_1 || matchedFeature.properties?.NL_NAME_1 || 'N/A'})`);
+            const props = matchedFeature.properties || {};
           const gid1 = cityMapping.gid;
           const gadmIdParts = String(gid1).split('_');
           const gadmId = gadmIdParts[0] || gid1;
@@ -2274,8 +2281,17 @@ async function handleAdministrationSearch(query, locationResolver) {
           // 預設顏色
           const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
           const stageData = state.administrationStage;
-          const colorIndex = (stageData?.areas?.length || 0) % defaultColors.length;
+          
+          // 關鍵修復：使用正確的方式計算顏色索引
+          // 排除預覽邊界（id 以 'preview-' 開頭的）
+          const existingAreasCount = (stageData?.areas || []).filter(a => {
+            return !a.id || !String(a.id).startsWith('preview-');
+          }).length;
+          
+          const colorIndex = existingAreasCount % defaultColors.length;
           const color = defaultColors[colorIndex];
+          
+          logger.info(`[handleAdministrationSearch] Color calculation (direct mapping): existingAreas=${existingAreasCount}, colorIndex=${colorIndex}, color=${color}`);
 
           // 創建區域對象
           const area = {
@@ -2297,9 +2313,100 @@ async function handleAdministrationSearch(query, locationResolver) {
           stageController.addArea('administration', area);
           logger.info(`Area added to state: ${adminName}`);
           
-          // 自動縮放到該區域
+          // 使用 BoundaryManager 添加邊界並填充
+          if (!boundaryManager) {
+            logger.error('BoundaryManager not initialized');
+            throw new Error('BoundaryManager not initialized');
+          }
+          
           try {
-            // 計算簡單的 bbox
+            // 在添加填充的行政區之前，先移除對應的預覽邊界（如果存在）
+            const adminSourceId = 'boundary-source-administration';
+            const adminSource = map.getSource(adminSourceId);
+            if (adminSource && adminSource.type === 'geojson') {
+              const currentData = adminSource._data || { type: 'FeatureCollection', features: [] };
+              const previewFeatureIds = [
+                `preview-${cityMapping.country}-${cityMapping.gid}`,
+                `preview-${cityMapping.country}-${gadmId}`
+              ];
+              
+              // 移除預覽邊界
+              const filteredFeatures = (currentData.features || []).filter(f => {
+                const fid = f.id || '';
+                return !previewFeatureIds.includes(fid) && 
+                       !fid.startsWith(`preview-${cityMapping.country}-`) &&
+                       !fid.startsWith(`preview-${gadmId}-`);
+              });
+              
+              if (filteredFeatures.length < currentData.features.length) {
+                adminSource.setData({
+                  type: 'FeatureCollection',
+                  features: filteredFeatures
+                });
+                logger.info(`[handleAdministrationSearch] Removed ${currentData.features.length - filteredFeatures.length} preview boundary(ies) before adding filled area`);
+              }
+            }
+            
+            // 關鍵修復：直接使用匹配的 feature，而不是調用 boundaryManager.addArea
+            // 因為 addArea 會調用 GADMLoader，可能獲取整個國家的數據（83 個 features）
+            // 我們已經有了匹配的 feature，直接使用它
+            if (!adminSource) {
+              boundaryManager.createSource('administration');
+              adminSource = map.getSource(adminSourceId);
+            }
+            
+            if (adminSource && adminSource.type === 'geojson') {
+              const currentData = adminSource._data || { type: 'FeatureCollection', features: [] };
+              
+              // 移除舊的 features（如果有相同的 gadmId）
+              const filteredFeatures = (currentData.features || []).filter(f => {
+                const fid = f.id || '';
+                return fid !== gadmId && !fid.startsWith(`${gadmId}-`);
+              });
+              
+              // 創建單個 feature，使用正確的顏色和屬性
+              const singleFeature = {
+                ...matchedFeature,
+                id: gadmId,
+                properties: {
+                  ...matchedFeature.properties,
+                  gadmId: gadmId,
+                  name: adminName,
+                  color: color,
+                  opacity: 0.7
+                }
+              };
+              
+              // 只添加這一個 feature
+              filteredFeatures.push(singleFeature);
+              
+              adminSource.setData({
+                type: 'FeatureCollection',
+                features: filteredFeatures
+              });
+              
+              logger.info(`[handleAdministrationSearch] Added single administrative feature directly: ${adminName} (${gadmId})`);
+            }
+            
+            // 確保圖層已創建並更新
+            boundaryManager.updateLayers('administration');
+            boundaryManager.setVisibility('administration', true);
+            boundaryManager.setMode('administration', 'fill');
+            
+            logger.info(`Added administrative area: ${adminName} (${gadmId}) with color ${color}`);
+            
+            // 驗證圖層
+            const fillLayerId = `boundary-fill-administration`;
+            const sourceId = `boundary-source-administration`;
+            if (map.getSource(sourceId)) {
+              const sourceData = map.getSource(sourceId)._data;
+              logger.info(`Boundary source data: ${sourceData?.features?.length || 0} features`);
+            }
+            if (map.getLayer(fillLayerId)) {
+              logger.info(`Boundary fill layer visibility: ${map.getLayoutProperty(fillLayerId, 'visibility')}`);
+            }
+            
+            // 自動縮放到該區域
             const geometry = matchedFeature.geometry;
             let bbox = null;
             
@@ -2327,17 +2434,50 @@ async function handleAdministrationSearch(query, locationResolver) {
               });
               logger.info(`Zoomed to administrative region: ${adminName}`);
             }
+            
+            // 成功添加，直接返回，不繼續執行後續邏輯
+            return;
           } catch (error) {
-            logger.error('Error calculating bounds:', error);
+            logger.error('Error adding administrative area:', error);
+            throw error;
           }
-          
-          return; // 成功添加，直接返回
+          } else {
+            logger.warn(`[handleAdministrationSearch] Feature with GID ${cityMapping.gid} not found in GeoJSON`);
+            // 列出所有可用的 GID 以便調試
+            if (geojson.features && geojson.features.length > 0) {
+              const availableGids = geojson.features.slice(0, 10).map(f => 
+                (f.properties.GID_1 || f.properties.gid_1 || 'N/A').toUpperCase()
+              );
+              logger.info(`[handleAdministrationSearch] Available GIDs (first 10): ${availableGids.join(', ')}`);
+              // 檢查是否有部分匹配
+              const partialMatches = geojson.features.filter(f => {
+                const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
+                const targetParts = cityMapping.gid.toUpperCase().split('.');
+                const featureParts = featureGid.split('.');
+                if (targetParts.length === 2 && featureParts.length === 2) {
+                  const targetNum = targetParts[1].split('_')[0];
+                  const featureNum = featureParts[1].split('_')[0];
+                  return targetParts[0] === featureParts[0] && targetNum === featureNum;
+                }
+                return false;
+              });
+              if (partialMatches.length > 0) {
+                logger.info(`[handleAdministrationSearch] Found ${partialMatches.length} partial matches`);
+                partialMatches.slice(0, 3).forEach(f => {
+                  logger.info(`[handleAdministrationSearch] Partial match: ${(f.properties.GID_1 || 'N/A').toUpperCase()} - ${f.properties.NAME_1 || f.properties.NL_NAME_1 || 'N/A'}`);
+                });
+              }
+            }
+            // 继续使用常规搜索流程
+          }
         } else {
-          logger.warn(`[handleAdministrationSearch] Feature with GID ${cityMapping.gid} not found in GeoJSON`);
+          const errorText = await response.text().catch(() => 'Unknown error');
+          logger.warn(`[handleAdministrationSearch] Failed to fetch GeoJSON for ${cityMapping.country}: ${response.status} - ${errorText.substring(0, 200)}`);
           // 继续使用常规搜索流程
         }
-      } else {
-        logger.warn(`[handleAdministrationSearch] Failed to fetch GeoJSON for ${cityMapping.country}`);
+      } catch (error) {
+        logger.error(`[handleAdministrationSearch] Error in direct mapping path:`, error);
+        logger.error(`[handleAdministrationSearch] Error stack:`, error.stack);
         // 继续使用常规搜索流程
       }
     }
@@ -2617,8 +2757,17 @@ async function handleAdministrationSearch(query, locationResolver) {
           // 預設顏色
           const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
           const stageData = state.administrationStage;
-          const colorIndex = (stageData?.areas?.length || 0) % defaultColors.length;
+          
+          // 關鍵修復：使用正確的方式計算顏色索引
+          // 排除預覽邊界（id 以 'preview-' 開頭的）
+          const existingAreasCount = (stageData?.areas || []).filter(a => {
+            return !a.id || !String(a.id).startsWith('preview-');
+          }).length;
+          
+          const colorIndex = existingAreasCount % defaultColors.length;
           const color = defaultColors[colorIndex];
+          
+          logger.info(`[handleAdministrationSearch] Color calculation: existingAreas=${existingAreasCount}, colorIndex=${colorIndex}, color=${color}`);
 
           // 創建區域對象
           const area = {
@@ -2873,8 +3022,17 @@ async function handleCountrySearch(query, locationResolver) {
       const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
       const state = stateManager.getState();
       const stageData = state.countryStage;
-      const colorIndex = stageData.areas.length % defaultColors.length;
+      
+      // 關鍵修復：使用正確的方式計算顏色索引
+      // 排除預覽邊界（id 以 'preview-' 開頭的）
+      const existingAreasCount = (stageData?.areas || []).filter(a => {
+        return !a.id || !String(a.id).startsWith('preview-');
+      }).length;
+      
+      const colorIndex = existingAreasCount % defaultColors.length;
       const color = defaultColors[colorIndex];
+      
+      logger.info(`[handleCountrySearch] Color calculation: existingAreas=${existingAreasCount}, colorIndex=${colorIndex}, color=${color}`);
 
       // 創建區域對象
       const area = {
