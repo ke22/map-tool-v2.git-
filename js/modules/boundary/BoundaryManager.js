@@ -447,11 +447,27 @@ class BoundaryManager {
         type: 'fill',
         source: sourceId,
         paint: {
-          'fill-color': ['coalesce', ['get', 'color'], '#3388ff'], // 從 feature properties 獲取顏色，如果沒有則使用默認值
-          'fill-opacity': ['coalesce', ['get', 'opacity'], 0.5] // 從 feature properties 獲取透明度，如果沒有則使用默認值
+          // 修復 2: 在 fill 模式下過濾預覽邊界（_preview 為 true 時使用透明色）
+          // 使用 to-boolean 和 coalesce 處理 null 值，避免 Mapbox 表達式錯誤
+          'fill-color': [
+            'case',
+            ['to-boolean', ['coalesce', ['get', '_preview'], false]], // 將 null/undefined 轉換為 false
+            'rgba(0,0,0,0)',      // 如果是預覽邊界，使用透明色（不顯示填充）
+            ['coalesce', ['get', 'color'], '#3388ff'] // 否則使用正常顏色
+          ],
+          'fill-opacity': [
+            'case',
+            ['to-boolean', ['coalesce', ['get', '_preview'], false]], // 將 null/undefined 轉換為 false
+            0,                    // 如果是預覽邊界，透明度為0（不顯示填充）
+            ['coalesce', ['get', 'opacity'], 0.5] // 否則使用正常透明度
+          ]
         }
       };
       
+      // 修復 3: 確保圖層順序
+      // 在 Mapbox GL JS 中，如果兩個圖層都使用相同的 beforeId（標籤圖層），後添加的圖層會位於上層
+      // 由於 country 圖層總是在 administration 圖層之前添加，administration 會自然位於其上
+      // 因此我們只需確保它們都在標籤圖層之前即可
       if (beforeLayer) {
         layerConfig.beforeId = beforeLayer;
       }
@@ -695,7 +711,8 @@ class BoundaryManager {
           gadmId: area.gadmId || area.id, // 使用 area 的 gadmId
           name: area.name, // 使用 area 的 name
           color: area.color || '#3388ff', // 使用 area 的 color（重要！）
-          opacity: area.opacity !== undefined ? area.opacity : 0.5 // 使用 area 的 opacity
+          opacity: area.opacity !== undefined ? area.opacity : 0.5, // 使用 area 的 opacity
+          _preview: false // 明確標記為非預覽邊界，避免 Mapbox 表達式錯誤
         }
       }));
       
@@ -721,7 +738,8 @@ class BoundaryManager {
           gadmId: area.gadmId,
           name: area.name,
           color: area.color || '#3388ff',
-          opacity: area.opacity !== undefined ? area.opacity : 0.5
+          opacity: area.opacity !== undefined ? area.opacity : 0.5,
+          _preview: false // 明確標記為非預覽邊界，避免 Mapbox 表達式錯誤
         }
       }];
     } else if (geojson.type === 'Polygon' || geojson.type === 'MultiPolygon') {
@@ -734,7 +752,8 @@ class BoundaryManager {
           gadmId: area.gadmId,
           name: area.name,
           color: area.color || '#3388ff',
-          opacity: area.opacity !== undefined ? area.opacity : 0.5
+          opacity: area.opacity !== undefined ? area.opacity : 0.5,
+          _preview: false // 明確標記為非預覽邊界，避免 Mapbox 表達式錯誤
         },
         geometry: geojson
       }];

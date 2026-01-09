@@ -105,14 +105,32 @@
             <h3 id="area-style-title">區域樣式</h3>
             <div class="control-group">
               <label>顏色</label>
-              <input type="color" id="area-style-color" class="color-input" value="#6CA7A1">
+              <input type="color" id="area-style-color" class="color-input" value="#A8D5E2">
               <div class="color-presets">
-                <button class="color-preset" data-color="#6CA7A1" style="background-color: #6CA7A1;" title="#6CA7A1"></button>
-                <button class="color-preset" data-color="#496F96" style="background-color: #496F96;" title="#496F96"></button>
-                <button class="color-preset" data-color="#E05C5A" style="background-color: #E05C5A;" title="#E05C5A"></button>
-                <button class="color-preset" data-color="#EDBD76" style="background-color: #EDBD76;" title="#EDBD76"></button>
-                <button class="color-preset" data-color="#E8DFCF" style="background-color: #E8DFCF;" title="#E8DFCF"></button>
-                <button class="color-preset" data-color="#B5CBCD" style="background-color: #B5CBCD;" title="#B5CBCD"></button>
+                <!-- 國家區域色票（較淡，作為背景層） -->
+                <div class="color-preset-group" style="margin-bottom: 8px;">
+                  <label style="font-size: 11px; color: #666; display: block; margin-bottom: 4px;">國家區域</label>
+                  <div style="display: flex; gap: 4px;">
+                    <button class="color-preset" data-color="#A8D5E2" style="background-color: #A8D5E2;" title="國家 #A8D5E2"></button>
+                    <button class="color-preset" data-color="#B8C7D9" style="background-color: #B8C7D9;" title="國家 #B8C7D9"></button>
+                    <button class="color-preset" data-color="#E5B8B8" style="background-color: #E5B8B8;" title="國家 #E5B8B8"></button>
+                    <button class="color-preset" data-color="#F0D6A8" style="background-color: #F0D6A8;" title="國家 #F0D6A8"></button>
+                    <button class="color-preset" data-color="#E8D5C4" style="background-color: #E8D5C4;" title="國家 #E8D5C4"></button>
+                    <button class="color-preset" data-color="#C5D9E8" style="background-color: #C5D9E8;" title="國家 #C5D9E8"></button>
+                  </div>
+                </div>
+                <!-- 行政區色票（較鮮明，作為前景層） -->
+                <div class="color-preset-group">
+                  <label style="font-size: 11px; color: #666; display: block; margin-bottom: 4px;">行政區</label>
+                  <div style="display: flex; gap: 4px;">
+                    <button class="color-preset" data-color="#2E86AB" style="background-color: #2E86AB;" title="行政區 #2E86AB"></button>
+                    <button class="color-preset" data-color="#1B4965" style="background-color: #1B4965;" title="行政區 #1B4965"></button>
+                    <button class="color-preset" data-color="#C1121F" style="background-color: #C1121F;" title="行政區 #C1121F"></button>
+                    <button class="color-preset" data-color="#F77F00" style="background-color: #F77F00;" title="行政區 #F77F00"></button>
+                    <button class="color-preset" data-color="#D62828" style="background-color: #D62828;" title="行政區 #D62828"></button>
+                    <button class="color-preset" data-color="#4A90A4" style="background-color: #4A90A4;" title="行政區 #4A90A4"></button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="control-group">

@@ -27,6 +27,35 @@ let labelAddMode = false;
 let mapClickHandler = null;
 
 /**
+ * 顏色色票系統
+ * 定義國家區域和行政區的分層色票，確保視覺層次清晰
+ */
+const COLOR_PALETTES = {
+  // 國家區域色票（較淡，飽和度低，作為背景層）
+  country: [
+    '#A8D5E2', // 淡藍色 - 對應行政區 #2E86AB
+    '#B8C7D9', // 淡藍灰色 - 對應行政區 #1B4965
+    '#E5B8B8', // 淡粉紅色 - 對應行政區 #C1121F
+    '#F0D6A8', // 淡黃色 - 對應行政區 #F77F00
+    '#E8D5C4', // 淡米色 - 對應行政區 #D62828
+    '#C5D9E8'  // 淡天藍色 - 對應行政區 #4A90A4
+  ],
+  
+  // 行政區色票（較鮮明，飽和高，作為前景層）
+  administration: [
+    '#2E86AB', // 鮮明藍色
+    '#1B4965', // 深藍灰色
+    '#C1121F', // 鮮明紅色
+    '#F77F00', // 鮮明橙色
+    '#D62828', // 深紅色
+    '#4A90A4'  // 天藍色
+  ],
+  
+  // 中性色用於 fallback
+  default: '#CCCCCC'
+};
+
+/**
  * 初始化应用
  */
 async function initApp() {
@@ -2246,9 +2275,14 @@ async function handleAdministrationSearch(query, locationResolver) {
         logger.info(`Zoomed to predefined location: [${predefCoords[0]}, ${predefCoords[1]}]`);
       }
       
-      // 直接获取该行政区的数据
-      const apiUrl = `/api/gadm?gadmId=${encodeURIComponent(cityMapping.country)}&level=1`;
-      logger.info(`[handleAdministrationSearch] Fetching from API: ${apiUrl}`);
+      // 修復 1: 計算正確的 gadmId（例如 'RUS.43'），用於 API 請求的精確過濾
+      const gid1 = cityMapping.gid; // 例如 'RUS.43_1'
+      const gadmIdParts = String(gid1).split('_');
+      const gadmId = gadmIdParts[0] || gid1; // 例如 'RUS.43'
+      
+      // 直接獲取該行政區的數據（使用精確的 gadmId，觸發服務器端精確過濾）
+      const apiUrl = `/api/gadm?gadmId=${encodeURIComponent(gadmId)}&level=1`;
+      logger.info(`[handleAdministrationSearch] Fetching from API: ${apiUrl} (using precise gadmId for server-side filtering)`);
       
       try {
         const response = await fetch(apiUrl);
@@ -2258,7 +2292,7 @@ async function handleAdministrationSearch(query, locationResolver) {
           const geojson = await response.json();
           logger.info(`[handleAdministrationSearch] Received GeoJSON with ${geojson?.features?.length || 0} features`);
           
-          // 在 GeoJSON 中找到对应的 feature
+          // 在 GeoJSON 中找到對應的 feature
           const matchedFeature = geojson.features?.find(f => {
             const featureGid = (f.properties.GID_1 || f.properties.gid_1 || '').toUpperCase();
             const targetGid = cityMapping.gid.toUpperCase();
@@ -2269,17 +2303,14 @@ async function handleAdministrationSearch(query, locationResolver) {
           if (matchedFeature) {
             logger.info(`[handleAdministrationSearch] Feature matched: ${cityMapping.gid} (${matchedFeature.properties?.NAME_1 || matchedFeature.properties?.NL_NAME_1 || 'N/A'})`);
             const props = matchedFeature.properties || {};
-          const gid1 = cityMapping.gid;
-          const gadmIdParts = String(gid1).split('_');
-          const gadmId = gadmIdParts[0] || gid1;
           
           // 使用映射中的名称，或从 feature properties 获取
           const adminName = cityMapping.name || props.NL_NAME_1 || props.NAME_1 || query;
           
           logger.info(`[handleAdministrationSearch] Found administrative region via direct mapping: ${adminName} (${gadmId})`);
           
-          // 預設顏色
-          const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
+          // 預設顏色（使用行政區色票）
+          const defaultColors = COLOR_PALETTES.administration;
           const stageData = state.administrationStage;
           
           // 關鍵修復：使用正確的方式計算顏色索引
@@ -2330,12 +2361,11 @@ async function handleAdministrationSearch(query, locationResolver) {
                 `preview-${cityMapping.country}-${gadmId}`
               ];
               
-              // 移除預覽邊界
+              // 修復 4: 移除所有預覽邊界（不僅是 RUS），防止其他國家的預覽邊界在 fill 模式下被填充
               const filteredFeatures = (currentData.features || []).filter(f => {
                 const fid = f.id || '';
-                return !previewFeatureIds.includes(fid) && 
-                       !fid.startsWith(`preview-${cityMapping.country}-`) &&
-                       !fid.startsWith(`preview-${gadmId}-`);
+                // 移除所有預覽邊界（id 以 'preview-' 開頭或 properties._preview 為 true）
+                return !fid.startsWith('preview-') && !f.properties?._preview;
               });
               
               if (filteredFeatures.length < currentData.features.length) {
@@ -2754,8 +2784,8 @@ async function handleAdministrationSearch(query, locationResolver) {
           
           logger.info(`[handleAdministrationSearch] Found administrative region: ${adminName} (${gadmId})`);
           
-          // 預設顏色
-          const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
+          // 預設顏色（使用行政區色票）
+          const defaultColors = COLOR_PALETTES.administration;
           const stageData = state.administrationStage;
           
           // 關鍵修復：使用正確的方式計算顏色索引
@@ -3018,8 +3048,8 @@ async function handleCountrySearch(query, locationResolver) {
     if (countryCode) {
       logger.info(`Processing country code: ${countryCode} (${countryName})`);
       
-      // 預設顏色（參考 hkn 項目的預設顏色）
-      const defaultColors = ['#6CA7A1', '#496F96', '#E05C5A', '#EDBD76', '#E8DFCF', '#B5CBCD'];
+      // 預設顏色（使用國家區域色票）
+      const defaultColors = COLOR_PALETTES.country;
       const state = stateManager.getState();
       const stageData = state.countryStage;
       

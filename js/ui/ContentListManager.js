@@ -122,9 +122,9 @@ class ContentListManager {
           <div class="content-item ${isSelected ? 'selected' : ''}" 
                data-area-id="${area.id}" 
                data-area-stage="${area.stage}"
-               style="border-left-color: ${area.color || '#6CA7A1'}">
+               style="border-left-color: ${area.color || '#CCCCCC'}">
             <div class="content-item-info">
-              <div class="content-item-color" style="background-color: ${area.color || '#6CA7A1'}"></div>
+              <div class="content-item-color" style="background-color: ${area.color || '#CCCCCC'}"></div>
               <span class="content-item-name">${area.name || area.id}</span>
               <span class="content-item-stage">(${area.stageLabel})</span>
             </div>
@@ -344,7 +344,7 @@ class ContentListManager {
     
     // 設置顏色
     if (colorInput) {
-      colorInput.value = area.color || '#6CA7A1';
+      colorInput.value = area.color || '#CCCCCC';
     }
     
     // 設置模式（從階段設置或區域設置）
